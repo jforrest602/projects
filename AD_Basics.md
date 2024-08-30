@@ -18,9 +18,21 @@ Once connected to the host, I accessed the Windows Administrative Tools by utili
 ![image](https://github.com/user-attachments/assets/e500e6a1-0e28-4e4e-941f-1ebd5206537b)
 
 
-#### TASK 1: User Management
+#### TASK 1: User Management - Adding New Users
 The first task of the lab was to create three new users, something any AD admin will have to do when your company hires and onboards new employees. To do this, I accessed the AD Users and Computers via Windows Administrative Tools.
 ![image](https://github.com/user-attachments/assets/40526871-21f5-468d-9ee7-5d94b7a1a975)
 
 Navigating to the proper folder, in this case the INLANEFREIGHT.LOCAL domain and drilling down to the Corp > Employees > HQ-NYC > IT folder, I right clicked and selected New > User.
 ![image](https://github.com/user-attachments/assets/55fdb3f0-d758-47da-9742-503716dd362b)
+
+Once the dialog box opened up, I entered the employee information (first and last name, email address, display name), created a temporary password, and enabled the *User must change password at next logon* feature. 
+
+In AD, object [attributes](https://learn.microsoft.com/en-us/windows/win32/adschema/attributes) is data that define the properties of objects. There are many different attributes an object can have but, here they include name, email address, and display name. Attributes can fall into several different types of class but, that is beyond the scope of this project. 
+
+I repeteaded this procedure for an additional two new users.
+![image](https://github.com/user-attachments/assets/c62c991d-fe50-4ae6-bd59-0111eeca38df)
+![image](https://github.com/user-attachments/assets/ad314262-fcc7-4ae8-9a51-39fb804b6ac1)
+![image](https://github.com/user-attachments/assets/4ab803a4-96da-42a5-90ae-edd854f7381b)
+
+
+#### TASK 2: User Managment - Removing Users
