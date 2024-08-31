@@ -77,7 +77,10 @@ To add our new employees to this security group I selected the employess to move
 ![image](https://github.com/user-attachments/assets/bce9dc51-57d0-4057-bde7-818ae713860e)
 ![image](https://github.com/user-attachments/assets/d6dffd12-746d-4509-82b4-8fa350f4f338)
 To confirm that the users were added to the group, I checked the group properties.
-![image](https://github.com/user-attachments/assets/f8ce50fc-6bed-40b3-8c04-255ee31c3f0c)
+![image](https://github.com/user-attachments/assets/f8ce50fc-6bed-40b3-8c04-255ee31c3f0c)   
+
+#### Managing Group Policy
+
 
 
 
