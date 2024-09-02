@@ -132,6 +132,33 @@ Define policy settings and apply.
 
 ![image](https://github.com/user-attachments/assets/68c03c59-f60d-4a2d-8852-f460b5c95593)  
 
+#### TASK 6: Add & Remove Computers to the Domain
+In order to add a remote computer to the localhost domain, you first have to RDP to that computer. Do this by opening the Remote Desktop Connection application.
+![image](https://github.com/user-attachments/assets/38be997e-a5ca-468d-9633-0379bf5cffdb)  
+Enter the name of the computer you wih to connect to and enter your credentials.
+![image](https://github.com/user-attachments/assets/f52b69a3-b72b-4964-8607-c02b1a7fcfcf)
+![image](https://github.com/user-attachments/assets/cb63fc41-5a9c-4e46-8768-c7370870158a)  
+Once connected, open up the computers Control Panel and navigate to: System and Security > System > Change settings.
+![image](https://github.com/user-attachments/assets/5699323a-a4d3-4d4c-9d5e-93a869df4317)  
+![image](https://github.com/user-attachments/assets/3f154f40-2ee3-4387-90d2-90fbd9b216de)  
+![image](https://github.com/user-attachments/assets/1a6c7fcb-1eff-416a-aa37-b665b5746f12) 
+![image](https://github.com/user-attachments/assets/363573b7-b73d-45ea-9c28-aee9aeda9425)  
+After the dialog box opens click Change next to To rename this computer or change its domain or workgroup, click change.
+ ![image](https://github.com/user-attachments/assets/ef2b90dc-e9a0-461c-857a-83f7fad65e43)  
+ 
+Select Domain and enter domain name.
+![image](https://github.com/user-attachments/assets/60af2cfb-e473-4880-9233-87ee66287bec) 
+Enter authorized user credentials and click OK three times.
+![image](https://github.com/user-attachments/assets/c46cfd0b-40bb-4b03-a1c9-a6b1dc9bc3d6) 
+![image](https://github.com/user-attachments/assets/6898272f-cd9c-40d8-948d-c7cb4d50d280)
+![image](https://github.com/user-attachments/assets/87035151-ece2-4658-b048-23f5d19bce1f) 
+![image](https://github.com/user-attachments/assets/adfa936b-c633-4fcf-90ea-c85204964ea4)
+
+
+
+
+
+
 
 
 
