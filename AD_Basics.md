@@ -114,6 +114,21 @@ Right click on Interactive logon: Message text for users attemptoing to logon an
 
 
 ##### Ensure password policy settings for Security Analyst group are strong  
+Within the Group Policy Management editor, navigate to: Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy.
+
+![image](https://github.com/user-attachments/assets/139d3256-2010-485e-b7b9-966dcccd8d56)  
+Right click each policy setting and click Properties.
+![image](https://github.com/user-attachments/assets/38bde3f3-7a9f-43fc-a1a7-a8c555b25b42)
+Define policy settings and apply.
+![image](https://github.com/user-attachments/assets/c0dc460a-86b9-479c-883b-f1272bf7008c)  
+
+![image](https://github.com/user-attachments/assets/c3a6b75a-ff78-4d4c-b98f-fc88bae2e4a8)  
+
+![image](https://github.com/user-attachments/assets/68c03c59-f60d-4a2d-8852-f460b5c95593)  
+
+
+
+
 
 
 
