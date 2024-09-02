@@ -104,9 +104,23 @@ Diasable the policy and apply.
 
 
 ##### Duplicate Logon Banner Policy
-Navigate to:   
 Edit the Logon Banner policy by right clicking the policy object and selecting Edit from the pop-up menu.  
-![image](https://github.com/user-attachments/assets/417e7f43-0881-493c-8d59-86831653c9e6)
+![image](https://github.com/user-attachments/assets/417e7f43-0881-493c-8d59-86831653c9e6)   
+
+Navigate to: Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options.   
+Right click on Interactive logon: Message text for users attemptoing to logon and select Properties from the pop-up menu. Setting is enabled.
+![image](https://github.com/user-attachments/assets/dff49c54-e3fb-4f73-a995-50772a9e7fcc)  
+![image](https://github.com/user-attachments/assets/9dff404e-6b39-4ac6-ae4d-d367abc2ab5b)
+
+
+##### Ensure password policy settings for Security Analyst group are strong  
+
+
+
+
+
+
+
 
 
 
