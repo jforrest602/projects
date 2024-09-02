@@ -79,7 +79,7 @@ To add our new employees to this security group I selected the employess to move
 To confirm that the users were added to the group, I checked the group properties.
 ![image](https://github.com/user-attachments/assets/f8ce50fc-6bed-40b3-8c04-255ee31c3f0c)   
 
-#### Managing Group Policy Objects
+#### TASK 5: Managing Group Policy Objects
 Within AD, [group policy](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview) is used to define configurations for groups of users, client computers, and to help manage servers. Group policy settings are stored in a Group Policy Object (GPO). GPOs are essentially a collection of configurations (policy settings, security permissions, etc.) that are applied to a group (user, computers, servers, etc.).  
 
 #####  Deny access to removable storage devices
@@ -111,6 +111,12 @@ Navigate to: Computer Configuration > Policies > Windows Settings > Security Set
 Right click on Interactive logon: Message text for users attemptoing to logon and select Properties from the pop-up menu. Setting is enabled.
 ![image](https://github.com/user-attachments/assets/dff49c54-e3fb-4f73-a995-50772a9e7fcc)  
 ![image](https://github.com/user-attachments/assets/9dff404e-6b39-4ac6-ae4d-d367abc2ab5b)
+
+Right click on Interactive logon: Message totle for users attempting to log on, select Properties, and confirm policy is enabled.
+![image](https://github.com/user-attachments/assets/d9ce17cd-da95-4c07-b8f9-5d62bd4997a2)  
+
+![image](https://github.com/user-attachments/assets/90a5481e-3516-4748-bfcf-94b7272d9d43)
+  
 
 
 ##### Ensure password policy settings for Security Analyst group are strong  
