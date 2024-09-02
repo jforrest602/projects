@@ -155,12 +155,26 @@ Enter authorized user credentials and click OK three times.
 ![image](https://github.com/user-attachments/assets/adfa936b-c633-4fcf-90ea-c85204964ea4)
 
 
+#### TASK 7: Move the Computer Object to a New OU
+Open the Windows Administrative Management tool. Navigate to Active Directory Users and COmputers > INLANEFREIGHT.LOCAL > Computers, right click on the computer you want to move and select Move... from the pop-up menu.
 
+![image](https://github.com/user-attachments/assets/3457c83f-7950-4eb5-bad4-b53f60f60dfb)
+![image](https://github.com/user-attachments/assets/cea43b40-2197-4c02-8141-c6f548641a8e)
+![image](https://github.com/user-attachments/assets/4d9876f3-b137-46e7-b239-c697893bfb81)
+Select the container into which you want to move the object.
+![image](https://github.com/user-attachments/assets/d6bac30b-a923-4eb3-8065-1e0c4edff33a)
+Confirm object was successfully moved.
+![image](https://github.com/user-attachments/assets/e95e2775-b20b-4a19-a1d0-20ab79949c09)
 
-
-
-
-
+### Summary 
+reinforce the basic concepts surrounding AD management. great to get hands-on
+experience with topics and technologies like Active Directory. This experience provides a better
+understanding of how it functions and how it can possibly be taken advantage of. New
+vulnerabilities and attacks are being released every day that affect the Windows operating
+system, and by extension, Active Directory. A fundamental understanding of AD, the attacks that
+plague it, and defensive measures will take us a long way as security Professionals.
+### Conclusions
+exposure exposure exposure
 
 
 
