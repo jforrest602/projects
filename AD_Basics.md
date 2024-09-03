@@ -21,7 +21,8 @@ Once connected to the host, access Windows Administrative Tools by utilizing the
   
 
 ### TASK 1: User Management - Adding New Users
-The first task of the lab was to create three new users, something any AD admin will have to do when your company hires and onboards new employees. To do this, I accessed the AD Users and Computers via Windows Administrative Tools.
+The first task of the lab is to create three new users, something that any AD admin will have to do every time your company hires and onboards new employees. To do this, access AD Users and Computers via Windows Administrative Tools.  
+  
 ![image](https://github.com/user-attachments/assets/40526871-21f5-468d-9ee7-5d94b7a1a975)
 
 Navigating to the proper folder, in this case the INLANEFREIGHT.LOCAL domain and drilling down to the Corp > Employees > HQ-NYC > IT folder, I right clicked and selected New > User.
