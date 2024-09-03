@@ -12,9 +12,11 @@ This introductory guided lab was completed as part of the HTB [Introduction to A
 ![image](https://github.com/user-attachments/assets/ca863dbf-3300-4b95-8e7e-526763d71629)
     
 To get started, connect to the lab's host using the Remote Desktop Protocol (RDP).  
+  
 ![image](https://github.com/user-attachments/assets/c0350f3d-735a-4fed-ba5f-15c748acd1fa)
   
-Once connected to the host, access Windows Administrative Tools by utilizing the search function on the taskbar.  
+Once connected to the host, access Windows Administrative Tools by utilizing the search function on the taskbar.    
+  
 ![image](https://github.com/user-attachments/assets/e500e6a1-0e28-4e4e-941f-1ebd5206537b)
   
 
