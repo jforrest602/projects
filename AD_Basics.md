@@ -25,7 +25,7 @@ The first task of the lab is to create three new users, something that any AD ad
   
 ![image](https://github.com/user-attachments/assets/40526871-21f5-468d-9ee7-5d94b7a1a975)
 
-Navigating to the proper folder, in this case the INLANEFREIGHT.LOCAL domain and drilling down to the Corp > Employees > HQ-NYC > IT folder, I right clicked and selected New > User.
+Navigating to the proper folder, in this case the `INLANEFREIGHT.LOCAL` domain and drilling down to the `Corp > Employees > HQ-NYC > IT` folder, I right clicked and selected `New > User`.
 ![image](https://github.com/user-attachments/assets/55fdb3f0-d758-47da-9742-503716dd362b)
 
 Once the dialog box opened up, I entered the employee information (first and last name, email address, display name), created a temporary password, and enabled the *User must change password at next logon* feature. 
