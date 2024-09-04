@@ -128,19 +128,23 @@ To modify removable media policy settings, navigate to: `User Configuration > Po
 Right click the policy object and select `Edit` from the pop-up menu.  
 
 Enable the `Deny all access` option and `Apply`.  
+  
 ![image](https://github.com/user-attachments/assets/1d7f3743-df27-4ec1-aca3-5ca2e86beb6a)
   
 ![image](https://github.com/user-attachments/assets/69e4f8ef-8d02-4aa0-9e2b-407645b5cbb6)   
   
-##### Allow Security Analysts access to CMD.exe
-Navigate to: User Configuration > Policies > Administrative Templates > System. Select Prevent access to the command prompt and click Edit policy settings.
-![image](https://github.com/user-attachments/assets/39f4d531-3f19-4d37-a1ed-d548de7c2775  
-Diasable the policy and apply.
+#### Allow Access to CMD.exe
+Navigate to: `User Configuration > Policies > Administrative Templates > System`. Select `Prevent access to the command prompt` and click `Edit policy settings`.  
+  
+![image](https://github.com/user-attachments/assets/39f4d531-3f19-4d37-a1ed-d548de7c2775)  
+  
+Select `Disabled` and `Apply`.  
+  
 ![image](https://github.com/user-attachments/assets/475bd3bc-54ca-48d7-a4a0-4659d6311e18)
-![image](https://github.com/user-attachments/assets/ef174f49-33bd-4dd3-9f43-1493795ecc9e)   
-
-
-##### Duplicate Logon Banner Policy
+  
+![image](https://github.com/user-attachments/assets/ef174f49-33bd-4dd3-9f43-1493795ecc9e)     
+  
+#### Duplicate Logon Banner Policy
 Edit the Logon Banner policy by right clicking the policy object and selecting Edit from the pop-up menu.  
 ![image](https://github.com/user-attachments/assets/417e7f43-0881-493c-8d59-86831653c9e6)   
 
