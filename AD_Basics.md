@@ -35,7 +35,8 @@ Once the dialog box opens up, enter the new employee information. In this case, 
 
 In AD, object [attributes](https://learn.microsoft.com/en-us/windows/win32/adschema/attributes) is data that define the properties of objects. There are many different attributes an object can have but, here they include name, email address, and display name. Attributes can fall into several different types of class but, that is beyond the scope of this project.  
 
-Repeat this procedure for the additional two new users.    
+Repeat this procedure for the additional two new users.  
+  
 ![image](https://github.com/user-attachments/assets/c62c991d-fe50-4ae6-bd59-0111eeca38df)
   
 ![image](https://github.com/user-attachments/assets/ad314262-fcc7-4ae8-9a51-39fb804b6ac1)
