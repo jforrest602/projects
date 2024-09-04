@@ -60,7 +60,7 @@ Once located, right click and select `Delete` and click `Yes`.
   
 Repeat the process to remove the second user.  
   
-### TASK 3: User Management - Unlocking Accounts and Forcing Password Changes  
+### TASK 3: User Management - Unlock Account and Forcie Password Change  
 
 Within [Identity and Access Management](https://www.microsoft.com/en-us/security/business/security-101/what-is-identity-access-management-iam) (IAM), best practice includes setting a limit to the maximum number of login attempts before an account is locked. It helps [protect against brute force attacks](https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks).   
   
@@ -114,10 +114,10 @@ Confirm that the users were added to the group by checking the group properties.
   
 ### TASK 5: Manage Group Policy Objects  
   
-Within AD, [group policy](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview) is used to define configurations for groups of users, client computers, and to help manage servers. Group policy settings are stored in a Group Policy Object (GPO). GPOs are essentially a collection of configurations (policy settings, security permissions, etc.) that are applied to a group (user, computers, servers, etc.).  
-
+Within AD, [group policy](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview) is used to define configurations for groups of users, client computers, and to help manage servers. Group policy settings are stored in a Group Policy Object (GPO). GPOs are essentially a collection of configurations (policy settings, security permissions, etc.) that are applied to a group (user, computers, servers, etc.).   
+  
 #####  Deny access to removable storage devices
-Navigate to the Group Policy Management
+Navigate to the Group Policy Management  
 ![image](https://github.com/user-attachments/assets/fdf1f3b9-4352-42d3-9cd6-2c7bfd5a4c76)  
 
 
