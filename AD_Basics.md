@@ -1,6 +1,6 @@
 # Active Directory Basics 
 
-[Microsoft](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/active-directory-domain-services-overview?source=recommendations) Active Directory Domain Services (AD DS) "provides the methods for storing directory data and making this data available to network users and administrators." It is "a hierarchical structure that stores information about objects on the network." Objects are single elements like users, groups,shared folders, computers, or printers. AD stores object details and enables authorized users to access that information. Active Directory also provides authentication and authorization services within a Windows domain environment.  
+[Microsoft Active Directory Domain Services](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview) (AD DS) "provides the methods for storing directory data and making this data available to network users and administrators." It is "a hierarchical structure that stores information about objects on the network." Objects are single elements like users, groups,shared folders, computers, or printers. AD stores object details and enables authorized users to access that information. Active Directory also provides authentication and authorization services within a Windows domain environment.  
 
 According to [HTB](https://academy.hackthebox.com/module/74/section/699), "around 95% of Fortune 500 companies run Active Directory." If you're planning to join the IT or InfoSec fields, familiarizing yourself with AD is a must. Not only because it is so widespread but it is inherently insecure (primarily due to misconfigurations) making it a high priority target for any intruder looking to access and or move around a network.  
 
@@ -60,18 +60,28 @@ Once located, right click and select `Delete` and click `OK`.
   
 Repeat the process to remove the second user.  
   
-### TASK 3: User Management - Unlocking Accounts and Forcing Password Changes
-Within Identity and Access Management (IAM), best practice includes setting a limit to the maximum number of login attempts before an account is locked. It helps protect against brute force attacks. You may have experienced this before if you have ever forgotten a password.   
-This task required me to unlock a user account and force the user to change their password upon their next logon. This helps protect the user and organization in case their password was compromised rather than just forgotten.
-After locating the user via the search function, I right clicked and selected Reset Password on the pop-up menu.
+### TASK 3: User Management - Unlocking Accounts and Forcing Password Changes  
+
+Within [Identity and Access Management](https://www.microsoft.com/en-us/security/business/security-101/what-is-identity-access-management-iam) (IAM), best practice includes setting a limit to the maximum number of login attempts before an account is locked. It helps [protect against brute force attacks](https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks).   
+  
+You may have experienced this before if you have ever forgotten a password.   
+  
+This task requires unlocking a user account and forcing the user to change their password upon their next logon. This helps protect both the user and the organization in case the user credential were in fact compromised rather than just forgotten. 
+
+Locate the user via the search function. Right click and select `Reset Password` on the pop-up menu.  
+  
 ![image](https://github.com/user-attachments/assets/0a9bc2f3-02e2-4e7f-8ca5-1214c79aef6e)
-
-Once there, I made sure that the Unlock Account and User must change password at next logon options were selected and created a temporary password for the user.
+  
+Once there, make sure that the `Unlock Account` and `User must change password at next logon` options are selected and create a temporary password for the user.  
+  
 ![image](https://github.com/user-attachments/assets/51b6ee6d-36ef-427e-be7a-f1980850a569)
+    
 ![image](https://github.com/user-attachments/assets/0eab7e60-80be-47e9-b3df-a75bc13dffa2)
-I want to note here that this is just one of several ways that this task can be accomplished through the GUI.
+  
+It is useful to note here, that this is just one of several ways that this task can be accomplished through the GUI.  
 
-#### TASK 4: Managing Groups and Organizational Units - Creating a New OU & Security Group
+### TASK 4: Managing Groups and Organizational Units - Creating a New OU & Security Group  
+
 First up under this task was to create a new Analysts organizational unit under IT. [Organizational units](https://learn.microsoft.com/en-us/entra/identity/domain-services/create-ou) allow you to logically group objects together and apply group policy to enforce configuration settings ultimately making your job as admin a bit easier.   
 ![image](https://github.com/user-attachments/assets/69e13475-40dc-4e8b-809e-c9b9bac1328f)
 ![image](https://github.com/user-attachments/assets/4bb728f4-57b6-4324-b1a7-98ff306e182f)   
