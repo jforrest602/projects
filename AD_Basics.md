@@ -154,13 +154,13 @@ To edit the Logon Banner policy, open `Group Policy Management` within `Windows 
     
 Navigate to: `Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options`.   
   
-Right click on `Interactive logon: Message text for users attemptoing to logon` and select `Properties` from the pop-up menu. In this instance, the setting is already enabled.  
+Right click on `Interactive logon: Message text for users attempting to logon` and select `Properties` from the pop-up menu. In this instance, the setting is already enabled.  
   
 ![image](https://github.com/user-attachments/assets/dff49c54-e3fb-4f73-a995-50772a9e7fcc)  
   
 ![image](https://github.com/user-attachments/assets/9dff404e-6b39-4ac6-ae4d-d367abc2ab5b)
   
-Next, right click on `Interactive logon: Message totle for users attempting to log on`, select `Properties`, and, in this case, confirm policy is enabled.  
+Next, right click on `Interactive logon: Message title for users attempting to log on`, select `Properties`, and, in this case, confirm policy is enabled.  
   
 ![image](https://github.com/user-attachments/assets/d9ce17cd-da95-4c07-b8f9-5d62bd4997a2)  
   
