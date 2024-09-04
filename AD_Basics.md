@@ -22,7 +22,7 @@ Once connected to the host, access Windows Administrative Tools by utilizing the
 ![image](https://github.com/user-attachments/assets/e500e6a1-0e28-4e4e-941f-1ebd5206537b)
   
 
-### TASK 1: User Management - Adding New Users
+### TASK 1: User Management - Add New Users
 The first task of the lab is to create three new users, something that an AD admin will need to do each time the organization onboards new employees. To do this via the GUI, access AD Users and Computers via Windows Administrative Tools.  
   
 ![image](https://github.com/user-attachments/assets/40526871-21f5-468d-9ee7-5d94b7a1a975)
@@ -43,7 +43,7 @@ Repeat this procedure for the additional two new users.
 ![image](https://github.com/user-attachments/assets/4ab803a4-96da-42a5-90ae-edd854f7381b)
   
 
-#### TASK 2: User Managment - Removing Users
+### TASK 2: User Managment - Remove Users
 Of course, employees (users) leave companies too. Next up, I was tasked with removing two users. I only had first and last names to work with so, I utilized the search function to locate the users.
 
 ![image](https://github.com/user-attachments/assets/f6ce2483-13cb-448a-a847-c799382417ba)
