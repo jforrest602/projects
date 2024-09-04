@@ -148,77 +148,102 @@ Select `Disabled` and `Apply`.
   
 #### Duplicate Logon Banner Policy  
   
-Edit the Logon Banner policy by right clicking the policy object and selecting `Edit` from the pop-up menu.    
+To edit the Logon Banner policy, open `Group Policy Management` within `Windows Administrative Tools` and navigate to `Group Policy Objects`. Right click the policy object `Logon Banner` and select `Edit` from the pop-up menu.    
   
 ![image](https://github.com/user-attachments/assets/417e7f43-0881-493c-8d59-86831653c9e6)   
-  
+    
 Navigate to: `Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options`.   
-Right click on Interactive logon: Message text for users attemptoing to logon and select Properties from the pop-up menu. Setting is enabled.
-![image](https://github.com/user-attachments/assets/dff49c54-e3fb-4f73-a995-50772a9e7fcc)  
-![image](https://github.com/user-attachments/assets/9dff404e-6b39-4ac6-ae4d-d367abc2ab5b)
-
-Right click on Interactive logon: Message totle for users attempting to log on, select Properties, and confirm policy is enabled.
-![image](https://github.com/user-attachments/assets/d9ce17cd-da95-4c07-b8f9-5d62bd4997a2)  
-
-![image](https://github.com/user-attachments/assets/90a5481e-3516-4748-bfcf-94b7272d9d43)
+Right click on `Interactive logon: Message text for users attemptoing to logon` and select `Properties` from the pop-up menu. In this instance, the setting is already enabled.  
   
-
-
-##### Ensure password policy settings for Security Analyst group are strong  
-Within the Group Policy Management editor, navigate to: Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy.
-
+![image](https://github.com/user-attachments/assets/dff49c54-e3fb-4f73-a995-50772a9e7fcc)  
+  
+![image](https://github.com/user-attachments/assets/9dff404e-6b39-4ac6-ae4d-d367abc2ab5b)
+  
+Next, right click on `Interactive logon: Message totle for users attempting to log on`, select `Properties`, and, in this case, confirm policy is enabled.  
+  
+![image](https://github.com/user-attachments/assets/d9ce17cd-da95-4c07-b8f9-5d62bd4997a2)  
+  
+![image](https://github.com/user-attachments/assets/90a5481e-3516-4748-bfcf-94b7272d9d43)
+    
+#### Ensure that password policy settings for Security Analyst group are strong  
+Within the Group Policy Management editor, navigate to: `Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy`.
+  
 ![image](https://github.com/user-attachments/assets/139d3256-2010-485e-b7b9-966dcccd8d56)  
-Right click each policy setting and click Properties.
-![image](https://github.com/user-attachments/assets/38bde3f3-7a9f-43fc-a1a7-a8c555b25b42)
-Define policy settings and apply.
+  
+Right click each policy setting and click `Properties`.  
+
+![image](https://github.com/user-attachments/assets/38bde3f3-7a9f-43fc-a1a7-a8c555b25b42)  
+  
+Define policy settings and `Apply`.  
+  
 ![image](https://github.com/user-attachments/assets/c0dc460a-86b9-479c-883b-f1272bf7008c)  
-
+  
 ![image](https://github.com/user-attachments/assets/c3a6b75a-ff78-4d4c-b98f-fc88bae2e4a8)  
-
+  
 ![image](https://github.com/user-attachments/assets/68c03c59-f60d-4a2d-8852-f460b5c95593)  
-
-#### TASK 6: Add & Remove Computers to the Domain
-In order to add a remote computer to the localhost domain, you first have to RDP to that computer. Do this by opening the Remote Desktop Connection application.
+  
+### TASK 6: Add & Remove Computers to the Domain
+To add a remote computer to the `INLANEFREIGHT.LOCAL` domain, first RDP to the computer to be added to the domain. Open the Remote Desktop Connection application.  
+  
 ![image](https://github.com/user-attachments/assets/38be997e-a5ca-468d-9633-0379bf5cffdb)  
-Enter the name of the computer you wih to connect to and enter your credentials.
+  
+Enter the name of the computer you wih to connect to and enter authorized credentials.  
+  
 ![image](https://github.com/user-attachments/assets/f52b69a3-b72b-4964-8607-c02b1a7fcfcf)
+  
 ![image](https://github.com/user-attachments/assets/cb63fc41-5a9c-4e46-8768-c7370870158a)  
-Once connected, open up the computers Control Panel and navigate to: System and Security > System > Change settings.
+  
+Once connected, open up the computer's Control Panel and navigate to: `System and Security > System > Change settings`.
+  
 ![image](https://github.com/user-attachments/assets/5699323a-a4d3-4d4c-9d5e-93a869df4317)  
+  
 ![image](https://github.com/user-attachments/assets/3f154f40-2ee3-4387-90d2-90fbd9b216de)  
+  
 ![image](https://github.com/user-attachments/assets/1a6c7fcb-1eff-416a-aa37-b665b5746f12) 
+  
 ![image](https://github.com/user-attachments/assets/363573b7-b73d-45ea-9c28-aee9aeda9425)  
-After the dialog box opens click Change next to To rename this computer or change its domain or workgroup, click change.
+  
+After the dialog box opens click `Change` located next to `To rename this computer or change its domain or workgroup`.  
+  
  ![image](https://github.com/user-attachments/assets/ef2b90dc-e9a0-461c-857a-83f7fad65e43)  
- 
-Select Domain and enter domain name.
+   
+Select `Domain` and enter the domain name.  
+  
 ![image](https://github.com/user-attachments/assets/60af2cfb-e473-4880-9233-87ee66287bec) 
-Enter authorized user credentials and click OK three times.
+  
+Enter authorized user credentials and click `OK` three times.  
+
 ![image](https://github.com/user-attachments/assets/c46cfd0b-40bb-4b03-a1c9-a6b1dc9bc3d6) 
 ![image](https://github.com/user-attachments/assets/6898272f-cd9c-40d8-948d-c7cb4d50d280)
 ![image](https://github.com/user-attachments/assets/87035151-ece2-4658-b048-23f5d19bce1f) 
 ![image](https://github.com/user-attachments/assets/adfa936b-c633-4fcf-90ea-c85204964ea4)
 
-
-#### TASK 7: Move the Computer Object to a New OU
-Open the Windows Administrative Management tool. Navigate to Active Directory Users and COmputers > INLANEFREIGHT.LOCAL > Computers, right click on the computer you want to move and select Move... from the pop-up menu.
-
+### TASK 7: Move the Computer Object to a New OU
+Open the Windows Administrative Management tool. Navigate to: `Active Directory Users and Computers > INLANEFREIGHT.LOCAL > Computers` and right click on the computer you want to move. Select `Move...` from the pop-up menu.  
+  
 ![image](https://github.com/user-attachments/assets/3457c83f-7950-4eb5-bad4-b53f60f60dfb)
 ![image](https://github.com/user-attachments/assets/cea43b40-2197-4c02-8141-c6f548641a8e)
 ![image](https://github.com/user-attachments/assets/4d9876f3-b137-46e7-b239-c697893bfb81)
-Select the container into which you want to move the object.
+  
+Select the container into which you want to move the object.  
+  
 ![image](https://github.com/user-attachments/assets/d6bac30b-a923-4eb3-8065-1e0c4edff33a)
-Confirm object was successfully moved.
-![image](https://github.com/user-attachments/assets/e95e2775-b20b-4a19-a1d0-20ab79949c09)
-
-### Summary 
+  
+Confirm object was successfully moved.  
+  
+![image](https://github.com/user-attachments/assets/e95e2775-b20b-4a19-a1d0-20ab79949c09)  
+  
+## Summary   
+  
 reinforce the basic concepts surrounding AD management. great to get hands-on
 experience with topics and technologies like Active Directory. This experience provides a better
 understanding of how it functions and how it can possibly be taken advantage of. New
 vulnerabilities and attacks are being released every day that affect the Windows operating
 system, and by extension, Active Directory. A fundamental understanding of AD, the attacks that
 plague it, and defensive measures will take us a long way as security Professionals.
-### Conclusions
+  
+## Conclusions  
+  
 exposure exposure exposure
 
 
