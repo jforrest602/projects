@@ -43,8 +43,9 @@ Repeat this procedure for the additional two new users.
 ![image](https://github.com/user-attachments/assets/4ab803a4-96da-42a5-90ae-edd854f7381b)
   
 
-### TASK 2: User Managment - Remove Users
-Of course, employees (users) leave companies too. Next up, I was tasked with removing two users. I only had first and last names to work with so, I utilized the search function to locate the users.
+### TASK 2: User Managment - Remove Users  
+  
+Of course, employees (users) leave organizations too. Next up, I was tasked with removing two users. I only had first and last names to work with so, I utilized the search function to locate the users.
 
 ![image](https://github.com/user-attachments/assets/f6ce2483-13cb-448a-a847-c799382417ba)
 
