@@ -52,7 +52,7 @@ In this instance, we only have first and last names to work with so, utilize the
   
 ![image](https://github.com/user-attachments/assets/f6ce2483-13cb-448a-a847-c799382417ba)
   
-Once located, right click and select `Delete` and click `OK`.  
+Once located, right click and select `Delete` and click `Yes`.  
   
 ![image](https://github.com/user-attachments/assets/586d915f-8efa-46d9-a2be-f89983d054dd)  
   
