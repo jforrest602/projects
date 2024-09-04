@@ -33,7 +33,7 @@ Navigate to the proper location, in this case `INLANEFREIGHT.LOCAL` domain and d
   
 Once the dialog box opens up, enter the new employee information. In this case, onl first and last name, email address, display name are required, as well as a temporary password. Enable the `User must change password at next logon` feature. 
 
-In AD, object [attributes](https://learn.microsoft.com/en-us/windows/win32/adschema/attributes) is data that define the properties of objects. There are many different attributes an object can have but, here they include name, email address, and display name. Attributes can fall into several different types of class but, that is beyond the scope of this project.  
+In AD, object [attributes](https://learn.microsoft.com/en-us/windows/win32/adschema/attributes) are data that define the properties of objects. There are many different attributes an object can have but, here they include name, email address, and display name. Attributes can fall into several different types of class but, that is beyond the scope of this project.  
 
 Repeat this procedure for the additional two new users.  
   
@@ -116,7 +116,8 @@ Confirm that the users were added to the group by checking the group properties.
   
 Within AD, [group policy](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview) is used to define configurations for groups of users, client computers, and to help manage servers. Group policy settings are stored in a Group Policy Object (GPO). GPOs are essentially a collection of configurations (policy settings, security permissions, etc.) that are applied to a group (user, computers, servers, etc.).   
   
-####  Deny access to removable storage devices
+####  Deny access to removable storage devices  
+  
 Navigate to the `Group Policy Management` function within the `Administrative Tools`.    
   
 ![image](https://github.com/user-attachments/assets/fdf1f3b9-4352-42d3-9cd6-2c7bfd5a4c76)  
@@ -133,7 +134,8 @@ Enable the `Deny all access` option and `Apply`.
   
 ![image](https://github.com/user-attachments/assets/69e4f8ef-8d02-4aa0-9e2b-407645b5cbb6)   
   
-#### Allow Access to CMD.exe
+#### Allow Access to CMD.exe  
+  
 Navigate to: `User Configuration > Policies > Administrative Templates > System`. Select `Prevent access to the command prompt` and click `Edit policy settings`.  
   
 ![image](https://github.com/user-attachments/assets/39f4d531-3f19-4d37-a1ed-d548de7c2775)  
@@ -144,11 +146,13 @@ Select `Disabled` and `Apply`.
   
 ![image](https://github.com/user-attachments/assets/ef174f49-33bd-4dd3-9f43-1493795ecc9e)     
   
-#### Duplicate Logon Banner Policy
-Edit the Logon Banner policy by right clicking the policy object and selecting Edit from the pop-up menu.  
+#### Duplicate Logon Banner Policy  
+  
+Edit the Logon Banner policy by right clicking the policy object and selecting `Edit` from the pop-up menu.    
+  
 ![image](https://github.com/user-attachments/assets/417e7f43-0881-493c-8d59-86831653c9e6)   
-
-Navigate to: Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options.   
+  
+Navigate to: `Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options`.   
 Right click on Interactive logon: Message text for users attemptoing to logon and select Properties from the pop-up menu. Setting is enabled.
 ![image](https://github.com/user-attachments/assets/dff49c54-e3fb-4f73-a995-50772a9e7fcc)  
 ![image](https://github.com/user-attachments/assets/9dff404e-6b39-4ac6-ae4d-d367abc2ab5b)
