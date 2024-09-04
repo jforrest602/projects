@@ -45,18 +45,21 @@ Repeat this procedure for the additional two new users.
 
 ### TASK 2: User Managment - Remove Users  
   
-Of course, employees (users) leave organizations too. Next up, I was tasked with removing two users. I only had first and last names to work with so, I utilized the search function to locate the users.
+Of course, employees (users) leave organizations too. When they do leave, AD admins will need to remove the users or reconfigure the user's rights and permissions.  
 
+In this instance, we only have first and last names to work with so, utilize the search function to locate the user profiles.  
+  
 ![image](https://github.com/user-attachments/assets/f6ce2483-13cb-448a-a847-c799382417ba)
-
-Once located, it is as simple as right clicking and selecting the Delete option and clicking OK.
-
-![image](https://github.com/user-attachments/assets/586d915f-8efa-46d9-a2be-f89983d054dd)
+  
+Once located, right click and select `Delete` and click `OK`.  
+  
+![image](https://github.com/user-attachments/assets/586d915f-8efa-46d9-a2be-f89983d054dd)  
+  
 ![image](https://github.com/user-attachments/assets/b9f794b2-8c7c-4cad-b9fb-47cee6dcb993)
-
-This process was repeated to remove the second user.
-
-#### TASK 3: User Management - Unlocking Accounts and Forcing Password Changes
+  
+Repeat the process to remove the second user.  
+  
+### TASK 3: User Management - Unlocking Accounts and Forcing Password Changes
 Within Identity and Access Management (IAM), best practice includes setting a limit to the maximum number of login attempts before an account is locked. It helps protect against brute force attacks. You may have experienced this before if you have ever forgotten a password.   
 This task required me to unlock a user account and force the user to change their password upon their next logon. This helps protect the user and organization in case their password was compromised rather than just forgotten.
 After locating the user via the search function, I right clicked and selected Reset Password on the pop-up menu.
