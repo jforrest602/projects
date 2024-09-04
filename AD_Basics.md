@@ -31,7 +31,7 @@ Navigate to the proper location, in this case `INLANEFREIGHT.LOCAL` domain and d
     
 ![image](https://github.com/user-attachments/assets/55fdb3f0-d758-47da-9742-503716dd362b)
   
-Once the dialog box opens up, enter the new employee information. In this case, onl first and last name, email address, display name are required, as well as a temporary password. Enable the `*User must change password at next logon*` feature. 
+Once the dialog box opens up, enter the new employee information. In this case, onl first and last name, email address, display name are required, as well as a temporary password. Enable the `User must change password at next logon` feature. 
 
 In AD, object [attributes](https://learn.microsoft.com/en-us/windows/win32/adschema/attributes) is data that define the properties of objects. There are many different attributes an object can have but, here they include name, email address, and display name. Attributes can fall into several different types of class but, that is beyond the scope of this project.  
 
