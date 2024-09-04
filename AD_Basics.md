@@ -80,18 +80,28 @@ Once there, make sure that the `Unlock Account` and `User must change password a
   
 It is useful to note here, that this is just one of several ways that this task can be accomplished through the GUI.  
 
-### TASK 4: Managing Groups and Organizational Units - Creating a New OU & Security Group  
+### TASK 4: Manage Groups and Organizational Units - Create a New OU & Security Group  
 
-First up under this task was to create a new Analysts organizational unit under IT. [Organizational units](https://learn.microsoft.com/en-us/entra/identity/domain-services/create-ou) allow you to logically group objects together and apply group policy to enforce configuration settings ultimately making your job as admin a bit easier.   
+The first thing to do within this task is to create a new Analysts organizational unit (OU) under IT. Withing AD,  [organizational units](https://learn.microsoft.com/en-us/entra/identity/domain-services/create-ou) allow you to logically group objects together and apply group policies to enforce configuration settings, ultimately making your job as administrator a bit easier.   
+
+Staying within Active Directory Users and Computers navigate again to  `Corp > Employees > HQ-NYC > IT` folder under the `INLANEFREIGHT.LOCAL` domain. Right click and select `New > Organizational Unit`.
+
 ![image](https://github.com/user-attachments/assets/69e13475-40dc-4e8b-809e-c9b9bac1328f)
+  
 ![image](https://github.com/user-attachments/assets/4bb728f4-57b6-4324-b1a7-98ff306e182f)   
-This is straightforward when operating via the GUI.   
-Creating the new Security Group within the new Analysts OU followed similar steps. 
+    
+Create a new Security Group within the new Analysts OU following similar steps.   
+  
 ![image](https://github.com/user-attachments/assets/a7fd2d88-2339-413a-bee6-bc47c9baa1cd)
+  
 ![image](https://github.com/user-attachments/assets/992dbdf5-05b4-4260-83b1-a33d4d15a401)
-Confirmation that the group was sucessfully created.
+  
+Confirm that the group was sucessfully created.  
+  
 ![image](https://github.com/user-attachments/assets/3c1ac9b1-c2c1-4dd9-b08e-bdd5f2aebd12)
+  
 To add our new employees to this security group I selected the employess to move and utilized the toolbar button for Adds selected objects to group you specify.   
+
 ![image](https://github.com/user-attachments/assets/03b67bbb-1264-4f5f-8f91-35ecb6e9e1bb)
 ![image](https://github.com/user-attachments/assets/bce9dc51-57d0-4057-bde7-818ae713860e)
 ![image](https://github.com/user-attachments/assets/d6dffd12-746d-4509-82b4-8fa350f4f338)
