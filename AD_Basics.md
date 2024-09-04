@@ -6,7 +6,9 @@ According to [HTB](https://academy.hackthebox.com/module/74/section/699), "aroun
 
 ![AD ninja](https://github.com/user-attachments/assets/5f0f9086-44a4-438f-a4ad-15fe0d29c0d4)
      
-This introductory guided lab was completed as part of the HTB [Introduction to Active Directory](https://academy.hackthebox.com/module/details/74) module which introduces AD basics. The goal of this lab was to demonstrate the skills needed to perform basic AD administrative tasks. In this case, through the Windows graphical user interface (GUI).  
+This introductory guided lab was completed as part of the HTB [Introduction to Active Directory](https://academy.hackthebox.com/module/details/74) module which introduces AD basics. The goal of this lab was to demonstrate the skills needed to perform basic AD administrative tasks. In this case, through the Windows graphical user interface (GUI).   
+
+Most, if not all, of the tasks performed in this demonstration can also be performed via the command line/PowerShell.
 
 ## What's the scenario?
 ![image](https://github.com/user-attachments/assets/ca863dbf-3300-4b95-8e7e-526763d71629)
@@ -15,28 +17,31 @@ To get started, connect to the lab's host using the Remote Desktop Protocol (RDP
   
 ![image](https://github.com/user-attachments/assets/c0350f3d-735a-4fed-ba5f-15c748acd1fa)
   
-Once connected to the host, access Windows Administrative Tools by utilizing the search function on the taskbar.    
-  
+Once connected to the host, access Windows Administrative Tools by utilizing the search function on the taskbar.       
+     
 ![image](https://github.com/user-attachments/assets/e500e6a1-0e28-4e4e-941f-1ebd5206537b)
   
 
 ### TASK 1: User Management - Adding New Users
-The first task of the lab is to create three new users, something that any AD admin will have to do every time your company hires and onboards new employees. To do this, access AD Users and Computers via Windows Administrative Tools.  
+The first task of the lab is to create three new users, something that an AD admin will need to do each time the organization onboards new employees. To do this via the GUI, access AD Users and Computers via Windows Administrative Tools.  
   
 ![image](https://github.com/user-attachments/assets/40526871-21f5-468d-9ee7-5d94b7a1a975)
 
-Navigating to the proper folder, in this case the `INLANEFREIGHT.LOCAL` domain and drilling down to the `Corp > Employees > HQ-NYC > IT` folder, I right clicked and selected `New > User`.
+Navigate to the proper location, in this case `INLANEFREIGHT.LOCAL` domain and drill down to the `Corp > Employees > HQ-NYC > IT` folder. Right click and select `New > User`.    
+    
 ![image](https://github.com/user-attachments/assets/55fdb3f0-d758-47da-9742-503716dd362b)
+  
+Once the dialog box opens up, enter the new employee information. In this case, onl first and last name, email address, display name are required, as well as a temporary password. Enable the `*User must change password at next logon*` feature. 
 
-Once the dialog box opened up, I entered the employee information (first and last name, email address, display name), created a temporary password, and enabled the *User must change password at next logon* feature. 
+In AD, object [attributes](https://learn.microsoft.com/en-us/windows/win32/adschema/attributes) is data that define the properties of objects. There are many different attributes an object can have but, here they include name, email address, and display name. Attributes can fall into several different types of class but, that is beyond the scope of this project.  
 
-In AD, object [attributes](https://learn.microsoft.com/en-us/windows/win32/adschema/attributes) is data that define the properties of objects. There are many different attributes an object can have but, here they include name, email address, and display name. Attributes can fall into several different types of class but, that is beyond the scope of this project. 
-
-I repeteaded this procedure for an additional two new users.
+Repeat this procedure for the additional two new users.    
 ![image](https://github.com/user-attachments/assets/c62c991d-fe50-4ae6-bd59-0111eeca38df)
+  
 ![image](https://github.com/user-attachments/assets/ad314262-fcc7-4ae8-9a51-39fb804b6ac1)
+  
 ![image](https://github.com/user-attachments/assets/4ab803a4-96da-42a5-90ae-edd854f7381b)
-
+  
 
 #### TASK 2: User Managment - Removing Users
 Of course, employees (users) leave companies too. Next up, I was tasked with removing two users. I only had first and last names to work with so, I utilized the search function to locate the users.
