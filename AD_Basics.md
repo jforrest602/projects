@@ -236,7 +236,7 @@ Confirm object was successfully moved.
   
 ## Summary   
   
-This lab intends to reinforce the introductory concepts around Active Directory administration. It covered managing users in AD (both adding and removing users), groups and organizational units, and group policy objects. Finally, we had to add computers to the domain. It provided hands-on experience with the information covered in the preceding module about basic AD functionality, schema, and protocols used to ensure authentication, authorization, and accounting within a domain. All of which are essential to ensuring the security and smooth operation of domains. It introduced us to the terminology and core concepts needed to understand how AD functions and to begin to understand its vulnerabilities and attack surface.   
+This lab intends to reinforce the introductory concepts around Active Directory administration. It covered managing users, groups and organizational units, and group policy objects. Finally, we had to add computers to the domain. It provided hands-on experience with the information covered in the preceding module about basic AD functionality, schema, and protocols used to ensure authentication, authorization, and accounting within a domain. All of which are essential to ensuring the security and smooth operation of domains. It introduced us to the terminology and core concepts needed to understand how AD functions and to begin to understand its vulnerabilities and attack surface.   
   
 ## Conclusions    
   
