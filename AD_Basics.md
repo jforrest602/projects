@@ -236,34 +236,9 @@ Confirm object was successfully moved.
   
 ## Summary   
   
-reinforce the basic concepts surrounding AD management. great to get hands-on
-experience with topics and technologies like Active Directory. This experience provides a better
-understanding of how it functions and how it can possibly be taken advantage of. New
-vulnerabilities and attacks are being released every day that affect the Windows operating
-system, and by extension, Active Directory. A fundamental understanding of AD, the attacks that
-plague it, and defensive measures will take us a long way as security Professionals.
+This lab intends to reinforce the introductory concepts around Active Directory administration. It covered managing users in AD (both adding and removing users), groups and organizational units, and group policy objects. Finally, we had to add computers to the domain. It provided hands-on experience with the information covered in the preceding module about basic AD functionality, schema, and protocols used to ensure authentication, authorization, and accounting within a domain. All of which are essential to ensuring the security and smooth operation of domains. It introduced us to the terminology and core concepts needed to understand how AD functions and to begin to understand its vulnerabilities and attack surface.   
   
-## Conclusions  
+## Conclusions    
   
-exposure exposure exposure
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+The biggest takeaway for me is the exposure I had working, hands-on with AD. Although the lab only covered AD fundamentals that any entry level Windows sysadmin is expected to be proficient in, it gave me more confidence to work in an administrative capacity with the Windows OS. I feel confident taking on the next challenges of my learning path and build upon this foundation. I can improve upon this lab by attempting to complete the same tasks through the command line (CLI) rather than the GUI. Such hands-on practice will increase both AD and command line skills. As the learning module made clear, AD by nature is insecure. New attacks on the Windows OS surface everyday. A firm grasp of AD, and how it is vulnerable, will make me a better security professional.  
 
