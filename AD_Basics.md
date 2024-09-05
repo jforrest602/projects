@@ -240,5 +240,7 @@ This lab intends to reinforce the introductory concepts around Active Directory 
   
 ## Conclusions    
   
-The biggest takeaway for me is the exposure I had working, hands-on with AD. Although the lab only covered AD fundamentals that any entry level Windows sysadmin is expected to be proficient in, it gave me more confidence to work in an administrative capacity with the Windows OS. I feel confident taking on the next challenges of my learning path and building upon this foundation. I can improve upon this lab by attempting to complete the same tasks through the command line (CLI) rather than the GUI. Such hands-on practice will increase both AD and command line skills. As the learning module made clear, AD by nature is insecure. New attacks on the Windows OS surface everyday. A firm grasp of AD, and how it is vulnerable, will make me a better security professional.  
+The biggest takeaway for me is the exposure I had working, hands-on with AD. Although the lab only covered AD fundamentals that any entry level Windows sysadmin is expected to be proficient in, it gave me more confidence to work in an administrative capacity with the Windows OS. I feel confident taking on the next challenges of my learning path and building upon this foundation. I can improve upon this lab by attempting to complete the same tasks through the command line (CLI) rather than the GUI. Such hands-on practice will increase both AD and command line skills.   
+  
+As the learning module made clear, AD by nature is insecure. New attacks on the Windows OS surface everyday. A firm grasp of AD, and how it is vulnerable, will make me a better security professional.  
 
