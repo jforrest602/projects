@@ -11,7 +11,7 @@ For more information about the project creator, visit https://www.mydfir.com/.
 
 To find out more about the challenge and try it for yourself, check out https://www.youtube.com/@MyDFIR, where you will find the entire video series for the challenge and many other helpful and informative videos for anyone looking to build their cybersecurity knowledge and skillset.
 
-# Day One: Logical Diagram
+## Day One: Logical Diagram
 
 ![MYDFIR 30 Day Challenge Network Diagram drawio](https://github.com/user-attachments/assets/8571246f-1dd1-42db-b6da-3c5a82e15e4a)
 
@@ -27,17 +27,17 @@ The diagram also includes two important machines:
 
 This exercise provided me with a clearer understanding of how the network components interact. Using [Draw.io](http://draw.io/) was straightforward, making it a great platform to get comfortable with building network diagrams. It also emphasized the importance of having a clear, organized representation of network setups, especially in cybersecurity scenarios.
 
-# Day Two: Introducing the ELK Stack
+## Day Two: Introducing the ELK Stack
 
 The ELK Stack is widely used in the cybersecurity industry and in SOCs specifically. Understanding what it is, its benefits, and how to get the most out of deploying it will help aspiring SOC analysts standout among the competition.
 
-#### Elasticsearch
+#### [ Elasticsearch](https://www.elastic.co/elasticsearch)
 Elasticsearch is a database used for storing and searching log information. It allows the user to search across their data. Users can integrate various applications to interact with the database in a programable way to access information.
 
-#### Logstash
+#### [Logstash](https://www.elastic.co/logstash)
 Logstash is a data processing pipeline for ingesting and normalizing data from multiple sources. It collects telemetry via [Beats](https://www.elastic.co/beats) or [Elastic Agents](https://www.elastic.co/elastic-agent) (this project will utilize Elastic Agents). It outputs the collected data into Elasticsearch. Importantly, it allows users to create and apply custom filters to forward desired data only.
 
-#### Kibana
+#### [Kibana](https://www.elastic.co/kibana)
 Kibana allows users to access Elasticsearch data via a web console to search data, create visual dashboards, and create alerts or reports. 
 
 #### Benefits of the ELK Stack
@@ -45,6 +45,6 @@ Kibana allows users to access Elasticsearch data via a web console to search dat
 - Powerful visualization tools for creating dashboards and reports⁠
 - Extensive ecosystem with numerous integrations and a large user community
 
-The ELK Stack is comparable to using Splunk in terms of indexing and forwarding data, as well as the ability to access the data via a graphical user interface (GUI).
+The ELK Stack is comparable to using [Splunk](http://www.splunk.com/) in terms of indexing and forwarding data, as well as the ability to access the data via a graphical user interface (GUI).
 
-# Day Three
+## Day Three: Setup Elasticsearch
