@@ -15,13 +15,17 @@ To find out more about the challenge and try it for yourself, check out https://
 
 ![MYDFIR 30 Day Challenge Network Diagram drawio](https://github.com/user-attachments/assets/8571246f-1dd1-42db-b6da-3c5a82e15e4a)
 
-The first task of the challenge was to create a logical diagram of the challenge infrastructure. The resource used to create the diagram was [draw.io](http://draw.io/), a user-friendly platform with many tools and options for customizing diagrams. 
+The first task of the challenge was to create a logical diagram of the challenge infrastructure. The resource used to create the diagram was [draw.io](http://draw.io/), an intuitive platform that offers numerous tools for customizing diagrams. The process taught me valuable lessons in understanding network setups and visualizing complex infrastructures and I now have a logical representation of the challenge setup. 
 
-From the diagram, we see that the challenge involves six servers, five of which reside on a virtual private cloud (VPC). One advantage of using a VPC provider is that it allows you to place your virtual servers on the same network. Another is that there will be much less consumption of your own machine's resources compared to if you were running these virtual servers on your local machine. In the top left corner of the VPC inner rectangle, our IP range and subnet mask are noted. 
+From the diagram, we see that the challenge involves six servers, five of which reside on a virtual private cloud (VPC). A VPC is a powerful tool for managing virtual resources efficiently, as it enables you to place virtual servers on the same network. This not only optimizes network performance but also reduces the strain on your local machine’s resources. If these servers were running locally, they would consume significant processing power and memory, which is not ideal for complex challenges like this.
 
-We see that the VPC is connected to the internet via an internet gateway represented by the orange cloud. This can be thought of as the internet service provider (ISP). Finally, we have our own SOC analyst machine in blue and the attackers machine and command and control server in red. Kali Linux is a Linux distribution designed for digital forensics and penetration testing and is a preferred operating system of both ethical and unethical hackers. 
+The VPC is secured and connected to the internet through an internet gateway, depicted by an orange cloud in the diagram. This gateway acts as the link between the VPC and the broader internet, much like an Internet Service Provider (ISP) would.
 
-Day one taught me how to create a diagram and I now have a logical representation of the challenge setup. [Draw.io](http://draw.io/) is an excellent platform for getting comfortable with building logical diagrams.
+The diagram also includes two important machines:
+- The SOC Analyst Machine (blue): This is where we, as defenders, would monitor and respond to any suspicious activity within the network.
+- The Attacker’s Machine and Command and Control (C2) Server (red): This represents the tools and systems an attacker would use to infiltrate or compromise the network. In this challenge, the attacker’s machine runs Kali Linux, a widely used distribution for both ethical and unethical hacking due to its comprehensive tools for penetration testing.
+
+This exercise provided me with a clearer understanding of how the network components interact. Using [Draw.io](http://draw.io/) was straightforward, making it a great platform to get comfortable with building network diagrams. It also emphasized the importance of having a clear, organized representation of network setups, especially in cybersecurity scenarios.
 
 # Day Two: The ELK Stack
 
