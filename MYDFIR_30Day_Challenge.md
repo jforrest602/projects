@@ -62,6 +62,9 @@ For aspiring SOC analysts, understanding the ELK Stack can be a valuable asset. 
 
 ## Day Three: Setup Elasticsearch
 
+![elastic1](https://github.com/user-attachments/assets/0ffc7f43-8e02-4c68-91e6-555bf4f009a6)
+
+
 Today felt like the true beginning of this challenge, combining both hands-on work and technical tasks.
 
 I successfully completed three primary tasks:
@@ -97,27 +100,19 @@ There is extensive troubleshooting documentation available, and once I found the
 #### The Install
 Once the server was created, the next step was to update the repositories and install Elasticsearch, all via the command line.
 
+<img width="659" alt="day3-1" src="https://github.com/user-attachments/assets/a4273dd4-407c-4250-9f37-73565396f2c5">
+
 It’s important to note that you should save the `Security autoconfiguration information` provided after the initial installation, as it contains the password for the built-in Elasticsearch superuser. If you miss this information, there is a way to reset the password later.
+
+<img width="582" alt="day3-2" src="https://github.com/user-attachments/assets/f67879f6-193f-4dc8-af81-803508a015c4">
 
 Next, I needed to make edits to the `elasticsearch.yml` file. I changed the network host IP address to my public IP address to allow the SOC analyst laptop (which will be created) to access the Elasticsearch instance. I deleted the comment marker before the network host IP address and port to activate it, making it part of the YAML structure.
 
 Finally, I started Elasticsearch and confirmed that it was running successfully.
 
-
-Here’s a refined version of your text for clarity and coherence:
-
-The Install
-Once the server was created, the next step was to update the repositories and install Elasticsearch, all via the command line.
-
-It’s important to note that you should save the Security autoconfiguration information provided after the initial installation, as it contains the password for the built-in Elasticsearch superuser. If you miss this information, there is a way to reset the password later.
-
-Next, I needed to make edits to the elasticsearch.yml file. I changed the network host IP address to my public IP address to allow the SOC analyst laptop (which will be created) to access the Elasticsearch instance. I deleted the comment marker before the network host IP address and port to activate it, making it part of the YAML structure.
-
-Finally, I started Elasticsearch and confirmed that it was running successfully.
+<img width="957" alt="day3-3" src="https://github.com/user-attachments/assets/3a41c706-53d3-4ca9-a6da-21948b83d2b2">
 
 #### Takeaways
-Today was more challenging than the first two days, but I enjoyed troubleshooting and figuring things out on my own.
-
-I found Vultr to be much more user-friendly, with a simpler user interface that is easier to navigate than Google VPC.
-
-I’m excited to move forward and look forward to deploying more machines on the network to observe how they interact with each other.
+- Today was more challenging than the first two days, but I enjoyed troubleshooting and figuring things out on my own. 
+- I found Vultr to be much more user-friendly, with a simpler user interface that is easier to navigate than Google VPC.
+- I’m excited to move forward and look forward to deploying more machines on the network to observe how they interact with each other.
