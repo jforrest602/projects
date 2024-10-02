@@ -61,3 +61,63 @@ The ELK Stack is often compared to Splunk, another popular log management platfo
 For aspiring SOC analysts, understanding the ELK Stack can be a valuable asset. Its ability to centralize and visualize large amounts of log data, combined with the flexibility to customize data processing workflows, makes it an indispensable tool in the cybersecurity industry. Mastering the ELK Stack will not only boost your technical skills but also enhance your ability to respond to cyber threats effectively.
 
 ## Day Three: Setup Elasticsearch
+
+Today felt like the true beginning of this challenge, combining both hands-on work and technical tasks.
+
+I successfully completed three primary tasks:
+- Established a VPC network
+- Deployed a server running Ubuntu
+- Installed Elasticsearch on the server
+
+#### The Network
+Setting up the network was relatively easy. I opted to use Google VPC instead of Vultr, as Steven does in his tutorials. This meant I couldn’t simply follow the video step-by-step; I had to slow down and figure out some details on my own. The setup involved creating a network name and assigning an IP range. Other configuration options were available, but I left them as default for now.
+
+##### What is a VPC network?
+
+A Virtual Private Cloud (VPC) network is a logically isolated network environment within a cloud provider's infrastructure (such as AWS, Google Cloud, or Microsoft Azure). It lets you define and manage your own private network space in the cloud, giving you full control over IP address ranges, subnets, routing, and access controls.
+
+Key features of a VPC include isolating your network from others, organizing resources through subnetting, and ensuring security by controlling traffic using security groups and access control lists (ACLs).
+
+In short, a VPC gives you control over your cloud infrastructure, allowing you to design how your resources communicate securely and efficiently within the cloud provider’s global network.
+
+#### The Server
+
+Deploying the server was straightforward. However, I encountered an error when trying to establish an SSH connection via the GUI.
+
+`Connection via Cloud Identity-Aware Proxy Failed`
+
+`Code: 4003`
+
+`Reason: failed to connect to backend`
+
+It took some time, but I resolved the issue by creating a firewall rule to allow Cloud Identity-Aware Proxy (IAP) to connect to port 22 on the instance.
+
+There is extensive troubleshooting documentation available, and once I found the relevant information, it guided me through a step-by-step solution. The built-in AI chatbot also proved to be helpful during the process.
+
+#### The Install
+Once the server was created, the next step was to update the repositories and install Elasticsearch, all via the command line.
+
+It’s important to note that you should save the `Security autoconfiguration information` provided after the initial installation, as it contains the password for the built-in Elasticsearch superuser. If you miss this information, there is a way to reset the password later.
+
+Next, I needed to make edits to the `elasticsearch.yml` file. I changed the network host IP address to my public IP address to allow the SOC analyst laptop (which will be created) to access the Elasticsearch instance. I deleted the comment marker before the network host IP address and port to activate it, making it part of the YAML structure.
+
+Finally, I started Elasticsearch and confirmed that it was running successfully.
+
+
+Here’s a refined version of your text for clarity and coherence:
+
+The Install
+Once the server was created, the next step was to update the repositories and install Elasticsearch, all via the command line.
+
+It’s important to note that you should save the Security autoconfiguration information provided after the initial installation, as it contains the password for the built-in Elasticsearch superuser. If you miss this information, there is a way to reset the password later.
+
+Next, I needed to make edits to the elasticsearch.yml file. I changed the network host IP address to my public IP address to allow the SOC analyst laptop (which will be created) to access the Elasticsearch instance. I deleted the comment marker before the network host IP address and port to activate it, making it part of the YAML structure.
+
+Finally, I started Elasticsearch and confirmed that it was running successfully.
+
+#### Takeaways
+Today was more challenging than the first two days, but I enjoyed troubleshooting and figuring things out on my own.
+
+I found Vultr to be much more user-friendly, with a simpler user interface that is easier to navigate than Google VPC.
+
+I’m excited to move forward and look forward to deploying more machines on the network to observe how they interact with each other.
