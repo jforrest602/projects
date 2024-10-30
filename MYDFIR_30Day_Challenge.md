@@ -179,3 +179,8 @@ Repeat for the remaining two keys.
 <img width="468" alt="day4b-10" src="https://github.com/user-attachments/assets/254fd727-944b-49db-9015-8bcfa7c7d0a0">
 
 Finally, restart the Kibana service by running `systemctl restart kibana.service`. To confirm success, refresh the web browser and log into Elastic. The *API integration key required* message will no longer appear.
+
+#### Takeaways
+- successfuly installed Kibana
+- learned about configuration (.yml) files
+- learned about keystores
