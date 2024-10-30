@@ -110,10 +110,12 @@ Finally, I started Elasticsearch and confirmed that it was running successfully.
 ## Day Four: Kibana Setup
 If you recall from day two, Kibana is a web interfce that allows users to interact with Elasticsearch data providing features for searching logs, creating dashboards, and generating alerts and reports helping the data analysis process.
 
-The first step of this process is to download Kibana [here](https://www.elastic.co/downloads/kibana). and install.
-Be sure to to download to right file for your system and right click the blue download button to copy the download link.
+The first step of this process is to download Kibana [here](https://www.elastic.co/downloads/kibana). and install. Be sure to to download to right file for your system and right click the blue download button to copy the download link.
+
 <img width="535" alt="day4-1" src="https://github.com/user-attachments/assets/fa438b13-52ec-4b4c-bff7-6b2dc091aa7a">
+
 Next, in your server's Command Prompt type `wget` and paste the download link and hit enter.
+
 <img width="641" alt="day4-2" src="https://github.com/user-attachments/assets/d9af363b-25f2-4511-a597-3ec8dc219f69">
 
 You may want to confirm that the file downloaded successfully. You can do this by running `ls` to list the contents of the current directory (make sure that you are in the right directory). You will see a file named `kibana-8.15.0-amd.64-deb`. Note that depending on when you're reading this and what OS you're using the version of Kibana may be different. 
@@ -121,6 +123,7 @@ You may want to confirm that the file downloaded successfully. You can do this b
 Next, two changes to the configuration file were necessary. To do so, open the configuration file by running `nano /etc/kibana/kibana.yml`. 
 
 <img width="575" alt="day4-4" src="https://github.com/user-attachments/assets/4d7f149a-b6c2-493d-b50d-2ad89a0c7f46">
+
 - One: activate the server port 5601 by deleting the hash sign at the beginning of the line.
 - Two: change the server host from 'localhost' to the public IP address of the virtual machine.
 
@@ -129,7 +132,14 @@ Once those changes are made, run the following commands to enable and start the 
 `systemctl start kibana.service`
 `systemctl status kibana.service`
 
-If everyhting went as planned you should see the service listed as `active (running)`.
+If everyhting went as planned, you should see the service listed as `active (running)`.
+
 <img width="958" alt="day4-5" src="https://github.com/user-attachments/assets/764ac787-f340-4c9f-bc6c-5aae8610b6a7">
 
+Now that the Kibana service is downlaoded and running, it is time to set it up. The first step in this process is to generate an Elasticsearch enrollment token. Navigate to `/usr/share/elasticsearch/bin` where you will find `elasticsearch-create-enrollment-token`. To generate a token, run `./elasticsearch-create-enrollment-token --scope kibana`.
 
+<img width="962" alt="day4a-1" src="https://github.com/user-attachments/assets/2f252361-7ff2-481c-9e44-88848c122d47">
+
+Once the enrollemnt token is generated, save it someplace safe and in a web browser navigate to your server's public IP address on port 5601, e.g. `http://104.198.122.33:5601/`.
+
+*If you experience connection issues here, you may need to update the server's firewall rules to allow inbound TCP traffic from your IP. Furthermore, configure the firewall on the ELK server to allow incoming connections on port 5601 by running `ufw allow 5601`. 
