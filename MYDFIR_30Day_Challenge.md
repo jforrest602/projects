@@ -148,11 +148,13 @@ When your web browser is able to establish a connection, it's needs that enrollm
 <img width="526" alt="day4b-1" src="https://github.com/user-attachments/assets/bdfff740-b2b4-4b14-a4ba-05de2b0369da">
 
 Next up, a verification code is required. This is done by navigating to `/usr/share/kibana/bin` and executing `./kibana-verification-code`.
+
 <img width="486" alt="day4b-2" src="https://github.com/user-attachments/assets/6a33114d-7410-47ce-ae06-31111a57cdbc">
 
 <img width="478" alt="day4b-3" src="https://github.com/user-attachments/assets/fadc703a-1204-409a-92de-904364cd2aa5">
 
 After entering the verification code, the login information can be retrieved from the *Security autoconfiguration information* that was saved when installing Elastic.
+
 <img width="597" alt="day4b-4" src="https://github.com/user-attachments/assets/8b6d9781-29f6-4200-b6de-d6a7da2bb0d1">
 
 <img width="960" alt="day4b-5" src="https://github.com/user-attachments/assets/9a042879-d0e7-465c-85df-6fdbed12f863">
