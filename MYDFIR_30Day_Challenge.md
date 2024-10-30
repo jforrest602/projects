@@ -145,6 +145,7 @@ Once the enrollemnt token is generated, save it someplace safe and in a web brow
 *If you experience connection issues here, you may need to update the server's firewall rules to allow inbound TCP traffic from your IP. Furthermore, configure the firewall on the ELK server to allow incoming connections on port 5601 by running `ufw allow 5601`.*
 
 When your web browser is able to establish a connection, it's needs that enrollment token that was just generated. Paste it into the box and click `Configure Elastic`.
+
 <img width="526" alt="day4b-1" src="https://github.com/user-attachments/assets/bdfff740-b2b4-4b14-a4ba-05de2b0369da">
 
 Next up, a verification code is required. This is done by navigating to `/usr/share/kibana/bin` and executing `./kibana-verification-code`.
@@ -169,3 +170,12 @@ This is accomplished by navigating to the `/usr/share/kibana/bin` directory and 
 
 <img width="495" alt="day4b-8" src="https://github.com/user-attachments/assets/92a963de-9c5b-48ff-8546-e0d0122c553a">
 
+Continuing work within the `/usr/share/kibana/bin` directory, there is a `kibana-keystore` binary. To add the the keys, execute `./kibana-keystore add xpack.encryptedSavedObjects.encryptionKey`. You'll then be prompted to provide the key value which you can copy and paste. 
+
+<img width="482" alt="day4b-9" src="https://github.com/user-attachments/assets/ae0c984d-91ab-45e9-80bd-08ea001bf9cd">
+
+Repeat for the remaining two keys.
+
+<img width="468" alt="day4b-10" src="https://github.com/user-attachments/assets/254fd727-944b-49db-9015-8bcfa7c7d0a0">
+
+Finally, restart the Kibana service by running `systemctl restart kibana.service`. To confirm success, refresh the web browser and log into Elastic. The *API integration key required* message will no longer appear.
