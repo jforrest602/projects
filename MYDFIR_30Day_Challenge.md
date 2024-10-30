@@ -56,7 +56,7 @@ The ELK Stack offers several advantages that make it an excellent choice for SOC
 
 The ELK Stack is often compared to Splunk, another popular log management platform. Both systems offer similar capabilities in terms of indexing and forwarding data, as well as the ability to search through logs via a graphical user interface (GUI). However, the ELK Stack is open-source, which can lead to lower costs and greater customization for organizations.
 
-#### Final Thoughts
+#### Takeaways
 
 For aspiring SOC analysts, understanding the ELK Stack can be a valuable asset. Its ability to centralize and visualize large amounts of log data, combined with the flexibility to customize data processing workflows, makes it an indispensable tool in the cybersecurity industry. Mastering the ELK Stack will not only boost your technical skills but also enhance your ability to respond to cyber threats effectively.
 
@@ -73,7 +73,7 @@ I successfully completed three primary tasks:
 - Installed Elasticsearch on the server
 
 #### The Network
-Setting up the network was relatively easy. I opted to use Google VPC instead of Vultr, as Steven does in his tutorials. This meant I couldn’t simply follow the video step-by-step; I had to slow down and figure out some details on my own. The setup involved creating a network name and assigning an IP range. Other configuration options were available, but I left them as default for now.
+Setting up the network was straightforward. The Vultr GUI is well organized and user friendly. Still, it is important to slow down and make sure you get it right or you may find yourself troubleshooting later. The setup involved creating a network name and assigning an IP range. Other configuration options were available, but they were left as default for now.
 
 ##### What is a VPC network?
 
@@ -85,17 +85,7 @@ In short, a VPC gives you control over your cloud infrastructure, allowing you t
 
 #### The Server
 
-Deploying the server was straightforward. However, I encountered an error when trying to establish an SSH connection via the GUI.
-
-`Connection via Cloud Identity-Aware Proxy Failed`
-
-`Code: 4003`
-
-`Reason: failed to connect to backend`
-
-It took some time, but I resolved the issue by creating a firewall rule to allow Cloud Identity-Aware Proxy (IAP) to connect to port 22 on the instance.
-
-There is extensive troubleshooting documentation available, and once I found the relevant information, it guided me through a step-by-step solution. The built-in AI chatbot also proved to be helpful during the process.
+Deploying the server was straightforward. I made sure to select the same location as my VPC network, chose an Ubuntu image, and a plan with 80GB and 4 vCPU cores. Next, was to ensure that the newly created VPC network was selected so that this server will be a part of that network. Finally, I gave the host a name and deployed.
 
 #### The Install
 Once the server was created, the next step was to update the repositories and install Elasticsearch, all via the command line.
@@ -116,3 +106,7 @@ Finally, I started Elasticsearch and confirmed that it was running successfully.
 - Today was more challenging than the first two days, but I enjoyed troubleshooting and figuring things out on my own. 
 - I found Vultr to be much more user-friendly, with a simpler user interface that is easier to navigate than Google VPC.
 - I’m excited to move forward and look forward to deploying more machines on the network to observe how they interact with each other.
+
+## Day Four: Kibana Setup
+If you recall from day two, Kibana is a web interfce that allows users to interact with Elasticsearch data providing features for searching logs, creating dashboards, and generating alerts and reports helping the data analysis process.
+
