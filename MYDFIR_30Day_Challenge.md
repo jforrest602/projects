@@ -142,4 +142,28 @@ Now that the Kibana service is downlaoded and running, it is time to set it up. 
 
 Once the enrollemnt token is generated, save it someplace safe and in a web browser navigate to your server's public IP address on port 5601, e.g. `http://104.198.122.33:5601/`.
 
-*If you experience connection issues here, you may need to update the server's firewall rules to allow inbound TCP traffic from your IP. Furthermore, configure the firewall on the ELK server to allow incoming connections on port 5601 by running `ufw allow 5601`. 
+*If you experience connection issues here, you may need to update the server's firewall rules to allow inbound TCP traffic from your IP. Furthermore, configure the firewall on the ELK server to allow incoming connections on port 5601 by running `ufw allow 5601`.*
+
+When your web browser is able to establish a connection, it's needs that enrollment token that was just generated. Paste it into the box and click `Configure Elastic`.
+<img width="526" alt="day4b-1" src="https://github.com/user-attachments/assets/bdfff740-b2b4-4b14-a4ba-05de2b0369da">
+
+Next up, a verification code is required. This is done by navigating to `/usr/share/kibana/bin` and executing `./kibana-verification-code`.
+<img width="486" alt="day4b-2" src="https://github.com/user-attachments/assets/6a33114d-7410-47ce-ae06-31111a57cdbc">
+
+<img width="478" alt="day4b-3" src="https://github.com/user-attachments/assets/fadc703a-1204-409a-92de-904364cd2aa5">
+
+After entering the verification code, the login information can be retrieved from the *Security autoconfiguration information* that was saved when installing Elastic.
+<img width="597" alt="day4b-4" src="https://github.com/user-attachments/assets/8b6d9781-29f6-4200-b6de-d6a7da2bb0d1">
+
+<img width="960" alt="day4b-5" src="https://github.com/user-attachments/assets/9a042879-d0e7-465c-85df-6fdbed12f863">
+
+<img width="960" alt="day4b-6" src="https://github.com/user-attachments/assets/860a1e9d-b4c7-46bd-bbdd-7c3001e01078">
+
+Finally, it is necessary to add keystores. A keystore is essentially a place to keep security certificates and private keys used in cruptographic functions. By clicking on the hamburger menu in the top left corner, scrolling down and selecting `Alerts` under `Security` you should come to the following page where *API integration key required*. 
+
+<img width="960" alt="day4b-7" src="https://github.com/user-attachments/assets/74c41b02-8dee-4c35-9e15-82999fce6b26">
+
+This is accomplished by navigating to the `/usr/share/kibana/bin` directory and executing `./kibana-encryption-keys generate` which will provide three different keys.
+
+<img width="495" alt="day4b-8" src="https://github.com/user-attachments/assets/92a963de-9c5b-48ff-8546-e0d0122c553a">
+
