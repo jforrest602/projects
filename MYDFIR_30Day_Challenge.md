@@ -120,9 +120,16 @@ You may want to confirm that the file downloaded successfully. You can do this b
 
 Next, two changes to the configuration file were necessary. To do so, open the configuration file by running `nano /etc/kibana/kibana.yml`. 
 
-<img width="958" alt="day4-5" src="https://github.com/user-attachments/assets/da3a8d16-c559-40bc-973b-be2bba239c19">
+<img width="575" alt="day4-4" src="https://github.com/user-attachments/assets/4d7f149a-b6c2-493d-b50d-2ad89a0c7f46">
 - One: activate the server port 5601 by deleting the hash sign at the beginning of the line.
 - Two: change the server host from 'localhost' to the public IP address of the virtual machine.
 
+Once those changes are made, run the following commands to enable and start the Kibana service:
+`systemctl enable kibana.service`
+`systemctl start kibana.service`
+`systemctl status kibana.service`
+
+If everyhting went as planned you should see the service listed as `active (running)`.
+<img width="958" alt="day4-5" src="https://github.com/user-attachments/assets/764ac787-f340-4c9f-bc6c-5aae8610b6a7">
 
 
