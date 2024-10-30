@@ -110,3 +110,19 @@ Finally, I started Elasticsearch and confirmed that it was running successfully.
 ## Day Four: Kibana Setup
 If you recall from day two, Kibana is a web interfce that allows users to interact with Elasticsearch data providing features for searching logs, creating dashboards, and generating alerts and reports helping the data analysis process.
 
+The first step of this process is to download Kibana [here](https://www.elastic.co/downloads/kibana). and install.
+Be sure to to download to right file for your system and right click the blue download button to copy the download link.
+<img width="535" alt="day4-1" src="https://github.com/user-attachments/assets/fa438b13-52ec-4b4c-bff7-6b2dc091aa7a">
+Next, in your server's Command Prompt type `wget` and paste the download link and hit enter.
+<img width="641" alt="day4-2" src="https://github.com/user-attachments/assets/d9af363b-25f2-4511-a597-3ec8dc219f69">
+
+You may want to confirm that the file downloaded successfully. You can do this by running `ls` to list the contents of the current directory (make sure that you are in the right directory). You will see a file named `kibana-8.15.0-amd.64-deb`. Note that depending on when you're reading this and what OS you're using the version of Kibana may be different. 
+
+Next, two changes to the configuration file were necessary. To do so, open the configuration file by running `nano /etc/kibana/kibana.yml`. 
+
+<img width="958" alt="day4-5" src="https://github.com/user-attachments/assets/da3a8d16-c559-40bc-973b-be2bba239c19">
+- One: activate the server port 5601 by deleting the hash sign at the beginning of the line.
+- Two: change the server host from 'localhost' to the public IP address of the virtual machine.
+
+
+
