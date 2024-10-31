@@ -32,3 +32,5 @@ Agents can be updated for new features or patches and scaled as data volumes gro
 For the purpose of this project, it's important to know that agents work based off policies that can be updated and take on additional integrations and protections which can all be used to tell the endpoint what logs to forward to your Elasticsearch or Logstash instance.
 
 This project will integrate the Elastic Agent as part of a fleet. A fleet server facilitates the management and coordination of Elastic Agents across an organization’s infrastructure. It acts as a central point for agent communication, providing functionalities for deployment, configuration, and monitoring of agents and allowing for the management of multiple endpoints simultaneously making it easy to update policies across the spectrum of an organization's managed devices.
+
+## Day 7: Elastic Agent & Fleet Server Setup
