@@ -181,6 +181,10 @@ Repeat for the remaining two keys.
 Finally, restart the Kibana service by running `systemctl restart kibana.service`. To confirm success, refresh the web browser and log into Elastic. The *API integration key required* message will no longer appear.
 
 #### Takeaways
-- successfuly installed Kibana
-- learned about configuration (.yml) files
-- learned about keystores
+I was able to successfully install and configure Kibana, a critical component of the ELK stack that provides interface to explore, analyze, and visualize data stored in Elasticsearch, a commonly used tool in SOCs enabling security analysts to gain insights into security logs, track potential security incidents, and respond to them quickly.
+
+I was also introduced to `.yml` files, or configuration files written in YAML (Yet Another Markup Language). It’s similar to JSON and XML but is more concise and easier to read. In the context of the ELK Stack, .yml files (like elasticsearch.yml or kibana.yml) are used to configure each component, specifying settings such as network ports, authentication, and paths.
+
+Finally, I learned about keystores. A keystore is a secure storage solution for sensitive information, such as encryption keys, passwords, certificates, or tokens, often used in applications and systems where data security is critical. There are several types of keystores. In this case, it was an application-specific keystore. The Elasticsearch keystore stores sensitive settings like passwords and tokens in a secure way, preventing them from being exposed in plain text within configuration files which can be managed through a command line utility to add, update, or remove items securely.
+
+## Day Five: Windows Server Setup
