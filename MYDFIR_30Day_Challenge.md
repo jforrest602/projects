@@ -1,6 +1,6 @@
 *This project is under construction.*
 
-# MyDFIR 30 Day SOC Analyst Challenge
+# MyDFIR 30 Day SOC Analyst Challenge (Part 1)
 
 
 This 30-day Security Operations Center (SOC) Analyst challenge aims to provide free, practical experience for aspiring SOC analysts who may lack hands-on experience. It is designed to bridge the gap between theoretical knowledge and practical application of skills for entry level applicants. 
@@ -11,7 +11,7 @@ For more information about the project creator, visit https://www.mydfir.com/.
 
 To find out more about the challenge and try it for yourself, check out https://www.youtube.com/@MyDFIR, where you will find the entire video series for the challenge and many other helpful and informative videos for anyone looking to build their cybersecurity knowledge and skillset.
 
-## Day One: Logical Diagram
+## Day 1: Logical Diagram
 
 ![MYDFIR 30 Day Challenge Network Diagram drawio](https://github.com/user-attachments/assets/8571246f-1dd1-42db-b6da-3c5a82e15e4a)
 
@@ -27,7 +27,7 @@ The diagram also includes two important machines:
 
 This exercise provided me with a clearer understanding of how the network components interact. Using [Draw.io](http://draw.io/) was straightforward, making it a great platform to get comfortable with building network diagrams. It also emphasized the importance of having a clear, organized representation of network setups, especially in cybersecurity scenarios.
 
-## Day Two: Introducing the ELK Stack
+## Day 2: Introducing the ELK Stack
 ![elk stack](https://github.com/user-attachments/assets/df1977ed-f7b5-42c8-a6c4-26a611f3d350)
 
 In today’s cybersecurity landscape, the ELK Stack has become an essential tool for Security Operations Centers (SOCs). Comprising Elasticsearch, Logstash, and Kibana, the ELK Stack offers powerful features that enable SOC analysts to gain critical insights from system logs and telemetry data. Understanding what the ELK Stack is, its benefits, and how to effectively deploy it can help aspiring SOC analysts stand out in a competitive field.
@@ -60,7 +60,7 @@ The ELK Stack is often compared to Splunk, another popular log management platfo
 
 For aspiring SOC analysts, understanding the ELK Stack can be a valuable asset. Its ability to centralize and visualize large amounts of log data, combined with the flexibility to customize data processing workflows, makes it an indispensable tool in the cybersecurity industry. Mastering the ELK Stack will not only boost your technical skills but also enhance your ability to respond to cyber threats effectively.
 
-## Day Three: Setup Elasticsearch
+## Day 3: Setup Elasticsearch
 
 ![elastic1](https://github.com/user-attachments/assets/0ffc7f43-8e02-4c68-91e6-555bf4f009a6)
 
@@ -187,7 +187,7 @@ I was also introduced to `.yml` files, or configuration files written in YAML (Y
 
 Finally, I learned about keystores. A keystore is a secure storage solution for sensitive information, such as encryption keys, passwords, certificates, or tokens, often used in applications and systems where data security is critical. There are several types of keystores. In this case, it was an application-specific keystore. The Elasticsearch keystore stores sensitive settings like passwords and tokens in a secure way, preventing them from being exposed in plain text within configuration files which can be managed through a command line utility to add, update, or remove items securely.
 
-## Day Five: Windows Server Setup
+## Day 5: Windows Server Setup
 
 Today's goal is to setup a Windows server with Remote Desktop Protocol (RDP) exposed to the internet. This machine will serve as the target machine for this project.
 
