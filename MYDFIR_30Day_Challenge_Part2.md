@@ -28,3 +28,5 @@ Data ingested into the central system can be indexed for retrieval and analyzed 
 
 #### Updating and Scaling
 Agents can be updated for new features or patches and scaled as data volumes grow or new systems are added.
+
+For the purpose of this project, it's important to know that agents work based off policies that can be updated and take on additional integrations and protections which can all be used to tell the endpoint what logs to forward to your Elasticsearch or Logstash instance
