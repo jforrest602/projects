@@ -188,3 +188,27 @@ I was also introduced to `.yml` files, or configuration files written in YAML (Y
 Finally, I learned about keystores. A keystore is a secure storage solution for sensitive information, such as encryption keys, passwords, certificates, or tokens, often used in applications and systems where data security is critical. There are several types of keystores. In this case, it was an application-specific keystore. The Elasticsearch keystore stores sensitive settings like passwords and tokens in a secure way, preventing them from being exposed in plain text within configuration files which can be managed through a command line utility to add, update, or remove items securely.
 
 ## Day Five: Windows Server Setup
+
+Today's goal is to setup a Windows server with Remote Desktop Protocol (RDP) exposed to the internet. This machine will serve as the target machine for this project.
+
+If you're using Vultr, navigate to your account and click `Deploy +` in the top right corner and choose `Deploy New Server`.
+
+<img width="960" alt="day5-1" src="https://github.com/user-attachments/assets/e823abdf-e058-4dd7-b965-40beee14246f">
+
+This machine only requires Cloud Compute with shared CPU and a Windows Standard image with 1 vCPU and 2GB of memory. This server will not be part of the VPC network that we have created. Additionally, this server will not be added to any firewall group.
+
+#### Updated Network Diagram
+
+![MYDFIR 30 Day Challenge Network Diagram_Update Day 5 drawio](https://github.com/user-attachments/assets/6b4ce55e-fb0d-4624-87df-37bd6e8e0b8a)
+This updated diagram reflects the decision to leave this windows server outside of the VPC network. Segmenting it this way means that if this Windows server is compromised, the rest of the network will not neccessarily also be compromised.
+
+Once the server is ready to go, it is possible to log into this Windows server.
+
+#### Confirm RDP is Exposed
+To confirm that RDP is exposed to the internet, open the Remote Desktop app and enter the server's IP address and click connect. If it allows a connection, it is exposed to the internet.
+
+<img width="725" alt="day5-6" src="https://github.com/user-attachments/assets/db31586a-c6da-44ba-bee3-2ab3fca8713c">
+
+<img width="810" alt="day5-7" src="https://github.com/user-attachments/assets/4a746d6d-dcf7-4d91-aa34-6e65e9aaf7be">
+
+Now that I have this Windows server machine in the cloud with RDP exposed to the internet, I am expecting unsuccessful login attempts from the internet to begin. This traffic should generate plenty of logs to dig into in the coming days.
