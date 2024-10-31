@@ -212,3 +212,5 @@ To confirm that RDP is exposed to the internet, open the Remote Desktop app and 
 <img width="810" alt="day5-7" src="https://github.com/user-attachments/assets/4a746d6d-dcf7-4d91-aa34-6e65e9aaf7be">
 
 Now that I have this Windows server machine in the cloud with RDP exposed to the internet, I am expecting unsuccessful login attempts from the internet to begin. This traffic should generate plenty of logs to dig into in the coming days.
+
+*In order to prevent this post from becoming too long, I will continue this project in a separate post labled Part 2* 
