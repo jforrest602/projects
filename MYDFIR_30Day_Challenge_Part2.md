@@ -34,3 +34,14 @@ For the purpose of this project, it's important to know that agents work based o
 This project will integrate the Elastic Agent as part of a fleet. A fleet server facilitates the management and coordination of Elastic Agents across an organization’s infrastructure. It acts as a central point for agent communication, providing functionalities for deployment, configuration, and monitoring of agents and allowing for the management of multiple endpoints simultaneously making it easy to update policies across the spectrum of an organization's managed devices.
 
 ## Day 7: Elastic Agent & Fleet Server Setup
+
+Now, it is time to install the Elastic Agent on the Windows server and enroll the server into a fleet.
+
+First, it is necessary to deploy a new server to act as the fleet server. This server is:
+- optimized for cloud compute
+- has a dedicated CPU
+- an Ubuntu 22.04 LTS x64 image
+- 4GB of storage
+- VPC 2.0 enabled
+- part of my VPC 2.0 network
+
