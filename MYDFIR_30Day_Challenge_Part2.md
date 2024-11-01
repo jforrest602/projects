@@ -63,13 +63,25 @@ A fleet server policy is a component of the Elastic Stack that defines how Elast
 
 <img width="957" alt="day7-6" src="https://github.com/user-attachments/assets/7287eb64-a676-4efc-aebf-7fe2f5f0a063">
 
+##### Install Elastic Agent
 Once the fleet server policy was generated, I connected to the fleet server via SSH. It's best practice to update the repository by running `apt-get update && apt-get upgrade -y`. This will download and install any OS updates.
 
 Then it was easy to copy and paste the provided policy commands into the SSH session.
 
 <img width="586" alt="day7-6a" src="https://github.com/user-attachments/assets/6a05bc8f-7aa2-4278-9e1b-f582f8f31124">
 
-<img width="947" alt="day7-10" src="https://github.com/user-attachments/assets/56183d93-e941-4789-9f59-e0cdd1998893">
+<img width="947" alt="day7-10" src="https://github.com/user-attachments/assets/c061f361-4e41-4efc-aae6-3879fe36430c">
 
-*Here it was neccessary to create a new newtork firewall rule to allow TCP connections on the fleet servers public IP address and to allow port 9200 (the port for Elasticsearch) on the ELK server.*  
+There was an error. To correct it, it was neccessary to:
+- create a new newtork firewall rule to allow TCP connections on the fleet servers public IP address
+- to allow port 9200 (the port for Elasticsearch) on the ELK server essentially allowing the fleet server and ELK server to communicate
 
+After running the policy command again, the agent is successfully installed.
+
+<img width="949" alt="day7-12" src="https://github.com/user-attachments/assets/8672fa1d-b654-42a3-904c-74c80dee2ab2">
+
+It is confirmed within the Elastic web GUI.
+
+<img width="1056" alt="day7-13" src="https://github.com/user-attachments/assets/ea8511b2-7b56-4f41-854b-4266fa0ec06a">
+
+#### Add Agent on Fleet Server
