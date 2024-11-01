@@ -90,4 +90,12 @@ It is confirmed within the Elastic web GUI.
 
 <img width="965" alt="day7-14" src="https://github.com/user-attachments/assets/89e7457f-68db-4f9d-9ac8-4e56e077b957">
 
+<img width="958" alt="day7-15" src="https://github.com/user-attachments/assets/3067e1f1-01e7-4e9e-aca5-b242ac3e4064">
 
+Once the policy was generated, it is easy again to copy and paste the commands, this time into Powershell in the Windows server.
+
+<img width="944" alt="day7-16" src="https://github.com/user-attachments/assets/96d92577-6cff-45a3-9475-3c2d10ff1b3a">
+
+<img width="1245" alt="day7-17" src="https://github.com/user-attachments/assets/1f673174-be26-4fd6-88fe-71be1ac06a03">
+
+An error occurred. 
