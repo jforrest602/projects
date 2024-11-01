@@ -37,6 +37,7 @@ This project will integrate the Elastic Agent as part of a fleet. A fleet server
 
 Now, it is time to install the Elastic Agent on the Windows server and enroll the server into a fleet.
 
+#### Fleet Server
 First, it is necessary to deploy a new server to act as the fleet server. This server is:
 - optimized for cloud compute
 - has a dedicated CPU
@@ -44,4 +45,11 @@ First, it is necessary to deploy a new server to act as the fleet server. This s
 - 4GB of storage
 - VPC 2.0 enabled
 - part of my VPC 2.0 network
+
+#### Connect Fleet server & Elastic Agent
+After deploying the fleet server, I logged into the Elastic web GUI and navigated to `Fleet` under `Management` within the hamburger menu.
+
+<img width="949" alt="day7-3" src="https://github.com/user-attachments/assets/f4746a5b-0e0f-4b98-94c2-326f9600f682">
+
+Once there, I chose `Add Fleet Server` using the `Quick Start` option. It's important to note here that `port 8220` is used by default.
 
