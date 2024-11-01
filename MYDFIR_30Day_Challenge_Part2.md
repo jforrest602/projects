@@ -46,10 +46,18 @@ First, it is necessary to deploy a new server to act as the fleet server. This s
 - VPC 2.0 enabled
 - part of my VPC 2.0 network
 
-#### Connect Fleet server & Elastic Agent
+#### Connect the Fleet Server & Elastic Agent
 After deploying the fleet server, I logged into the Elastic web GUI and navigated to `Fleet` under `Management` within the hamburger menu.
 
 <img width="949" alt="day7-3" src="https://github.com/user-attachments/assets/f4746a5b-0e0f-4b98-94c2-326f9600f682">
 
 Once there, I chose `Add Fleet Server` using the `Quick Start` option. It's important to note here that `port 8220` is used by default.
+
+<img width="960" alt="day7-4" src="https://github.com/user-attachments/assets/52bb3def-c0e3-4ab1-be4b-f2a2aaf76ba6">
+
+#### Fleet Server Policy
+
+<img width="960" alt="day7-5" src="https://github.com/user-attachments/assets/72edc815-1e43-4e8a-aa5d-8657344d73f9">
+
+<img width="957" alt="day7-6" src="https://github.com/user-attachments/assets/7287eb64-a676-4efc-aebf-7fe2f5f0a063">
 
