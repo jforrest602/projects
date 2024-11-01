@@ -84,4 +84,10 @@ It is confirmed within the Elastic web GUI.
 
 <img width="1056" alt="day7-13" src="https://github.com/user-attachments/assets/ea8511b2-7b56-4f41-854b-4266fa0ec06a">
 
-#### Add Agent on Fleet Server
+#### Adding an Agent on the Fleet Server
+
+<img width="1056" alt="day7-13" src="https://github.com/user-attachments/assets/819e8028-52dd-4f95-96b4-0f0393684d0c">
+
+<img width="965" alt="day7-14" src="https://github.com/user-attachments/assets/89e7457f-68db-4f9d-9ac8-4e56e077b957">
+
+
