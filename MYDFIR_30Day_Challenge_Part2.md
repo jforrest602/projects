@@ -55,9 +55,21 @@ Once there, I chose `Add Fleet Server` using the `Quick Start` option. It's impo
 
 <img width="960" alt="day7-4" src="https://github.com/user-attachments/assets/52bb3def-c0e3-4ab1-be4b-f2a2aaf76ba6">
 
-#### Fleet Server Policy
+##### Fleet Server Policy
+
+A fleet server policy is a component of the Elastic Stack that defines how Elastic Agents should behave and what data they should collect. 
 
 <img width="960" alt="day7-5" src="https://github.com/user-attachments/assets/72edc815-1e43-4e8a-aa5d-8657344d73f9">
 
 <img width="957" alt="day7-6" src="https://github.com/user-attachments/assets/7287eb64-a676-4efc-aebf-7fe2f5f0a063">
+
+Once the fleet server policy was generated, I connected to the fleet server via SSH. It's best practice to update the repository by running `apt-get update && apt-get upgrade -y`. This will download and install any OS updates.
+
+Then it was easy to copy and paste the provided policy commands into the SSH session.
+
+<img width="586" alt="day7-6a" src="https://github.com/user-attachments/assets/6a05bc8f-7aa2-4278-9e1b-f582f8f31124">
+
+<img width="947" alt="day7-10" src="https://github.com/user-attachments/assets/56183d93-e941-4789-9f59-e0cdd1998893">
+
+*Here it was neccessary to create a new newtork firewall rule to allow TCP connections on the fleet servers public IP address and to allow port 9200 (the port for Elasticsearch) on the ELK server.*  
 
