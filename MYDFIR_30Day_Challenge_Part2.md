@@ -96,6 +96,38 @@ Once the policy was generated, it is easy again to copy and paste the commands, 
 
 <img width="944" alt="day7-16" src="https://github.com/user-attachments/assets/96d92577-6cff-45a3-9475-3c2d10ff1b3a">
 
+An error occurred.
+
 <img width="1245" alt="day7-17" src="https://github.com/user-attachments/assets/1f673174-be26-4fd6-88fe-71be1ac06a03">
 
-An error occurred. 
+I was able to successfully ping the fleet server's IP address confirming there is a connection. 
+
+<img width="1149" alt="day7-18" src="https://github.com/user-attachments/assets/b59f2574-21dc-4567-a13f-732f2f041080">
+
+I modified the fleet server's internal firewall to allow port 8220.
+
+<img width="1054" alt="day7-19" src="https://github.com/user-attachments/assets/af1b7add-f794-4379-aa3c-69806b476c0d">
+
+Finally, in the Elastic web GUI, I navigated to `Fleet` under `Management` with the hamburger menu to get to the fleet `Settings`. The `Host URL` is using port 443. This needed to be changed to port 8220.
+
+<img width="1133" alt="day7-20" src="https://github.com/user-attachments/assets/ff8c2960-5e0f-4a4c-8ede-ecbf23f29b69">
+
+<img width="1188" alt="day7-21" src="https://github.com/user-attachments/assets/dc6d895b-33a8-4cf9-834c-600b16d92bcb">
+
+Running a slightly modified command with the updated port of 8220 rather than 443 on the Windows server ended with the Elastic Agent installed.
+
+<img width="1154" alt="day7-23" src="https://github.com/user-attachments/assets/459ecd50-85d3-48b3-b128-ab0a6f44d75d">
+
+<img width="1146" alt="day7-24" src="https://github.com/user-attachments/assets/d6aa0392-fa7c-48f9-8b74-c10d27d61ea6">
+
+<img width="967" alt="day7-25" src="https://github.com/user-attachments/assets/1f8463bc-f523-4c69-b0b9-97e5346c9195">
+
+However, when I navigated to the `Discover` page to look at the logs, I didn't see any. Restarting the Elastic Agent on the Windows server was the solution. 
+
+With the fleet server setup, Elastic Agent running, and communication taking place between the machines, logs will now start piling up.
+
+#### Takeaways
+- troubleshooting
+- importance of getting the networking right with proper firewall rules
+- the significance of using a fleet to manage multilpe endpoints
+
