@@ -131,3 +131,20 @@ With the fleet server setup, Elastic Agent running, and communication taking pla
 - importance of getting the networking right with proper firewall rules
 - the significance of using a fleet to manage multilpe endpoints
 
+## Day 8: Sysmon
+
+Logging is enabled by default on Windows endpoints. However, that default logging is not enough. The default logging does not monitor process creation, for example. Monitor for process creation is crucial because it can help identify malware activity, spot privilege escalation, or help SOC teams establish a baseline of normal activities enabling proactive detection of potential threats. 
+
+Sysmon (System Monitor) is a free tool from Microsoft's Sysinternals suite that provides detailed and continuous monitoring of various system activities on Windows systems. It enhances the visibility of system activity, such as process creation, network connections, and changes to file creation timestamps, which are often crucial for detecting cyber threats and suspicious activity. 
+
+Key logging features of Sysmon include process monitoring, network connections, file creation, and registry changes. In cybersecurity, Sysmon is used in threat hunting, incident response, anomoly detection, and even compliance.  
+
+Sysmon is highly customizable through its configuration file, allowing security teams to specify exactly what types of events to log and filter out noise that might otherwise overwhelm their logging infrastructure. This configuration flexibility is a core feature that makes Sysmon adaptable to different environments and security requirements.
+
+#### Useful Sysmon Event IDs
+Sysmon Event ID	Event Name	Significance
+1	Process Creation	Detects suspicious or malicious processes, often the first step in malware execution.
+3	Network Connections	Monitors unauthorized network connections, which may indicate data exfiltration or C2 activity.
+7	Image Load	Identifies malicious DLLs or driver injections into legitimate processes.
+11	File Creation	Detects dropped or created files, helping identify malware payloads.
+10	Process Access	Tracks inter-process access, helping detect credential dumping and privilege escalation techniques.
