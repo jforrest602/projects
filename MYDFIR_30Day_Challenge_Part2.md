@@ -149,3 +149,5 @@ Sysmon is highly customizable through its configuration file, allowing security 
 | 7	| Image Load | Identifies malicious DLLs or driver injections into legitimate processes.|
 | 11 | File Creation | Detects dropped or created files, helping identify malware payloads.|
 | 10 | Process Access |	Tracks inter-process access, helping detect credential dumping and privilege escalation techniques.|
+
+## Day 9: Sysmon Setup
