@@ -142,9 +142,10 @@ Key logging features of Sysmon include process monitoring, network connections, 
 Sysmon is highly customizable through its configuration file, allowing security teams to specify exactly what types of events to log and filter out noise that might otherwise overwhelm their logging infrastructure. This configuration flexibility is a core feature that makes Sysmon adaptable to different environments and security requirements.
 
 #### Useful Sysmon Event IDs
-Sysmon Event ID	Event Name	Significance
-1	Process Creation	Detects suspicious or malicious processes, often the first step in malware execution.
-3	Network Connections	Monitors unauthorized network connections, which may indicate data exfiltration or C2 activity.
-7	Image Load	Identifies malicious DLLs or driver injections into legitimate processes.
-11	File Creation	Detects dropped or created files, helping identify malware payloads.
-10	Process Access	Tracks inter-process access, helping detect credential dumping and privilege escalation techniques.
+| Sysmon Event ID	| Event Name | Significance |
+| --------------- | ---------- | ------------ |
+| 1 |	Process Creation | Detects suspicious or malicious processes, often the first step in malware execution. |
+| 3	| Network Connections |	Monitors unauthorized network connections, which may indicate data exfiltration or C2 activity.|
+| 7	| Image Load | Identifies malicious DLLs or driver injections into legitimate processes.|
+| 11 | File Creation | Detects dropped or created files, helping identify malware payloads.|
+| 10 | Process Access |	Tracks inter-process access, helping detect credential dumping and privilege escalation techniques.|
