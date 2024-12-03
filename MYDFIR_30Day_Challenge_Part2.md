@@ -151,3 +151,24 @@ Sysmon is highly customizable through its configuration file, allowing security 
 | 10 | Process Access |	Tracks inter-process access, helping detect credential dumping and privilege escalation techniques.|
 
 ## Day 9: Sysmon Setup
+Today's objective is to install Sysmon onto a Windows server and confirm that it generates telemetry. 
+
+Often used in situations where it's impractical or impossible to have human presence at the data collection site, telemetry is the process of remotely collecting and transmitting data from one location to another for monitoring, analysis, or control. It enables real-time, remote monitoring, making it a valuable tool in many industries and applications.
+
+I started by establishing a remote desktop connection to my Windows server using the server's public IP address and user credentials.
+
+<img width="680" alt="day9-1" src="https://github.com/user-attachments/assets/232f9210-2341-4143-b80a-1a834d49fe56">
+
+<img width="412" alt="day9-2" src="https://github.com/user-attachments/assets/7e14624b-9524-47bc-9726-dca59cfe6605">
+
+Once the session was established, I opened up the web browser and Googled Sysmon. 
+
+<img width="942" alt="Day9-2a" src="https://github.com/user-attachments/assets/6d7e453e-cec7-4f6b-bf48-bb88ab9dc052">
+
+The [first result](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) will take you to the download page.
+
+<img width="960" alt="day9-3" src="https://github.com/user-attachments/assets/3179424a-a0d7-4c81-b4e1-a6f375c92739">
+
+After downloading Sysmon, I extracted the compressed files. 
+
+<img width="597" alt="day9-4" src="https://github.com/user-attachments/assets/1174aa40-7793-4714-9429-5986d5fe327c">
