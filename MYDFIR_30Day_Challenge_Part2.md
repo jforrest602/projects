@@ -165,10 +165,38 @@ Once the session was established, I opened up the web browser and Googled Sysmon
 
 <img width="942" alt="Day9-2a" src="https://github.com/user-attachments/assets/6d7e453e-cec7-4f6b-bf48-bb88ab9dc052">
 
-The [first result](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) will take you to the download page.
+The [first result](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) will take you to the download page. Note that this page provides the download link and, if you scroll down, more information about how to use Sysmon, examples, and important Sysmon Event IDs.
 
-<img width="960" alt="day9-3" src="https://github.com/user-attachments/assets/3179424a-a0d7-4c81-b4e1-a6f375c92739">
+<img width="960" alt="day9-3" src="https://github.com/user-attachments/assets/efea9937-ca66-4c53-a42a-ecbec998e032">
 
 After downloading Sysmon, I extracted the compressed files. 
 
 <img width="597" alt="day9-4" src="https://github.com/user-attachments/assets/1174aa40-7793-4714-9429-5986d5fe327c">
+
+Next up, I needed to download the Sysmon configuration file. A popular configuration is Olaf's Sysmon configuration. This can be found quickly by Googling "sysmon olaf config".
+
+<img width="962" alt="day9-5" src="https://github.com/user-attachments/assets/a1d537f8-8333-46d0-bf43-1777b5820491">
+
+Scrolling down on the Github page, you will find the sysmonconfig.xml file. 
+
+<img width="882" alt="day9-6" src="https://github.com/user-attachments/assets/3368a9e0-b0b7-4653-844e-3e70ccb19bf0">
+
+Once inside there, select raw.
+
+<img width="954" alt="day9-7" src="https://github.com/user-attachments/assets/15cf1fa8-017e-455d-a250-3113f705e88d">
+
+Now, right click on the page and select "Save As". 
+
+<img width="958" alt="day9-8" src="https://github.com/user-attachments/assets/fa7be764-46b3-4343-b66d-9a57b3f0460a">
+
+Note that this file should be saved inside the Sysmon directory (folder).
+
+<img width="960" alt="day9-9" src="https://github.com/user-attachments/assets/3ed1798d-ce56-4958-921c-f314c0f47593">
+
+Next, I opened up a PowerShell window as Administrator. To navigate to the Sysmon directory I ran `cd C:\Users|Administrator\Downloads\Sysmon`. To confirm that I was in the right place, I ran `dir`. To install Sysmon, I ran `.\Sysmon64.exe`.
+
+<img width="481" alt="day9-10" src="https://github.com/user-attachments/assets/ee259574-d98b-4f72-8aea-c769df083b3c">
+
+
+
+
