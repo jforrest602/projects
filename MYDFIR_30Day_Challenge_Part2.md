@@ -193,10 +193,20 @@ Note that this file should be saved inside the Sysmon directory (folder).
 
 <img width="960" alt="day9-9" src="https://github.com/user-attachments/assets/3ed1798d-ce56-4958-921c-f314c0f47593">
 
-Next, I opened up a PowerShell window as Administrator. To navigate to the Sysmon directory I ran `cd C:\Users|Administrator\Downloads\Sysmon`. To confirm that I was in the right place, I ran `dir`. To install Sysmon, I ran `.\Sysmon64.exe`.
+Next, I opened up a PowerShell window as Administrator. To navigate to the Sysmon directory I ran `cd C:\Users|Administrator\Downloads\Sysmon`. To confirm that I was in the right place, I ran `dir`.  I ran `.\Sysmon64.exe` and hit enter. This provides the flags that you can use.
 
 <img width="481" alt="day9-10" src="https://github.com/user-attachments/assets/ee259574-d98b-4f72-8aea-c769df083b3c">
 
+<img width="466" alt="day9-11" src="https://github.com/user-attachments/assets/e22dc0e2-a4de-402b-8704-5802e1fa85b5">
 
+To install Sysmon, I ran `.\Sysmon.64.exe -i sysmonconfig.xml`.
 
+<img width="723" alt="day9-12" src="https://github.com/user-attachments/assets/70971a4d-6942-4e0b-864a-710cba108df2">
 
+It only takes a few seconds for it to finish installing. Once it was finished I opened up Services, part of the Microsfot Management Console which can be found by typing in "services" in your computer's search bar. Scrolling down, I did see that Sysmon was there and running.
+
+<img width="959" alt="day9-13" src="https://github.com/user-attachments/assets/59c987af-b817-4980-9655-b750518f8791">
+
+Furthermore, I opened my Windows Event Viewer, which can also be located by searching your computer for "event viewer". Once opened, using the dropdown menus on the left side, I navigated to `Applications and Service Logs > Microsoft > Windos > Sysmon > Operational`. This brought up a list of events, proving that Sysmon telemetry is being generated.
+
+<img width="964" alt="day9-14" src="https://github.com/user-attachments/assets/2fd95478-1e3a-428d-8d01-0f3bc4b86611">
