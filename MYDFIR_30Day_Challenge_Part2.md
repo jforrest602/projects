@@ -210,3 +210,6 @@ It only takes a few seconds for it to finish installing. Once it was finished I 
 Furthermore, I opened my Windows Event Viewer, which can also be located by searching your computer for "event viewer". Once opened, using the dropdown menus on the left side, I navigated to `Applications and Service Logs > Microsoft > Windos > Sysmon > Operational`. This brought up a list of events, proving that Sysmon telemetry is being generated.
 
 <img width="964" alt="day9-14" src="https://github.com/user-attachments/assets/2fd95478-1e3a-428d-8d01-0f3bc4b86611">
+
+## Day 10: Ingest Data with Elastic Search
+The goal for today is to learn how to ingest Sysmon and Windows Defender logs into Elasticsearch.
