@@ -222,4 +222,20 @@ To recap, Sysmon provides detailed, real-time monitoring of various system activ
 Sysmon is an essential tool for security professionals looking to maintain situational awareness, detect advanced threats, and respond quickly to incidents on Windows systems.
 
 ## Day 10: Ingest Data with Elastic Search
-The goal for today is to learn how to ingest Sysmon and Windows Defender logs into Elasticsearch.
+The goal for today is to learn how to ingest Sysmon and Windows Defender logs into Elasticsearch. After logging into my Elasticsearch instance, I selected "Add Integrations" on the homepage.
+
+<img width="946" alt="day10-1" src="https://github.com/user-attachments/assets/eae44b1a-f769-4175-8334-cfbdad04559b">
+
+Searching for "Windows events", the is a "Custom Windows Event Logs" option that collects and parses logs from any Windows event log channel with Elastic Agent. 
+
+ <img width="947" alt="day10-2" src="https://github.com/user-attachments/assets/ab316b7f-9e15-4839-a75b-0661259c2760">
+
+I selected that and then "Add Custom Windows Events Logs".
+
+<img width="952" alt="day10-3" src="https://github.com/user-attachments/assets/a0f367e6-0889-4860-916d-651387a1a18c">
+
+Following the prompts, I named and described the integration. For the Channel Name, I opened up Event Viewer on my Windows server and navigated to `Applications and Services Logs > Microsoft > Windows > Sysmon`, right clicked on `Operational` and selected `Properties`.
+
+<img width="903" alt="day10-4" src="https://github.com/user-attachments/assets/2d7f1355-cd28-4be2-afbe-056d7938852e">
+
+The field `Full Name` provides the information to use for the `Channel Name`.
