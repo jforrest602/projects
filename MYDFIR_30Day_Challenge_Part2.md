@@ -234,8 +234,20 @@ I selected that and then "Add Custom Windows Events Logs".
 
 <img width="952" alt="day10-3" src="https://github.com/user-attachments/assets/a0f367e6-0889-4860-916d-651387a1a18c">
 
-Following the prompts, I named and described the integration. For the Channel Name, I opened up Event Viewer on my Windows server and navigated to `Applications and Services Logs > Microsoft > Windows > Sysmon`, right clicked on `Operational` and selected `Properties`.
+Following the prompts, I named and described the integration. 
+
+<img width="941" alt="day10-6" src="https://github.com/user-attachments/assets/4669a871-be94-4ec4-9f64-7eb68bcdeb38">
+
+For the Channel Name, I opened up Event Viewer on my Windows server and navigated to `Applications and Services Logs > Microsoft > Windows > Sysmon`, right clicked on `Operational` and selected `Properties`.
 
 <img width="903" alt="day10-4" src="https://github.com/user-attachments/assets/2d7f1355-cd28-4be2-afbe-056d7938852e">
 
-The field `Full Name` provides the information to use for the `Channel Name`.
+The field `Full Name` provides the information to use for the `Channel Name`. I left all other configuration options as default.
+
+<img width="750" alt="day10-7" src="https://github.com/user-attachments/assets/426ae58e-a5b8-4886-b8c3-358865daa788">
+
+FInally, I added the integration to an existing host, selecting the proper agent policy, saved and deployed.
+
+<img width="947" alt="day10-8" src="https://github.com/user-attachments/assets/2e6af218-7ab0-4e6d-851d-9f64b3815264">
+
+<img width="1032" alt="day10-9" src="https://github.com/user-attachments/assets/06f0a8c2-636b-4727-b491-c741bc962dee">
