@@ -241,6 +241,7 @@ Following the prompts, I named and described the integration.
 For the Channel Name, I opened up Event Viewer on my Windows server and navigated to `Applications and Services Logs > Microsoft > Windows > Sysmon`, right clicked on `Operational` and selected `Properties`.
 
 <img width="780" alt="day10-4" src="https://github.com/user-attachments/assets/5dae5348-b1de-46ab-8dbc-53fb399a490e">
+<img width="913" alt="day10-5" src="https://github.com/user-attachments/assets/dece34ef-62b7-48a4-9131-5f856816c25a">
 
 The field `Full Name` provides the information to use for the `Channel Name`. I left all other configuration options as default.
 
