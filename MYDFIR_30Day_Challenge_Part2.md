@@ -211,5 +211,15 @@ Furthermore, I opened my Windows Event Viewer, which can also be located by sear
 
 <img width="964" alt="day9-14" src="https://github.com/user-attachments/assets/2fd95478-1e3a-428d-8d01-0f3bc4b86611">
 
+To recap, Sysmon provides detailed, real-time monitoring of various system activities, focusing on capturing low-level events that are often useful for detecting suspicious or malicious activity on a system. Sysmon and its logs are incredibly valuable for:
+
+**Incident detection and response:** Offering visibility into processes, network activity, and file operations that might otherwise go unnoticed.
+
+**Proactive defense and threat hunting:** Allowing analysts to search for indicators of compromise or early signs of attack.
+
+**Forensics and root cause analysis:** Assisting investigators in reconstructing what happened during an attack or breach.
+
+Sysmon is an essential tool for security professionals looking to maintain situational awareness, detect advanced threats, and respond quickly to incidents on Windows systems.
+
 ## Day 10: Ingest Data with Elastic Search
 The goal for today is to learn how to ingest Sysmon and Windows Defender logs into Elasticsearch.
