@@ -250,7 +250,7 @@ The field `Full Name` field provides the information to use for the `Channel Nam
 
 I left all other configuration options as default.
 
-FInally, I added the integration to an existing host, selecting the proper agent policy, saved and deployed.
+Finally, I added the integration to an existing host, selecting the proper agent policy, saved and deployed.
 
 <img width="947" alt="day10-8" src="https://github.com/user-attachments/assets/2e6af218-7ab0-4e6d-851d-9f64b3815264">
 
@@ -261,8 +261,22 @@ TO ingest logs from Windows Defender, I followed the same procedure. To located 
 <img width="730" alt="day10-10" src="https://github.com/user-attachments/assets/274cf23d-589c-416b-ab44-76d61cfed6a9">
 
 To avoid ingesting non-security related information into my SIEM, I set a filter to only ingest event IDs 1116, 1117, and 5001. These event IDs are all security related and I want this information ingested into my SIEM.
-*[1116](https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus) alerts the user to malware or other potentially unwanted software being detected.
-*[1117](https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus) informs the user that the antimalware platform took action to protect the system.
-*[5001](https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus) alerts the user that real-time portection has been disabled.
+* [1116](https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus) alerts the user to malware or other potentially unwanted software being detected.
+* [1117](https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus) informs the user that the antimalware platform took action to protect the system.
+* [5001](https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus) alerts the user that real-time portection has been disabled.
+
 All of these are cause for concern.
 
+<img width="713" alt="day10-11" src="https://github.com/user-attachments/assets/0efafda1-ec73-47f0-a7c9-be95c484adc1">
+
+Finally, I added the integration to an existing host, selecting the proper agent policy, saved and deployed.
+
+<img width="968" alt="day10-12" src="https://github.com/user-attachments/assets/24fbe065-10fc-40b2-a12c-5e6aff332d74">
+
+I did experience an issue where I wasn't seeing any of these logs when I searched for them in my Elasticsearch instance. After some troubleshooting, I restarted the Elastic Agent on my Windows server by opening up `Services`, right-clicking on `Elastic Agent`, and choosing `Restart`. 
+
+<img width="960" alt="day10-14" src="https://github.com/user-attachments/assets/57057a5b-4603-4275-a568-0af685d4100b">
+
+I did also have to configure a rule to allow incoming connections on port 9200 in my VPC firewall group policy. After these two changes, I was able to confirm that the desired data was being ingested into my Elasticsearch instance.
+
+<img width="966" alt="day10-15" src="https://github.com/user-attachments/assets/57024c15-6c43-4dcc-b312-eb3af5ce5bc7">
