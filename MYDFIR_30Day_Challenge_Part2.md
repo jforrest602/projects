@@ -280,3 +280,5 @@ I did experience an issue where I wasn't seeing any of these logs when I searche
 I did also have to configure a rule to allow incoming connections on port 9200 in my VPC firewall group policy. After these two changes, I was able to confirm that the desired data was being ingested into my Elasticsearch instance.
 
 <img width="966" alt="day10-15" src="https://github.com/user-attachments/assets/57024c15-6c43-4dcc-b312-eb3af5ce5bc7">
+
+Now, I can start exploring further and begin to better my understanding of how to interpret these logs.
