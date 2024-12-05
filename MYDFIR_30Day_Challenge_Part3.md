@@ -29,8 +29,11 @@ A password manager is a tool that securely stores and manages passwords for vari
 A passphrase is a longer and more complex form of a password, consisting of a sequence of words or characters, often forming a meaningful or memorable phrase. 
 
 __Enable multifactor authenication (MFA)__ when available. MFA requires users to provide two or more verification factors to confirm their identity when accessing a system, account, or application. This can be accomplished through text message, email, or authenticator apps. The factors fall into three categories:
+
   **1)** Something you know (e.g., a password or PIN).
+
   **2)** Something you have (e.g., a smartphone, hardware token, or security key).
+
   **3)** Something you are (e.g., a fingerprint, facial recognition, or voice).
 
 By requiring multiple factors, MFA significantly enhances security, making it harder for attackers to gain access, even if one factor (like a password) is compromised.
