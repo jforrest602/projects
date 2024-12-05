@@ -1,4 +1,4 @@
-*This prject is under construction.*
+*This project is under construction.*
 
 # MyDFIR 30 Day SOC Analyst Challenge (Part 3)
 
@@ -16,3 +16,6 @@ A brute force attack is a method used to gain unauthorized access to a system, a
 Unfortunately, brute force methods are accessible and easy to use, making it a common attack method. Servers all around the world have services running that are exposed to the internet, like remote desktop (RDP), allowing anyone from the internet to connect and attempt to login using credentials found in password dumps, malware, or social engineering techniques. 
 
 #### 3 Common Brute Force Attacks
+* Simple Brute Force: The attacker, relying on automation, tries every possible combination, utilizing trial and error in attempt to gain unauthorized access.
+* Dictionary Attack: The attacker uses a word list containing common words, phrases, and or passwords found in credential dumps. Credential dumps (or password dumps) are passwrods that have been leaked from previously successful data breaches. These attacks have a higher success rate due to the fact the people often reuse the same password across multiple different sites and platforms.
+* Credential Stuffing: An attacker will use the stolen username-password pairs from credential dumps and attempt to access  multiple accounts across different platforms. Again, this relies on users reusing passwords across sites.
