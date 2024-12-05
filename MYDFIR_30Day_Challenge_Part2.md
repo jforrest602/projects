@@ -226,11 +226,11 @@ The goal for today is to learn how to ingest Sysmon and Windows Defender logs in
 
 <img width="946" alt="day10-1" src="https://github.com/user-attachments/assets/eae44b1a-f769-4175-8334-cfbdad04559b">
 
-Searching for "Windows events", the is a "Custom Windows Event Logs" option that collects and parses logs from any Windows event log channel with Elastic Agent. 
+Searching for "Windows events", there is a "Custom Windows Event Logs" option that collects and parses logs from any Windows event log channel with Elastic Agent. 
 
  <img width="947" alt="day10-2" src="https://github.com/user-attachments/assets/ab316b7f-9e15-4839-a75b-0661259c2760">
 
-I selected that and then "Add Custom Windows Events Logs".
+I selected that and then chose "Add Custom Windows Events Logs".
 
 <img width="952" alt="day10-3" src="https://github.com/user-attachments/assets/a0f367e6-0889-4860-916d-651387a1a18c">
 
@@ -241,14 +241,28 @@ Following the prompts, I named and described the integration.
 For the Channel Name, I opened up Event Viewer on my Windows server and navigated to `Applications and Services Logs > Microsoft > Windows > Sysmon`, right clicked on `Operational` and selected `Properties`.
 
 <img width="780" alt="day10-4" src="https://github.com/user-attachments/assets/5dae5348-b1de-46ab-8dbc-53fb399a490e">
+
+The field `Full Name` field provides the information to use for the `Channel Name`. 
+
 <img width="913" alt="day10-5" src="https://github.com/user-attachments/assets/dece34ef-62b7-48a4-9131-5f856816c25a">
 
-The field `Full Name` provides the information to use for the `Channel Name`. I left all other configuration options as default.
-
 <img width="750" alt="day10-7" src="https://github.com/user-attachments/assets/426ae58e-a5b8-4886-b8c3-358865daa788">
+
+I left all other configuration options as default.
 
 FInally, I added the integration to an existing host, selecting the proper agent policy, saved and deployed.
 
 <img width="947" alt="day10-8" src="https://github.com/user-attachments/assets/2e6af218-7ab0-4e6d-851d-9f64b3815264">
 
 <img width="1032" alt="day10-9" src="https://github.com/user-attachments/assets/06f0a8c2-636b-4727-b491-c741bc962dee">
+
+TO ingest logs from Windows Defender, I followed the same procedure. To located the `Channel Name` information for this integration, I navigated to `Applications and Services Logs > Microsoft > Windows > Windows Defender`, right clicked on `Operational` and selected `Properties`. Again, this part is being done within Event Viewer on my Windows server. 
+
+<img width="730" alt="day10-10" src="https://github.com/user-attachments/assets/274cf23d-589c-416b-ab44-76d61cfed6a9">
+
+To avoid ingesting non-security related information into my SIEM, I set a filter to only ingest event IDs 1116, 1117, and 5001. These event IDs are all security related and I want this information ingested into my SIEM.
+*[1116](https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus) alerts the user to malware or other potentially unwanted software being detected.
+*[1117](https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus) informs the user that the antimalware platform took action to protect the system.
+*[5001](https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus) alerts the user that real-time portection has been disabled.
+All of these are cause for concern.
+
