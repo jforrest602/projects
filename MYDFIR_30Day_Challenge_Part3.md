@@ -91,9 +91,11 @@ Let's break down this command.
     * Passes the filtered output (lines containing both "failed" and "root") to the next command.
  5) `cut -d ' ' -f 9`
     * __Purpose:__ Extracts the 9th field from each line, where fields are separated by spaces.
-    * `-d ' '`: Specifies the delimiter as a space character.
+    * `-d ' '`: Specifies the delimiter<sup>*</sup> as a space character.
     * `-f 9`: Specifies the field to extract (the 9th one).
    
-*A __delimiter__ is a character or sequence of characters used to separate or define boundaries between distinct pieces of data in a file, string, or dataset. It helps identify where one part of the data ends and the next begins.* 
+<sup>* </sup>A __delimiter__ is a character or sequence of characters used to separate or define boundaries between distinct pieces of data in a file, string, or dataset. It helps identify where one part of the data ends and the next begins.* 
 
 Monitoring authentication attempts in real time is crucial for maintaining the security and stability of a server. Real-time monitoring of authentication attempts is essential for detecting unauthorized access, unusual activity, and brute force attacks, enabling quick responses to mitigate potential threats. It helps protect sensitive data, ensures compliance with security regulations, and prevents system compromise by identifying and blocking malicious activity. Additionally, it provides valuable insights into both malicious behavior and legitimate user issues, enhancing overall server security and reliability. By monitoring authentication attempts in real time, organizations can reduce the attack surface, improve response times, and maintain a secure environment for their servers and data.
+
+## Day 13: Installing Elastic Agent
