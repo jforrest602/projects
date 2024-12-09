@@ -80,3 +80,18 @@ Let's break down this command.
    * __Purpose:__ Searches the file `auth.log` for lines containing the word "failed".
    * `-i`: Makes the search case-insensitive (matches "Failed", "FAILED", etc.).
    * __Output:__ Displays only the lines in auth.log that include "failed" in any case.
+2) `|` (Pipe)
+   * Connects the output of the first `grep` command to the next command.
+   * The output of `grep -i failed auth.log` becomes the input for the next `grep`.
+3) `grep -i root`
+   * __Purpose:__ Filters the lines passed from the first `grep` to find only those containing the word "root".
+   * `-i`: Again, makes the search case-insensitive.
+   * __Output:__ Displays lines containing both "failed" (from the previous step) and "root".
+ 4) `|` (Pipe)
+    * Passes the filtered output (lines containing both "failed" and "root") to the next command.
+ 5) `cut -d ' ' -f 9`
+    * __Purpose:__ Extracts the 9th field from each line, where fields are separated by spaces.
+    * `-d ' '`: Specifies the delimiter as a space character.
+    * `-f 9`: Specifies the field to extract (the 9th one).
+   
+*A __delimiter__ is a character or sequence of characters used to separate or define boundaries between distinct pieces of data in a file, string, or dataset. It helps identify where one part of the data ends and the next begins.* 
