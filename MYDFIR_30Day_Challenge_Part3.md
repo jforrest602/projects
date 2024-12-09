@@ -62,3 +62,21 @@ The above image doesn't show much interesting activity yet because the server wa
 <img width="943" alt="day12-4" src="https://github.com/user-attachments/assets/42230ed7-8ee4-449f-bd37-aa965c1f0810">
 
 In this image, we can see some unauthorized attempts to login taking place. Key words like *failed password, invalid user, authentication failure, and connection closed* should stand out.
+
+Next, I ran `grep -i failed auth.log` to filter the auth.log file for any entries that contain the word "failed".
+
+<img width="944" alt="day12-5" src="https://github.com/user-attachments/assets/ee7a50b8-00ba-42d1-8827-0f5a12e24bd6">
+
+I narrowed down my search further with `grep -i failed auth.log | grep -i root` to only include entries where someone tried to login as root. 
+
+<img width="949" alt="day12-6" src="https://github.com/user-attachments/assets/0ffa77b8-2f9f-4e56-920d-4ad1835b9d2b">
+
+To filter the results to see only the IP address from which these failed authentication attempts by root came from, I ran `grep -i failed auth.log | grep -i root | cut -d ‘ ‘ -f 9`.
+
+<img width="947" alt="day12-7" src="https://github.com/user-attachments/assets/6af6d47f-d87d-476c-bcc6-48716340fdcd">
+
+Let's break down this command.
+1) `grep -i failed auth.log`
+   * __Purpose:__ Searches the file `auth.log` for lines containing the word "failed".
+   * `-i`: Makes the search case-insensitive (matches "Failed", "FAILED", etc.).
+   * __Output:__ Displays only the lines in auth.log that include "failed" in any case.
