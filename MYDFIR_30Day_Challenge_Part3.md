@@ -99,3 +99,21 @@ Let's break down this command.
 Monitoring authentication attempts in real time is crucial for maintaining the security and stability of a server. Real-time monitoring of authentication attempts is essential for detecting unauthorized access, unusual activity, and brute force attacks, enabling quick responses to mitigate potential threats. It helps protect sensitive data, ensures compliance with security regulations, and prevents system compromise by identifying and blocking malicious activity. Additionally, it provides valuable insights into both malicious behavior and legitimate user issues, enhancing overall server security and reliability. By monitoring authentication attempts in real time, organizations can reduce the attack surface, improve response times, and maintain a secure environment for their servers and data.
 
 ## Day 13: Installing Elastic Agent
+The goal for today is to install Elastic Agent onto the Linux Ubuntu server that was deployed yesterday. This will provide the ability to query the server's logs in my Elasticsearch instance. 
+
+Elastic Agent is a unified data collection agent developed by Elastic. It simplifies the process of ingesting and managing data across different sources in the Elastic Stack. In the SOC context, Elastic Agent plays a critical role in:
+* Collecting endpoint telemetry for threat detection and investigation.
+* Enabling rapid deployment of threat detection rules and monitoring policies.
+* Providing insights via Kibana dashboards for centralized visibility.
+
+By adopting Elastic Agent, organizations can achieve a more cohesive and efficient approach to managing their data ingestion and endpoint security.
+
+Elasticsearch is the core component of the Elastic Stack (ELK Stack) and powers the system's ability to store, search, and analyze data efficiently. In the context of cybersecurity and SOCs:
+* Incident Investigation: Enables fast querying of logs and events to uncover potential threats.
+* Threat Detection: Powers rule-based and machine learning-based threat detection.
+* Centralized Visibility: Facilitates data integration from various security tools for a unified view.
+
+Elasticsearch’s ability to handle massive amounts of data efficiently makes it a cornerstone of modern monitoring and analytics workflows.
+
+#### The Install
+
