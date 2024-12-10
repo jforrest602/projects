@@ -173,7 +173,7 @@ Adding the keyword "authentication failure" I narrow the results down even furth
 
 <img width="957" alt="day13-9b" src="https://github.com/user-attachments/assets/5f03bfe1-c24b-4723-9837-89f2a042b9a7">
 
-Viewing the details of one of these resutls, the message reads "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=148.153.158.114  user=root". To add this information into the results table, I clicked the second icon above the highlighted message field, making the information easier to digest.
+Viewing the details of one of these resutls, the message reads "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=148.153.158.114  user=root". To add this information into the results table, I clicked the second icon above the highlighted message field, "toggle column in table", making the information easier to digest.
 
 <img width="960" alt="day13-9c" src="https://github.com/user-attachments/assets/6338dd10-fda4-4ae2-924f-98d6a99d4722">
 
