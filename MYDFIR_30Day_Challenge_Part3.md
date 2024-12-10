@@ -140,11 +140,42 @@ Next, I navigated to `View All Agent Policies > Agents > Add Agent`, selected th
 
 I pasted that command into my SSH session with the server, making sure to change into the home directory first, and the Elastic Agent installed. However, an `Error: fail to enroll: fail to execute request to fleet server: x509: certificate signed by unknown authority` message arose.
 
+In this case, I am using a self-signed certificate. A self-signed certificate is a type of digital certificate that is signed by the entity that it certifies, rather than by a trusted Certificate Authority (CA). These certificates are typically used for internal or development purposes where the cost or need for a certificate issued by a trusted CA is unnecessary.
+
 <img width="947" alt="day13-6" src="https://github.com/user-attachments/assets/bd5164f3-28e2-462d-ab5e-aa2bdf074341">
 
-To remedy this, I appended a `--insecure` to the command and ran it again. 
+To remedy this, I appended a `--insecure` to the command, ran it again, and the agent was successfully installed.
 
 <img width="946" alt="day13-7" src="https://github.com/user-attachments/assets/c089b810-9e98-40e1-833f-1a813992625b">
 
-In this case, I am using a self-signed certificate. A self-signed certificate is a type of digital certificate that is signed by the entity that it certifies, rather than by a trusted Certificate Authority (CA). These certificates are typically used for internal or development purposes where the cost or need for a certificate issued by a trusted CA is unnecessary.
+<img width="947" alt="day13-8" src="https://github.com/user-attachments/assets/00e65519-6106-4ecb-a167-36e3f075afc9">
+
+This is confirmed with the Elastic web GUI.
+
+<img width="953" alt="day13-8a" src="https://github.com/user-attachments/assets/fbeca93c-86fb-411a-a090-573dcc0924c6">
+
+Next, clicking on the hamburger icon and navigating to `Discover` the agent also appears now.
+<img width="961" alt="day13-8b" src="https://github.com/user-attachments/assets/1c5ad9b6-3ccb-4cd6-8632-483b0329f999">
+
+By clicking the plus (+) button there, it applies a filter to show logs tht contain only this agent name.
+
+<img width="961" alt="day13-8c" src="https://github.com/user-attachments/assets/13929ad8-b0c6-4199-b680-5d4bb7482aad">
+
+Yesterday, I ran `grep -i failed auth.log | grep -i root | cut -d ‘ ‘ -f 9` identified one particular IP address that had failed to login to the root account.
+
+ <img width="948" alt="day13-9" src="https://github.com/user-attachments/assets/610b2ab8-b42b-4dd9-91ff-a94f919e8837">
+
+ Searching for that in Elastic, I found some results.
+ 
+<img width="959" alt="day13-9a" src="https://github.com/user-attachments/assets/07c1afdb-806d-4927-b9d6-c903892dd1cc">
+
+Adding the keyword "authentication failure" I narrow the results down even further.
+
+<img width="957" alt="day13-9b" src="https://github.com/user-attachments/assets/5f03bfe1-c24b-4723-9837-89f2a042b9a7">
+
+Viewing the details of one of these resutls, the message reads "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=148.153.158.114  user=root". To add this information into the results table, I clicked the second icon above the highlighted message field, making the information easier to digest.
+
+<img width="960" alt="day13-9c" src="https://github.com/user-attachments/assets/6338dd10-fda4-4ae2-924f-98d6a99d4722">
+
+<img width="962" alt="day13-9d" src="https://github.com/user-attachments/assets/c194535f-63e0-4bab-a093-d02c7d181544">
 
