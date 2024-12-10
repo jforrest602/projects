@@ -179,3 +179,6 @@ Viewing the details of one of these resutls, the message reads "pam_unix(sshd:au
 
 <img width="962" alt="day13-9d" src="https://github.com/user-attachments/assets/c194535f-63e0-4bab-a093-d02c7d181544">
 
+Now that the Elastic Agent is installed on the SSH server, I can begin looking for interesting events with the Elasticsearch instance.
+
+## Day 14: Creating Alerts and Dashboards in Kibana (1/4)
