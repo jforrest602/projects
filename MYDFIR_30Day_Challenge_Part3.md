@@ -116,4 +116,12 @@ Elasticsearch is the core component of the Elastic Stack (ELK Stack) and powers 
 Elasticsearch’s ability to handle massive amounts of data efficiently makes it a cornerstone of modern monitoring and analytics workflows.
 
 #### The Install
+To begin, I logged into the Elastic web GUI, clicked the hamburger icon, and navigated to `management > fleet > agent policies > create new policy`.
 
+<img width="961" alt="day13-1" src="https://github.com/user-attachments/assets/8b3ae81b-e144-49ba-b474-db38c4360785">
+
+After naming and creating the agent policy, I navigated into that policy and selected `system-3` to see the default log collection settings and what kind of logs this policy is instructing the Ubuntu server to push to my Elasticsearch instance. It points to the path `/var/log/auth.log` and `/var/log/secure`.
+
+<img width="945" alt="day13-3" src="https://github.com/user-attachments/assets/b88f99a2-a8aa-445c-92a3-5a17e830e88f">
+
+Hopping over to an SSH session on the Ubuntu server and listing out the contents of the `var/log` directory, the `auth.log` exists but, there isn't anything named `secure`. A bit of sleuthing shows that both `/var/log/auth.log` or `/var/log/secure` keep authentication logs for both successful or failed logins, and authentication processes and that storage depends on system type. If you're running Debian or Ubuntu, logs are stored in `/var/log/auth.log`. If you're using Redhat or CentOS, you'll find the logs stored in `/var/log/secure`.
