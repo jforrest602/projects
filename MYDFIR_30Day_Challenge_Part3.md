@@ -124,4 +124,27 @@ After naming and creating the agent policy, I navigated into that policy and sel
 
 <img width="945" alt="day13-3" src="https://github.com/user-attachments/assets/b88f99a2-a8aa-445c-92a3-5a17e830e88f">
 
-Hopping over to an SSH session on the Ubuntu server and listing out the contents of the `var/log` directory, the `auth.log` exists but, there isn't anything named `secure`. A bit of sleuthing shows that both `/var/log/auth.log` or `/var/log/secure` keep authentication logs for both successful or failed logins, and authentication processes and that storage depends on system type. If you're running Debian or Ubuntu, logs are stored in `/var/log/auth.log`. If you're using Redhat or CentOS, you'll find the logs stored in `/var/log/secure`.
+Hopping over to an SSH session on the Ubuntu server and listing out the contents of the `var/log` directory, the `auth.log` exists but, there isn't anything named `secure`. 
+
+<img width="944" alt="day13-4" src="https://github.com/user-attachments/assets/35fe04ec-5fb0-4736-87eb-4db1d3732abd">
+
+A bit of sleuthing shows that both `/var/log/auth.log` or `/var/log/secure` keep authentication logs for both successful or failed logins, and authentication processes and that storage depends on system type. If you're running Debian or Ubuntu, logs are stored in `/var/log/auth.log`. If you're using Redhat or CentOS, you'll find the logs stored in `/var/log/secure`.
+
+Next, I navigated to `View All Agent Policies > Agents > Add Agent`, selected the proper policy to monitor, selected `Enroll in Fleet`, and copied the command provided for the Linux Tar OS.
+
+<img width="953" alt="day13-5" src="https://github.com/user-attachments/assets/645d5252-2496-4ae0-a5e9-df0368df7ff3">
+
+<img width="953" alt="day13-5a" src="https://github.com/user-attachments/assets/191a7171-b8e9-47bd-9f0c-f1c24543f886">
+
+<img width="952" alt="day13-5b" src="https://github.com/user-attachments/assets/d0a11d80-8132-47b0-9175-cb2df17847c2">
+
+I pasted that command into my SSH session with the server, making sure to change into the home directory first, and the Elastic Agent installed. However, an `Error: fail to enroll: fail to execute request to fleet server: x509: certificate signed by unknown authority` message arose.
+
+<img width="947" alt="day13-6" src="https://github.com/user-attachments/assets/bd5164f3-28e2-462d-ab5e-aa2bdf074341">
+
+To remedy this, I appended a `--insecure` to the command and ran it again. 
+
+<img width="946" alt="day13-7" src="https://github.com/user-attachments/assets/c089b810-9e98-40e1-833f-1a813992625b">
+
+In this case, I am using a self-signed certificate. A self-signed certificate is a type of digital certificate that is signed by the entity that it certifies, rather than by a trusted Certificate Authority (CA). These certificates are typically used for internal or development purposes where the cost or need for a certificate issued by a trusted CA is unnecessary.
+
