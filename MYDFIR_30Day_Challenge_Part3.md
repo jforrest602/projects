@@ -243,9 +243,11 @@ Other settings were left as default. After saving and naming the map, it needs t
 <img width="959" alt="day14-8d" src="https://github.com/user-attachments/assets/bd7f9dc3-e7ed-44dc-a085-63f7fc4dfce2">
 <img width="963" alt="day14-8e" src="https://github.com/user-attachments/assets/85c7df2b-356d-49dd-8c43-6ae4dfe77635">
 
-Now, to create an SSH Successful Authentications visulaization, I duplicated my first visulaization, renamed it, and adjusted the query parameters to `system.auth.ssh.event: * and agent.name: MYDFIR-Linux-jf and system.auth.ssh.event: Accepted`. As we see, only my successful authentications from Japan are shown.
+To create an SSH Successful Authentications visulaization, I duplicated my first visulaization, renamed it, and adjusted the query parameters to `system.auth.ssh.event: * and agent.name: MYDFIR-Linux-jf and system.auth.ssh.event: Accepted`. As we see, only my successful authentications from Japan are shown.
 <img width="965" alt="day14-9" src="https://github.com/user-attachments/assets/fa26c0a8-773a-4e34-9d59-8c304d9d3ff0">
 
-Like custom alerts, this is just the beginning of be able to create custom dashboards and visualizations that help analysts and decision makers easily ingest and comprehend the relevant data key to keeping an organization safe from unauthorized access. 
+Now, next time brute force activity occurs, I can be alerted and easily view where the activity is coming from. However, like custom alerts, this is just the beginning of be able to create custom dashboards and visualizations that help analysts and decision makers easily ingest and comprehend the relevant data key to keeping an organization safe from unauthorized access. 
 
 Custom alerts for unauthorized SSH connections and associated dashboard visualizations are vital for detecting potential breaches and mitigating risks promptly. They enable real-time monitoring, quick identification of suspicious activity, and actionable insights, helping protect sensitive systems and data from unauthorized access.
+
+## Day 15: Remote Desktop Protocol (RDP)
