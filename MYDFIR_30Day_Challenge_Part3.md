@@ -186,6 +186,7 @@ Dashboards are crucial in a Security Operations Center (SOC) because they provid
 
 I will create an SSH brute force alert and associated dashboard to visualize where the attacks are coming from.
 
+#### Identifying Brute Force Attempts
 To begin, I filtered my Elasticsearch instance for the `agent.name` `MYDFIR-Linux-jf`, my SSH server, which revealed 5000+ events for that day.
 <img width="963" alt="day14-1a" src="https://github.com/user-attachments/assets/1f7ab5d9-d5a8-4dd1-9a87-c60d6d8dcf0d">
 
@@ -210,3 +211,23 @@ Moving forward, I added `user.name` as a column along with `source.ip` and `sour
 
 Finally, I filtered for "failed' to show only failed attempts narrowing the search down to just 169 events.
 <img width="959" alt="day14-6" src="https://github.com/user-attachments/assets/137d3502-004c-4fb7-9082-c720d2f1fbce">
+
+After saving these search parameters search, I am ready to create a new alert.
+
+#### Creating a Custom Alert
+Located under `Alerts` in the top right hand corner of the screen, I chose `Create search threshold rule`.
+<img width="961" alt="day14-6a" src="https://github.com/user-attachments/assets/79f01acf-34d3-4eca-9432-b96be613878d">
+
+After naming the rule, I can see that my search parameters have automatically populated in the `Define your query` section.
+<img width="957" alt="day14-6c" src="https://github.com/user-attachments/assets/4bc81a9f-38ec-430b-adf3-35e6d87e57c1">
+
+I set the thresholds for the alert.
+<img width="963" alt="day14-6d" src="https://github.com/user-attachments/assets/3a4688cf-7658-4e32-befd-f83ccf496d8e">
+
+Tested the query and saved.
+<img width="958" alt="day14-6e" src="https://github.com/user-attachments/assets/338308fa-900a-4648-905d-3df5855f498e">
+
+This is not the best rule for an alert but rather just the beginning of learning how to build and tune custom rules within a SOC environment. Later, I will further tune this rule to take action when triggered.
+
+#### Creating a Dashboard
+
