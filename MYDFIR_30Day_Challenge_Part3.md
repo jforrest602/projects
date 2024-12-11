@@ -182,3 +182,17 @@ Viewing the details of one of these resutls, the message reads "pam_unix(sshd:au
 Now that the Elastic Agent is installed on the SSH server, I can begin looking for interesting events with the Elasticsearch instance.
 
 ## Day 14: Creating Alerts and Dashboards in Kibana (1/4)
+Dashboards are crucial in a Security Operations Center (SOC) because they provide real-time visibility into security events, enabling analysts to quickly identify threats, monitor trends, and assess system health. They centralize data from various sources into an intuitive visual format, facilitating faster decision-making and efficient incident response.
+
+I will create an SSH brute force alert and associated dashboard to visualize where the attacks are coming from.
+
+To begin, I filtered my Elasticsearch instance for the `agent.name` `MYDFIR-Linux-jf`, my SSH server, which revealed 5000+ events for that day.
+<img width="963" alt="day14-1a" src="https://github.com/user-attachments/assets/1f7ab5d9-d5a8-4dd1-9a87-c60d6d8dcf0d">
+
+One of the first things to look for in a brute force attack is failed authentications because every possible combination is being tried to gain unauthorized access. Searching for the keyword "failed" my search results narrow to 37. However, looking at the message, it doesn't seem to be relevant to failed authentication attempts.
+<img width="960" alt="day14-2" src="https://github.com/user-attachments/assets/d620accb-6cd0-4cf9-8d12-fd9dd6352ff5">
+
+Searching the list of available fields on the left hand side of the page, `system.auth` is an option under `event.dataset`. Applying that as the filter leaves me 786 events to work with. 
+<img width="959" alt="day14-2a" src="https://github.com/user-attachments/assets/1fc99415-b2e6-41d1-b700-d7deb25fccf4">
+
+Looking at the details of one of the events, I can see that it is coming from the `/var/log/auth.log` filepath that we learned about previously.
