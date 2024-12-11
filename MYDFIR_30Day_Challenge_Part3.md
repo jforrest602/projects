@@ -196,3 +196,17 @@ Searching the list of available fields on the left hand side of the page, `syste
 <img width="959" alt="day14-2a" src="https://github.com/user-attachments/assets/1fc99415-b2e6-41d1-b700-d7deb25fccf4">
 
 Looking at the details of one of the events, I can see that it is coming from the `/var/log/auth.log` filepath that we learned about previously.
+<img width="961" alt="day14-2d" src="https://github.com/user-attachments/assets/e44ae5a7-d80a-47eb-bd98-90ffbb999dcd">
+
+This is closer to what I'm looking for but, I think there is better information out there. Further review of the available fields revealed a `system.auth.ssh.event` field, with "failed", "invalid", and "accepted" as the top values. I added this as a column in my search results table.
+<img width="959" alt="day14-3" src="https://github.com/user-attachments/assets/37e9e6fb-2f10-4a06-9369-4f7e54b78589">
+
+However, the column populated with only a `-` so I searched for `system.auth.ssh.event: *` to ensure to return only results with data in the `system.auth.ssh.event` field.
+<img width="959" alt="day14-3a" src="https://github.com/user-attachments/assets/833f8af4-1319-442b-b752-559428ad6d02">
+<img width="959" alt="day14-3b" src="https://github.com/user-attachments/assets/cb2b9229-35b4-4691-97e7-28c8201e3dac">
+
+Moving forward, I added `user.name` as a column along with `source.ip` and `source.geo.country_name`.
+<img width="961" alt="day14-4" src="https://github.com/user-attachments/assets/3090424e-f9d6-4655-8719-d63cc40d1d0a">
+
+Finally, I filtered for "failed' to show only failed attempts narrowing the search down to just 169 events.
+<img width="959" alt="day14-6" src="https://github.com/user-attachments/assets/137d3502-004c-4fb7-9082-c720d2f1fbce">
