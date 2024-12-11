@@ -230,4 +230,16 @@ Tested the query and saved.
 This is not the best rule for an alert but rather just the beginning of learning how to build and tune custom rules within a SOC environment. Later, I will further tune this rule to take action when triggered.
 
 #### Creating a Dashboard
+Under the hamburger menu, I navigated to `Analytics > Maps`. Once there, I enetered my previously defines search parameters into the search bar and clicked `Add layer`.
+<img width="960" alt="day14-8" src="https://github.com/user-attachments/assets/0b756757-f35b-4c98-8810-90a9ac7cbbad">
+
+One of my goals here is to pinpoint activites based on geolocation derived from the source IP address. The Chloropleth option will shade areas to compare statisitcs across boundaries.
+<img width="961" alt="day14-8b" src="https://github.com/user-attachments/assets/b0e829b0-53f3-461d-aca6-4574f68afc1d">
+
+For the `Boudaries source`, `Administrative Boundaries > World Countries` was applied. The same `Data view` used for my custom search parameters was applied as the `Statistics source`. `source.geo.country_iso_code` was applied as the `Join field`. 
+<img width="952" alt="day14-8c" src="https://github.com/user-attachments/assets/25a5b0e3-6504-4526-91d4-026598f5fa3b">
+
+Other settings were left as default. After saving and naming the map, it needs to be added to a dashboard. No dashboards exist yet, so `New` was chosen.
+<img width="959" alt="day14-8d" src="https://github.com/user-attachments/assets/bd7f9dc3-e7ed-44dc-a085-63f7fc4dfce2">
+<img width="963" alt="day14-8e" src="https://github.com/user-attachments/assets/85c7df2b-356d-49dd-8c43-6ae4dfe77635">
 
