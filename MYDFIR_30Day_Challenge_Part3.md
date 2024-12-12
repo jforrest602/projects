@@ -270,9 +270,9 @@ RDP is one way an attacker can gain initial access to a target network. Servers 
 [Censys](https://censys.com/) is a search engine that scans the internet to collect and index data about devices and services exposed to the web. Similar to Shodan, Censys continuously scans the global internet to discover servers, services, and their vulnerabilities. Censys provides tools to search and analyze exposed systems by filtering based on factors like service types (e.g., HTTP, HTTPS, RDP), geographical location, or security issues. It’s widely used by security researchers, network administrators, and organizations for monitoring, threat intelligence, and vulnerability assessments.
 
 #### How can you protect yourself?
-+ Turn off RDP
-+ Use MFA
-+ Restrict access by implementing firewall rules or putting servers behind a VPN
-+ Have strong password policies
-+ Utilize a Privileged Access Management Tool (PAM)
-+ Don't use default accounts
++ __Turn off RDP__ - if it's not needed, don't expose yourself to unecessary risk.
++ __Use MFA__ - this provides an initial layer of security.
++ __Restrict access__ - implement firewall rules or put servers behind a VPN.
++ __Have strong password policies__ - requiring passwords with 15+ characters containing upper and lowercase letter, numbers, and special characters is best.
++ __Utilize a Privileged Access Management Tool (PAM)__ - these generally work by centralizing access control, enforcing the principle of least privilege, provide session recording and monitoring, offer password vaulting and rotation, and assist with audits and reporting responsibilities. 
++ __Don't use default accounts__ - change the local default acounts that get created and setup a different administrator account with a unique name, if needed.
