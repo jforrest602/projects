@@ -251,3 +251,22 @@ Now, next time brute force activity occurs, I can be alerted and easily view whe
 Custom alerts for unauthorized SSH connections and associated dashboard visualizations are vital for detecting potential breaches and mitigating risks promptly. They enable real-time monitoring, quick identification of suspicious activity, and actionable insights, helping protect sensitive systems and data from unauthorized access.
 
 ## Day 15: Remote Desktop Protocol (RDP)
+Remote Desktop Protocol (RDP) is one of the most commonly abused protocols. According to this [source](https://www.sophos.com/en-us/press/press-releases/2024/04/cybercriminals-abuse-remote-desktop-protocol-rdp-90-attacks-handled), it was present in 90% of ransomware attacks in the year 2023.
+
+#### What is RDP? 
+RDP is a protocol, or a set of agreed upon rules on which to operate, that is used for communication between a terminal server and a terminal server client. It operates within TCP and defaults to port 3389. It allows authorized users to connect remotely to another machine.
+
+Read more about it from Microsoft [here](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol).
+
+#### Why is it used? 
+RDP is accessible, convenient, and saves time. It allows users to remotely connect to endpoints to work or troubleshoot problems without have to be in the same physical location. However, these upsides of RDP are accompanied by risk.
+
+#### How do malicious actors abuse it? 
+RDP is one way an attacker can gain initial access to a target network. Servers will often have the RDP service open and exposed to the internet if the organization has not tightened up its security configurations. This means that it's possible for anyone from the internet to try and connect to that server. This can be done through brute force or with stolen credentials. Once this initial access is gained, depending on the level of privileges, the attacker can now do things like steal more data or move to other areas of the network.
+
+#### How can you identify endpoints with RDP exposed to the internet? 
+[Shodan](https://www.shodan.io/) (*account required*)identifies servers with RDP open to the internet by scanning IP addresses across the internet and checking for specific ports associated with RDP. When Shodan scans an IP, it probes common ports for services and identifies the service banners or response patterns that indicate RDP is running. It then indexes these findings, which allows users to search for devices with RDP exposed publicly. Shodan essentially maps the global internet to highlight systems with potentially risky configurations like open RDP ports.
+
+[Censys](https://censys.com/) is a search engine that scans the internet to collect and index data about devices and services exposed to the web. Similar to Shodan, Censys continuously scans the global internet to discover servers, services, and their vulnerabilities. 
+
+How can you protect yourself?
