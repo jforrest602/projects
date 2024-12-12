@@ -267,6 +267,12 @@ RDP is one way an attacker can gain initial access to a target network. Servers 
 #### How can you identify endpoints with RDP exposed to the internet? 
 [Shodan](https://www.shodan.io/) (*account required*)identifies servers with RDP open to the internet by scanning IP addresses across the internet and checking for specific ports associated with RDP. When Shodan scans an IP, it probes common ports for services and identifies the service banners or response patterns that indicate RDP is running. It then indexes these findings, which allows users to search for devices with RDP exposed publicly. Shodan essentially maps the global internet to highlight systems with potentially risky configurations like open RDP ports.
 
-[Censys](https://censys.com/) is a search engine that scans the internet to collect and index data about devices and services exposed to the web. Similar to Shodan, Censys continuously scans the global internet to discover servers, services, and their vulnerabilities. 
+[Censys](https://censys.com/) is a search engine that scans the internet to collect and index data about devices and services exposed to the web. Similar to Shodan, Censys continuously scans the global internet to discover servers, services, and their vulnerabilities. Censys provides tools to search and analyze exposed systems by filtering based on factors like service types (e.g., HTTP, HTTPS, RDP), geographical location, or security issues. It’s widely used by security researchers, network administrators, and organizations for monitoring, threat intelligence, and vulnerability assessments.
 
-How can you protect yourself?
+#### How can you protect yourself?
++ Turn off RDP
++ Use MFA
++ Restrict access by implementing firewall rules or putting servers behind a VPN
++ Have strong password policies
++ Utilize a Privileged Access Management Tool (PAM)
++ Don't use default accounts
