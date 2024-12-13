@@ -53,3 +53,5 @@ Next, shcedule the time interval on which the rule should run and decide how far
 
 Now, you have the ability to choose what kind of action you want to take when the rule is triggered. Finish by clicking `Create & enable rule`.
 <img width="947" alt="day16-7h" src="https://github.com/user-attachments/assets/b94f1f27-4269-4105-9614-5d76105176b5" />
+
+This should now provide me with more details to work with, making investigating failed SSH logon attempts much easier. These steps were repeated to create a similar security alert for failed RDP attempts.
