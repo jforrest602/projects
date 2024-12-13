@@ -55,3 +55,5 @@ Now, you have the ability to choose what kind of action you want to take when th
 <img width="947" alt="day16-7h" src="https://github.com/user-attachments/assets/b94f1f27-4269-4105-9614-5d76105176b5" />
 
 This should now provide me with more details to work with, making investigating failed SSH logon attempts much easier. These steps were repeated to create a similar security alert for failed RDP attempts.
+
+Although this rule is quite basic, it is just the beginning of understanding how to tune effective rules within a SOC environment. Good security rules in the ELK Stack are essential for effectively detecting and mitigating threats. They enable precise filtering, correlation, and analysis of security events, reducing false positives and highlighting genuine risks. Well-designed rules help SOC analysts prioritize incidents, respond faster, and maintain a secure environment, making the ELK Stack a powerful tool for cybersecurity operations.
