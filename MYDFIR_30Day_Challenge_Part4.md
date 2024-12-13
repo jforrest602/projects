@@ -30,3 +30,26 @@ To view the alerts that these rules are now generating, under the hamburger icon
 The problem here is that it doesn't provide many useful details as to what has taken place. You may need to know what user was affected or where the attack came from.
 <img width="959" alt="day16-6c" src="https://github.com/user-attachments/assets/0fe53363-d596-47d5-92dd-a7def0c6f2f6" />
 
+#### SIEM Detection Rules
+Let's create a rule that will provide us with more useful details. Under the hamburger icon, navigate to `Security` > `Rules` > `Detection rules (SIEM)`.
+<img width="958" alt="day16-7" src="https://github.com/user-attachments/assets/3d0752f5-89c2-4ada-8192-9649395e1079" />
+
+Here, you can load Elastic prebuilt detection rules and create custom rules. 
+<img width="962" alt="day16-7a" src="https://github.com/user-attachments/assets/5b1bb91c-cbd2-4fb1-95ef-1517b989e5dd" />
+
+Choosing `Create new rule` provides several options. In this case, I am using `Threshold`. 
+<img width="957" alt="day16-7b" src="https://github.com/user-attachments/assets/e7522f3f-87d9-42e4-9e7f-c717ee927a19" />
+
+The `Index Patterns` are left as default and the `Custom query` is defined by copying the previously saved search with an additional parameter of `user.name: root`. Next, decide how to organize the results in the `Group by` field. In this case, by username and source IP address. `User.name` and `source.ip` are also included as `Required fields`.
+<img width="948" alt="day16-7c" src="https://github.com/user-attachments/assets/ffa63482-b8e4-4f69-b632-6021cc21a2d7" />
+
+Next, the name will need a rule and brief description followed by severity and risk score
+<img width="949" alt="day16-7d" src="https://github.com/user-attachments/assets/f3710d60-d163-4dc0-b9c7-1cab16eeb7aa" />
+
+There are other optional settings to consider here under `Advanced settings` where items like URLs or the MITRE ATT&CK tactic can be included. You can also choose a custom highlighted field, include a setup guide, or even provide steps for investigating the alert. This is great for a SOC environment because it helps analysts understand exactly what they should and should not do when the alert has been triggered.
+
+Next, shcedule the time interval on which the rule should run and decide how far back you want it to look.
+<img width="949" alt="day16-7f" src="https://github.com/user-attachments/assets/c6573230-3390-447b-923a-38daea9d78f5" />
+
+Now, you have the ability to choose what kind of action you want to take when the rule is triggered. Finish by clicking `Create & enable rule`.
+<img width="947" alt="day16-7h" src="https://github.com/user-attachments/assets/b94f1f27-4269-4105-9614-5d76105176b5" />
