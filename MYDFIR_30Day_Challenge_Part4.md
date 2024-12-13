@@ -18,4 +18,8 @@ Searching for "event.code: 4625" narrows the number of events down further to 6,
 
 <img width="962" alt="day16-5" src="https://github.com/user-attachments/assets/b0991f4b-2785-4139-8875-43f45da0a87f" />
 
-Now that the search parameters are defined, a new alert can be configured.
+Now that the search parameters are defined, a new alert can be configured. Navigating to `Alerts` and choosing `Create search threshold rule`, it is straightforward to name the rule, customize the configurations, test the rule, and save.
+<img width="960" alt="day16-5a" src="https://github.com/user-attachments/assets/736d52d3-14d2-4ff0-b6de-66092a5499a7" />
+<img width="958" alt="day16-5b" src="https://github.com/user-attachments/assets/034688eb-f380-4cca-9880-b147e06b3e13" />
+<img width="960" alt="day16-5c" src="https://github.com/user-attachments/assets/f92fe2f0-a932-47de-b77a-19c3d04d2f19" />
+
