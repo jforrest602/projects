@@ -60,4 +60,4 @@ Although this rule is quite basic, it is just the beginning of understanding how
 
 
 ## Day 17: Creating Alerts and Dashboards in Kibana (3/4)
-Today's objective is create a dashboard for RDP activity.
+Today's objective is create a dashboard for RDP activity. Start by navigating to `Analytics` > `Maps` under the hamburger icon within the Elastic web GUI.
