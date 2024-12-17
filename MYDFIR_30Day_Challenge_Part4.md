@@ -77,3 +77,23 @@ Next, the map was named and added to the existing dashboard.
 Now, these same steps can be repeated to create a map to visualize successful authentications. Successful RDP logons can be either logon type 7 or logon type 10. Logon type 7 indicates that a user has unlocked a previously locked workstation using RDP. Type 10 indicates a successful RDP logon. 
 
 With that in mind, this query needs to focus on logon types 7 and 10 as well as event ID 4624, a successful attempt at logging on to a local computer.
+
+It's also critical to identify the proper field name when creating these queries. One way to do this is to go into the details of an event, in this case a successful logon event and see what kind of information is there. In the screenshot below, we can see that the field name for logon types is `winlog.event_data.LogonType`. 
+
+<img width="961" alt="day17-2" src="https://github.com/user-attachments/assets/fe197930-dff8-4a7f-a84f-916ce175b140" />
+
+Now that I know what field name to include in my search parameters for successful RDP logons, the full query in `event.code: 4624 and (winlog.event_data.LogonType: 10 or winlog.event_data.LogonType: 7)`. Appropriately, when I search using these parameters, only 2 events are reutrned. Successful attempts should only be coming from me. If they were coming from anywhere else, I would know that I have a security problem that would need to be addressed immediately. 
+
+<img width="959" alt="day17-2a" src="https://github.com/user-attachments/assets/a5d5ea17-ca84-4a74-b2fb-21f714d8bee1" />
+
+After naming and saving this search, I went to the dashboard and duplicated the previous map. 
+
+<img width="948" alt="day17-3" src="https://github.com/user-attachments/assets/be4da1af-5419-4b13-be24-c965446163c7" />
+
+Updated the search parameters.
+
+<img width="958" alt="day17-3a" src="https://github.com/user-attachments/assets/699f2628-5165-4a07-98a2-8f84135aacee" />
+
+Now, I have a dashboard showing failed and successful SSH authentications and failed and successful RDP authentications.
+
+<img width="948" alt="day17-3b" src="https://github.com/user-attachments/assets/0f4331e4-1c66-4e6d-b1ec-0a60d94f8cbe" />
