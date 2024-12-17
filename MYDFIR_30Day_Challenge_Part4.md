@@ -97,3 +97,15 @@ Updated the search parameters.
 Now, I have a dashboard showing failed and successful SSH authentications and failed and successful RDP authentications.
 
 <img width="948" alt="day17-3b" src="https://github.com/user-attachments/assets/0f4331e4-1c66-4e6d-b1ec-0a60d94f8cbe" />
+
+This dashboard is helpful, but it can be much better. To upgrade it, I will a table to go along with the map. The table will include user name, count and source IP address, and source country providing even more useful information. 
+
+Under the hamburger menu, I navigated to `Dashboards > Creaye visualization`. 
+
+<img width="959" alt="day17-4a" src="https://github.com/user-attachments/assets/32dee010-7025-4a33-b6fd-ad4e5cb10dff" />
+
+Paste in the search parameters, i.e., `system.auth.ssh.event: * and agent.name: MYDFIR-Linux-jf and system.auth.ssh.event: Failed`. Update the timeframe to `Last 7 days` and drag and drop the desired field names. Change the `Visulaization type` from bar graph to table. Now, rearrange the columns to suit your needs. It also possible to edit the individual columns, which I did to show the top 10 instead of the top 3 and I unchecked “group remaining as other”. I sorted the records in descending order. Finally, I saved it and renamed the table to `SSH Failed Activity`. 
+
+<img width="947" alt="day17-4f" src="https://github.com/user-attachments/assets/932bd9b7-98b8-4170-84f2-beda8be24a00" />
+
+This process was duplicated to create similar tables for successful SSH activity as well as both failed and successful RDP activity. Keep in mind that the search parameters must be updated for each of these tables to match what data should be displayed. 
