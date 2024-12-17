@@ -115,6 +115,7 @@ The tables provide detailed, granular data to complement the map's high-level ov
 2) __Correlate Data:__ Cross-reference the table's data with other sources or tools to confirm potential threats.
 3) __Improve Incident Reporting:__ Present both visual insights and specific evidence for comprehensive incident reports.
 4) __Support Automation:__ Export structured table data for automated analysis or threat intelligence tools.
+
 Combining visual and tabular data ensures a more efficient and thorough analysis process.
 
 ## Day 18:
