@@ -109,3 +109,12 @@ Paste in the search parameters, i.e., `system.auth.ssh.event: * and agent.name: 
 <img width="947" alt="day17-4f" src="https://github.com/user-attachments/assets/932bd9b7-98b8-4170-84f2-beda8be24a00" />
 
 This process was duplicated to create similar tables for successful SSH activity as well as both failed and successful RDP activity. Keep in mind that the search parameters must be updated for each of these tables to match what data should be displayed. 
+
+The tables provide detailed, granular data to complement the map's high-level overview. While the map visually highlights patterns and trends (e.g., geographic clusters of activity), the data table offers precise information such as IP addresses, timestamps, usernames, and success/failure counts. In a SOC environment, this allows analysts to:
+1) __Drill Down for Investigation:__ Quickly identify suspicious activity with exact details for further analysis.
+2) __Correlate Data:__ Cross-reference the table's data with other sources or tools to confirm potential threats.
+3) __Improve Incident Reporting:__ Present both visual insights and specific evidence for comprehensive incident reports.
+4) __Support Automation:__ Export structured table data for automated analysis or threat intelligence tools.
+Combining visual and tabular data ensures a more efficient and thorough analysis process.
+
+## Day 18:
