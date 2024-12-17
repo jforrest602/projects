@@ -60,4 +60,20 @@ Although this rule is quite basic, it is just the beginning of understanding how
 
 
 ## Day 17: Creating Alerts and Dashboards in Kibana (3/4)
-Today's objective is create a dashboard for RDP activity. Start by navigating to `Analytics` > `Maps` under the hamburger icon within the Elastic web GUI.
+Today's objective is to create a dashboard for RDP activity, similar to what was created on Day 14. Start by navigating to `Analytics` > `Maps` under the hamburger icon within the Elastic web GUI. Once there, it's time to define the query parameters. Luckily, these parameters have been already been saved as "RDP Failed Activity". That query searches `event.code: 4625`. To ensure this search only returns data from the RDP enabled Window server I need to include the agent's name, making the complete query `event.code: 4625 and agent.name: MYDFIR-WIN-jf`.
+
+<img width="958" alt="day17-1" src="https://github.com/user-attachments/assets/cf855a49-613b-443f-a5b3-057ec5273fd4" />
+
+Adding a layer to the map, I again chose Chloropleth, which means that the map uses colors to represent statistical data across geographic areas. The EMS boundaries are world countries, data view begins with .alerts, the Join field is source.geo.country_iso_code. 
+
+<img width="952" alt="day17-1a" src="https://github.com/user-attachments/assets/55fbf531-c0e7-49d5-9025-4832f66d8948" />
+
+I can already see more than 91,000 events originating from Russia alone. 
+
+Next, the map was named and added to the existing dashboard.
+
+<img width="960" alt="day17-1b" src="https://github.com/user-attachments/assets/e302bba3-b9c3-4fd8-8a37-4b4d1b89096c" />
+
+Now, these same steps can be repeated to create a map to visualize successful authentications. Successful RDP logons can be either logon type 7 or logon type 10. Logon type 7 indicates that a user has unlocked a previously locked workstation using RDP. Type 10 indicates a successful RDP logon. 
+
+With that in mind, this query needs to focus on logon types 7 and 10 as well as event ID 4624, a successful attempt at logging on to a local computer.
