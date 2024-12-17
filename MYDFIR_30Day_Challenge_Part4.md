@@ -118,4 +118,4 @@ The tables provide detailed, granular data to complement the map's high-level ov
 
 Combining visual and tabular data ensures a more efficient and thorough analysis process.
 
-## Day 18:
+## Day 18: Command & Control (C2)
