@@ -136,6 +136,7 @@ __[Sliver](https://bishopfox.com/tools/sliver):__ An open-source C2 framework de
 
 __[Mythic](https://docs.mythic-c2.net/):__ Designed with a focus on flexibility and extensibility, it allows operators to manage compromised systems efficiently while mimicking advanced adversary behaviors. Strong community support, flexibility, and user-friendly interface make it suitable for both experienced operators and those new to red teaming.
 
+#### *Insert subheading here*
 Command and Control (C2) is crucial in cybersecurity for both offensive and defensive purposes. Understanding C2 is vital for defenders to detect, disrupt, and mitigate adversary operations while for attackers, it is key to emulating real-world threats in penetration testing and red teaming scenarios.
 
 Finally, __[The DFIR Report](https://thedfirreport.com/)__ is a well regarded resource which publishes detailed, real-world case studies and technical analyses of cyberattacks, focusing on the tactics, techniques, and procedures (TTPs) used by adversaries. The reports aim to help security professionals understand threat actor behaviors, improve detection capabilities, and strengthen incident response strategies. Free and open to the community, it serves as a learning tool for analysts, incident responders, and security researchers.
