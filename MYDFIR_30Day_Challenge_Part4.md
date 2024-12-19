@@ -121,4 +121,8 @@ Combining visual and tabular data ensures a more efficient and thorough analysis
 ## Day 18: Command & Control (C2)
 The goal for today is to begin to understand what command and control (C2) is, why it is important, what are some common tools used fro C2, and what is the Mythic framework and how does it work. 
 
-Command and Control (C2) is a tactic used in cybersecurity where an attacker establishes communication with compromised systems to remotely issue commands, manage operations, and exfiltrate data. C2 is a critical part of many cyber attacks, enabling persistent access and control over the victim's environment.
+Although each malware is different, once executed, many will take similar initial discovery actions by running commands like `ipconfog`, `whoami`, `nslookup`, and `net user` or try to establish persistence by service creation or task scheduling. An attackers dream is to establish a command and control session over the target machine.
+
+Command and Control (C2) is a tactic used by attackers to establish communication with compromised systems to remotely issue commands, manage operations, and exfiltrate data. C2 is a critical part of many cyber attacks, enabling persistent access and control over the victim's environment. 
+
+According to the Mitre Att&ck framework, there are no less than [18 different techniques](https://attack.mitre.org/tactics/TA0011/), and even more subtechniques, that attackers use to communicate with systems under their control. Each allowing an attacker to perform actions on it and working towards their objective.
