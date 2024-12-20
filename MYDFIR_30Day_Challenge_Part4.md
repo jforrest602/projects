@@ -169,3 +169,6 @@ The malicious Mythic agent establishes a C2 channel with the Mythic server allow
 #### Phase 6: Exfiltration
 The attacker downloads a file (passwords.txt) from the target Windows Server. This simulates actual data exfiltration, and access sensitive information.
 ![6MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/150a9eef-389a-4fc8-87fb-d240db88318c)
+__________
+
+This attack
