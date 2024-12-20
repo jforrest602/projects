@@ -159,4 +159,13 @@ In order to evade endpoint protection and maintain stealth, its critical to avoi
 ![3MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/102299f6-2b38-4381-a069-05189d050f3f)
 
 #### Phase 4: Execution
+To deliver the payload, the attack will utilize PowerShell IEX which refers to the Invoke-Expression cmdlet in PowerShell. It is a built-in command used to evaluate or execute a string as a PowerShell expression or script. Using it allows the attack to utilize Powershell to download and execute a malicious agent from the internet. In this instance, the payload is connected to a Mythic Command-and-Control (C2) server, which provides the attacker with remote control over the compromised server.
+![4MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/e8947143-2d54-4c28-9e40-b659725569a6)
 
+#### Phase 5: Command and Control
+The malicious Mythic agent establishes a C2 channel with the Mythic server allowing the attacker to execute commands, exfiltrate data, and maintain control over the compromised system.
+![5MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/f7523a88-f01d-42b2-b088-4cbd49077d64)
+
+#### Phase 6: Exfiltration
+The attacker downloads a file (passwords.txt) from the target Windows Server. This simulates actual data exfiltration, and access sensitive information.
+![6MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/150a9eef-389a-4fc8-87fb-d240db88318c)
