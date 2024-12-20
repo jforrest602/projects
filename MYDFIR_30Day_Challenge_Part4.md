@@ -136,12 +136,12 @@ __[Sliver](https://bishopfox.com/tools/sliver):__ An open-source C2 framework de
 
 __[Mythic](https://docs.mythic-c2.net/):__ Designed with a focus on flexibility and extensibility, it allows operators to manage compromised systems efficiently while mimicking advanced adversary behaviors. Strong community support, flexibility, and user-friendly interface make it suitable for both experienced operators and those new to red teaming.
 
-#### *Insert subheading here*
+_______
 Command and Control (C2) is crucial in cybersecurity for both offensive and defensive purposes. Understanding C2 is vital for defenders to detect, disrupt, and mitigate adversary operations while for attackers, it is key to emulating real-world threats in penetration testing and red teaming scenarios.
 
 Finally, __[The DFIR Report](https://thedfirreport.com/)__ is a well regarded resource which publishes detailed, real-world case studies and technical analyses of cyberattacks, focusing on the tactics, techniques, and procedures (TTPs) used by adversaries. The reports aim to help security professionals understand threat actor behaviors, improve detection capabilities, and strengthen incident response strategies. Free and open to the community, it serves as a learning tool for analysts, incident responders, and security researchers.
 
-## Attack Diagrams
+## DAY 19: Attack Diagrams
 In the coming days, I will actively attack a Windows server to establish command and control (C2) over it. To help facilitate that upcoming attack, it is important to take the time and logically think through the attack step by step. One way to accomplish this is with an attack diagram. Attack diagrams are a visual representation used in cybersecurity to illustrate the stages, methods, tools, and paths an attacker might take to compromise a system or network. They are valuable for understanding, analyzing, and communicating the progression and potential impact of cyberattacks.
 [
 Draw.io](https://app.diagrams.net/) is a great tool for creating these types of diagrams. However, rather than going over how to create a diagram, it may be more useful to take the attack diagram which I have already created and break it down step by step to gain a better understanding of how the attack is going to work.
