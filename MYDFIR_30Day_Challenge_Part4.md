@@ -141,6 +141,22 @@ Command and Control (C2) is crucial in cybersecurity for both offensive and defe
 
 Finally, __[The DFIR Report](https://thedfirreport.com/)__ is a well regarded resource which publishes detailed, real-world case studies and technical analyses of cyberattacks, focusing on the tactics, techniques, and procedures (TTPs) used by adversaries. The reports aim to help security professionals understand threat actor behaviors, improve detection capabilities, and strengthen incident response strategies. Free and open to the community, it serves as a learning tool for analysts, incident responders, and security researchers.
 
-## Creating an Attack Diagram
+## Attack Diagrams
 In the coming days, I will actively attack a Windows server to establish command and control (C2) over it. To help facilitate that upcoming attack, it is important to take the time and logically think through the attack step by step. One way to accomplish this is with an attack diagram. Attack diagrams are a visual representation used in cybersecurity to illustrate the stages, methods, tools, and paths an attacker might take to compromise a system or network. They are valuable for understanding, analyzing, and communicating the progression and potential impact of cyberattacks.
+[
+Draw.io](https://app.diagrams.net/) is a great tool for creating these types of diagrams. However, rather than going over how to create a diagram, it may be more useful to take the attack diagram which I have already created and break it down step by step to gain a better understanding of how the attack is going to work.
+
+#### Phase 1: Initial Access
+A Kali Linux machine will gain unauthorized access to the target Windows Server through brute-forcing Remote Desktop Protocol (RDP) credentials. After brute-forcing, a successful authentication will provide the initial access to the target environment.
+![1MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/0c4c023e-fdfc-443a-b72b-4028b0984072)
+
+#### Phase 2: Discovery
+The discovery phase helps an attacker understand the system's structure and potential for lateral movement or privilege escalation. This is accomplished via commands like `whoami`, `ipconfig`, `net user`, and `net group` to gather information aboutthe current user identity, network configurations as well as users and groups on the system.
+![2MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/8f60d046-e7aa-4ace-9cc2-f3bf54937757)
+
+#### Phase 3: Defense Evasion
+In order to evade endpoint protection and maintain stealth, its critical to avoid triggering any alerts or other security measures the target has configured. Here, the attack executes commands via RDP to disable Windows Defender helping to avoid detection of subsequent malicious activities.
+![3MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/102299f6-2b38-4381-a069-05189d050f3f)
+
+#### Phase 4: Execution
 
