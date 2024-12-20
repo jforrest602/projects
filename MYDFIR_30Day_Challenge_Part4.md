@@ -171,4 +171,13 @@ The attacker downloads a file (passwords.txt) from the target Windows Server. Th
 ![6MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/150a9eef-389a-4fc8-87fb-d240db88318c)
 __________
 
-This attack
+This attack uses common tools like Kali Linux, PowerShell, and Mythic C2 and tactics that leverage weak RDP credentials, built-in Windows utilities, and the disabling security features to progress through the network. It also aligns with stages in frameworks like the MITRE ATT&CK, including Initial Access, Discovery, Defense Evasion, Execution, Command and Control, and Exfiltration.
+
+There are different types of attack diagrams but they all serve to illustrate the stages, methods, tools, and paths an attacker might take to compromise a system or network. The benefits of using attack diagrams include:
+* __Improves Understanding:__ Simplifies complex attack paths for stakeholders.
+* __Aids in Threat Analysis:__ Helps SOC teams anticipate and mitigate similar attacks.
+* __Supports Incident Response:__ Guides analysts in tracing the attack and identifying containment strategies.
+* __Training Tool:__ Enhances the skills of SOC analysts by providing clear examples of attack scenarios.
+* __Communicates Risks:__ Effectively conveys technical details to non-technical audiences.
+
+## DAY 20: Mythic Server Setup
