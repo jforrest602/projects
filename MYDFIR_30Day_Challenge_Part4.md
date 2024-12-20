@@ -150,25 +150,37 @@ Draw.io](https://app.diagrams.net/) is a great tool for creating these types of 
 A Kali Linux machine will gain unauthorized access to the target Windows Server through brute-forcing Remote Desktop Protocol (RDP) credentials. After brute-forcing, a successful authentication will provide the initial access to the target environment.
 ![1MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/0c4c023e-fdfc-443a-b72b-4028b0984072)
 
+To help mitigate this risk organizations can enforce strong password policies, enable MFA, restrict/disable RDP access, enforce account lockout policies, and monitor login activity. 
+
 #### Phase 2: Discovery
 The discovery phase helps an attacker understand the system's structure and potential for lateral movement or privilege escalation. This is accomplished via commands like `whoami`, `ipconfig`, `net user`, and `net group` to gather information aboutthe current user identity, network configurations as well as users and groups on the system.
 ![2MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/8f60d046-e7aa-4ace-9cc2-f3bf54937757)
+
+To help mitigate this risk organizations can adhere to the principle of least privilege, monitor system commands, utilize an endpoint detection and response (EDR) solution, and segment their network.
 
 #### Phase 3: Defense Evasion
 In order to evade endpoint protection and maintain stealth, its critical to avoid triggering any alerts or other security measures the target has configured. Here, the attack executes commands via RDP to disable Windows Defender helping to avoid detection of subsequent malicious activities.
 ![3MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/102299f6-2b38-4381-a069-05189d050f3f)
 
+To help mitigate this risk organizations can use tamper protection to prevent unauthorized changes to Windows Defender or other security tools, enable logging for changes to Windows Defender settings and set up alerts for such activity, block or restrict the execution of unauthorized PowerShell commands, and enforce privileged access management by ensuring only authorized personnel can disable security tools.
+
 #### Phase 4: Execution
 To deliver the payload, the attack will utilize PowerShell IEX which refers to the Invoke-Expression cmdlet in PowerShell. It is a built-in command used to evaluate or execute a string as a PowerShell expression or script. Using it allows the attack to utilize Powershell to download and execute a malicious agent from the internet. In this instance, the payload is connected to a Mythic Command-and-Control (C2) server, which provides the attacker with remote control over the compromised server.
 ![4MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/e8947143-2d54-4c28-9e40-b659725569a6)
+
+To help mitigate this riks organizations can use PowerShell Constrained Language Mode to limit the execution of malicious scripts, block known malicious URLs or IPs to prevent payload download, enforce code signing by requiring all PowerShell scripts to be digitally signed, and ensure antivirus software actively scans for suspicious script execution or payload delivery.
 
 #### Phase 5: Command and Control
 The malicious Mythic agent establishes a C2 channel with the Mythic server allowing the attacker to execute commands, exfiltrate data, and maintain control over the compromised system.
 ![5MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/f7523a88-f01d-42b2-b088-4cbd49077d64)
 
+To help mitigate this risk organizations can use intrusion detection/prevention systems (IDS/IPS) to detect and block suspicious C2 traffic, restrict outbound traffic to known malicious IPs or domains using a firewall or web filtering, detect anomalies like unusual traffic patterns or behavior indicative of C2 communication, and isolate compromised systems to disrupt communication with the attacker.
+
 #### Phase 6: Exfiltration
 The attacker downloads a file (passwords.txt) from the target Windows Server. This simulates actual data exfiltration, and access sensitive information.
 ![6MyDFIR Attack Diagram drawio](https://github.com/user-attachments/assets/150a9eef-389a-4fc8-87fb-d240db88318c)
+
+To help mitigate this risk organizations can implement tools to monitor and prevent unauthorized data transfers, ensure critical files are encrypted to prevent unauthorized access, set up alerts for unusual file creation, modification, or access activities, and bock unauthorized data transfer attempts at the network boundary.
 __________
 
 This attack uses common tools like Kali Linux, PowerShell, and Mythic C2 and tactics that leverage weak RDP credentials, built-in Windows utilities, and the disabling security features to progress through the network. It also aligns with stages in frameworks like the MITRE ATT&CK, including Initial Access, Discovery, Defense Evasion, Execution, Command and Control, and Exfiltration.
