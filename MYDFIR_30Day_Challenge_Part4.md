@@ -220,3 +220,10 @@ This was easily resolved by restarticg Docker by running `systemctl restart dock
 Running `make` again, successfully this time.
 <img width="958" alt="day20-6" src="https://github.com/user-attachments/assets/f376ab2c-f4d6-454d-8659-646457d9412f" />
 
+Next, running `./mythic-cli start` starts the Mythic command line interface. With that, the Mythic C2 setup is complete and I should be able to log in. Before doing that, I want to configure a firewall rule that will only allow my computer and other agents within my controlto communicate with this Mythic. 
+
+I created a new firewall group within my VPC, configured rules to only allow the necessary machines to communicate, and ensured my Mythic server was assigned to this firewall group.
+<img width="956" alt="day20-7b" src="https://github.com/user-attachments/assets/3d07805f-34e9-417e-bacb-225d493409d9" />
+<img width="965" alt="day20-7c" src="https://github.com/user-attachments/assets/e49739c2-83d3-45ec-b861-354db274f409" />
+<img width="946" alt="day20-7d" src="https://github.com/user-attachments/assets/56ad7229-c855-4ce2-a010-c369b5adcc33" />
+<img width="949" alt="day20-7e" src="https://github.com/user-attachments/assets/604d9fbf-d885-43d8-ac9f-c25c16d6f85e" />
