@@ -193,3 +193,8 @@ There are different types of attack diagrams but they all serve to illustrate th
 * __Communicates Risks:__ Effectively conveys technical details to non-technical audiences.
 
 ## DAY 20: Mythic Server Setup
+Today's objective is to setup a Mythic C2 server and begin to understand how [Mythic](https://docs.mythic-c2.net/) works.
+
+The first step is to deploy a new server within my [VPC](https://en.wikipedia.org/wiki/Virtual_private_cloud) network. This server won't experience much demand so it is configured as cloud compute with a shared CPU running an Ubuntu 22.04 OS. [Mythic recommends](https://docs.mythic-c2.net/installation) that it is run on a virtual machine with at least 2 CPUS and 4GB of RAM.
+
+Next, I downloaded installed Kali Linux for a VMWare virtual machine. Once this VM was up and running, I utilized Powershell to SSH into the Mythic Server. 
