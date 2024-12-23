@@ -211,3 +211,12 @@ Next, clone the repository. An essential step because the repository contains al
 Now, listing out what's available with the `ls` command, Mythic appears. Navigating to that directory, I see the [shell script](https://en.wikipedia.org/wiki/Shell_script), `install_docker_ubuntu.sh that I need to invoke.
 <img width="947" alt="day20-4" src="https://github.com/user-attachments/assets/58005bc6-8c2d-41d4-b942-8b28f05c3b21" />
 
+Once that finishes, I ran the command `make` which automates repetitive setup tasks like compiling code, creating Docker containers, or managing dependencies. However, I encountered an error that it could not connect to the Docker daemon so, I ran `systemctl status docker` to check the status. Sure enough, it was in a failed state. 
+<img width="960" alt="day20-5" src="https://github.com/user-attachments/assets/ab4e6697-d3ce-4495-8826-d833b1abb311" />
+
+This was easily resolved by restarticg Docker by running `systemctl restart docker`. 
+<img width="957" alt="day20-5a" src="https://github.com/user-attachments/assets/6a8c872c-2abd-4634-8910-3388f074d2b6" />
+
+Running `make` again, successfully this time.
+<img width="958" alt="day20-6" src="https://github.com/user-attachments/assets/f376ab2c-f4d6-454d-8659-646457d9412f" />
+
