@@ -227,3 +227,33 @@ I created a new firewall group within my VPC, configured rules to only allow the
 <img width="965" alt="day20-7c" src="https://github.com/user-attachments/assets/e49739c2-83d3-45ec-b861-354db274f409" />
 <img width="946" alt="day20-7d" src="https://github.com/user-attachments/assets/56ad7229-c855-4ce2-a010-c369b5adcc33" />
 <img width="949" alt="day20-7e" src="https://github.com/user-attachments/assets/604d9fbf-d885-43d8-ac9f-c25c16d6f85e" />
+
+To log into my newly established Mythic web GUI, I navigated to the server's IP address using port 7443, the default port for its HTTPS-based web interface, which brought me to the login screen.
+<img width="954" alt="day20-8png" src="https://github.com/user-attachments/assets/8991dacf-50ba-4543-b0aa-0c06d0fd8c05" />
+
+The default username is mythic_admin. The environment variable, which is hidden, specifies the password for this mythic_admin account. Entering `ls -la`, to include listing out the hidden files, the `.env` is seen.
+<img width="947" alt="day20-8a" src="https://github.com/user-attachments/assets/36612b4e-dbdd-4a95-9dda-0e6d8cb441b2" />
+
+Run `cat .env` to read what is inside the file and find the default password.
+<img width="962" alt="day20-8b" src="https://github.com/user-attachments/assets/2340bc3d-9fd6-4eec-9cc7-bda51cb73aea" />
+
+After entering the password, I am now inside my Mythic C2 server web GUI.
+<img width="954" alt="day20-8c" src="https://github.com/user-attachments/assets/a90b945c-20cd-4471-8ee1-fc4ad1da9299" />
+
+There isn't any activity yet but, that will come in the next few days. Some of the key features of the Mythic web GUI include:
+*__Dashboard:__
+  + Displays a summary of active agents, pending tasks, and system health.
+  + Provides quick access to essential tools and features.
+*__Agent Management:__
+  + Monitor connected agents (payloads running on compromised systems).
+  + View detailed information about each agent, including callback data and system details.
+*__Tasking and Responses:__
+  + Create, assign, and manage tasks for connected agents.
+  + View responses from agents, including command output or retrieved files.
+*__Payload Management:__
+  + Configure and generate payloads for various operating systems and communication methods.
+  + Customize C2 profiles for different operational needs.
+*__Logging and Reporting:__
+  + View detailed logs of all activities for tracking and auditing.
+  + Export task and agent data for reporting purposes.
+
