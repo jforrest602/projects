@@ -198,3 +198,16 @@ Today's objective is to setup a Mythic C2 server and begin to understand how [My
 The first step is to deploy a new server within my [VPC](https://en.wikipedia.org/wiki/Virtual_private_cloud) network. This server won't experience much demand so it is configured as cloud compute with a shared CPU running an Ubuntu 22.04 OS. [Mythic recommends](https://docs.mythic-c2.net/installation) that it is run on a virtual machine with at least 2 CPUS and 4GB of RAM.
 
 Next, I downloaded installed Kali Linux for a VMWare virtual machine. Once this VM was up and running, I utilized Powershell to SSH into the Mythic Server. Once there, I ran `apt-get update && apt-get upgrade -y` because it's always best to update and upgrade the repositories before getting started on any tasks, particularly with a newly established machine.
+
+Mythic does require some [prerequisites](https://docs.mythic-c2.net/installation) to run. [Docker Compose](https://docs.docker.com/compose/) is a tool for defining and running multi-container applications.
+<img width="967" alt="day20-2" src="https://github.com/user-attachments/assets/2ef29eb5-2b32-4345-bac6-5588c5a64a28" />
+
+[Make](https://docs.mythic-c2.net/customizing/payload-type-development) compiles payloads, generates docker containers, and builds plugins for Mythic. In this instance, it was already installed.
+<img width="959" alt="day20-3" src="https://github.com/user-attachments/assets/d2d13557-6c35-4225-a3a5-8ef11c0bc72a" />
+
+Next, clone the repository. An essential step because the repository contains all the code, configurations, and resources needed to run the platform. The repository link is [https://github.com/its-a-feature/Mythic](https://github.com/its-a-feature/Mythic).
+<img width="947" alt="day20-4aa" src="https://github.com/user-attachments/assets/3e8f9ac4-b5ef-45cc-87d1-d21d807787bf" />
+
+Now, listing out what's available with the `ls` command, Mythic appears. Navigating to that directory, I see the [shell script](https://en.wikipedia.org/wiki/Shell_script), `install_docker_ubuntu.sh that I need to invoke.
+<img width="947" alt="day20-4" src="https://github.com/user-attachments/assets/58005bc6-8c2d-41d4-b942-8b28f05c3b21" />
+
