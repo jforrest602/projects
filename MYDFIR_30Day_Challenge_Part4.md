@@ -241,19 +241,24 @@ After entering the password, I am now inside my Mythic C2 server web GUI.
 <img width="954" alt="day20-8c" src="https://github.com/user-attachments/assets/a90b945c-20cd-4471-8ee1-fc4ad1da9299" />
 
 There isn't any activity yet but, that will come in the next few days. Some of the key features of the Mythic web GUI include:
-*__Dashboard:__
+
+* __Dashboard:__
   + Displays a summary of active agents, pending tasks, and system health.
   + Provides quick access to essential tools and features.
-*__Agent Management:__
+    
+* __Agent Management:__
   + Monitor connected agents (payloads running on compromised systems).
   + View detailed information about each agent, including callback data and system details.
-*__Tasking and Responses:__
+  
+* __Tasking and Responses:__
   + Create, assign, and manage tasks for connected agents.
   + View responses from agents, including command output or retrieved files.
-*__Payload Management:__
+  
+* __Payload Management:__
   + Configure and generate payloads for various operating systems and communication methods.
   + Customize C2 profiles for different operational needs.
-*__Logging and Reporting:__
+  
+* __Logging and Reporting:__
   + View detailed logs of all activities for tracking and auditing.
   + Export task and agent data for reporting purposes.
 
