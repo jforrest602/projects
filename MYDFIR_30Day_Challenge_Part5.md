@@ -39,4 +39,16 @@ Running `cat rockyou.txt` will show all the list of commonly used passwords cont
 Now, it's necessary to include honeypot2024! in the `mydfir-wordlist.txt` file. To do so, run `nano mydfir-wordlist.txt` to open the file in the Nano text editor. [Here](https://youtu.be/g2PU--TctAM) is a short video on the basics of using Nano.
 <img width="959" alt="day21-3c" src="https://github.com/user-attachments/assets/9a128a53-159b-4cdd-b1b6-763144712c72" />
 
-A tool called [Crowbar](https://github.com/galkan/crowbar) is going to do the brute forcing. After updating and upgrading the system repositories, to download the tool, run `sudo apt-get install -y crowbar`. 
+A tool called [Crowbar](https://github.com/galkan/crowbar) is going to do the brute forcing. After updating and upgrading the system repositories, to download the tool, run `sudo apt-get install -y crowbar`. Once installed, I ran the command `crowbar -b rdp -u Administrator -C mydfir-wordlist.txt -s 45.32.40.253/32` to initiate the attack. Let's break this command down:
+* `crowbar`specifies the tool to be used.
+* The `-b` flag specifies the type of brute-force attack. (RDP)
+* The `-u` flag specifies what username to use during the attack. (Administrator)
+* The `-c` flag specifies the path to a wordlist file containing passwords to be tried. (mydfir-wordlist.txt)
+* The `-s` flag specifies the target IP address. (45.32.40.253/32)
+
+From the screen shot below, we can see that it only took 10 seconds for Crowbar to crack the password.
+
+Now, to authenticate into the Windows server, RDP into the server with `xfreerdp` by running `xfreerdp /u:Administrator /p:honeypot2024! /v:45.32.40.253:3389`. This command initiates an RDP session by logging into the server at the specified IP address using port `3389`, which is the default port for RDP, using the username `Administrator` and password `honeypot2024!`.
+<img width="955" alt="day21-5" src="https://github.com/user-attachments/assets/82af3a43-2b41-4093-b582-c93d285e61a3" />
+
+#### Phase 2: Discovery
