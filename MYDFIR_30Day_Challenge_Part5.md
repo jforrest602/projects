@@ -28,6 +28,8 @@ Once those two changes were made to the group policy, I successfully updated the
 Now that I have created the `passwords.txt` file and updated the account password on the Windows server, it is time to move onto to phase one of the attack. 
 
 #### Phase 1: Initial Access
+The goal of phase 1 is to gain access to the target machine using a common brute force attack tool to crack the password for the Administrator account.
+
 To initiate the attack, I will utilize a Kali Linux machine. Kali Linux comes preloaded with a vast array of tools for various cybersecurity tasks, including tools for network analysis, web application testing, password cracking, wireless testing, reverse engineering, and more. 
 
 There are several preexisting wordlists within Kali Linux found in `/usr/share/wordlists/`. This attack will utilize the rockyou.txt file. To unzip the file, run `sudo gunzip rockyou.txt.gz` and enter the default password `kali`.
@@ -52,3 +54,16 @@ Now, to authenticate into the Windows server, RDP into the server with `xfreerdp
 <img width="955" alt="day21-5" src="https://github.com/user-attachments/assets/82af3a43-2b41-4093-b582-c93d285e61a3" />
 
 #### Phase 2: Discovery
+Phase 2 is all about gathering critical information about the target environment. The goal is to identify as many assets, systems, and configurations as possible to better understand the network and determine how to proceed.
+
+Some basic discovery commands iclude:
+* `whoami`: provides information about the currently logged-in user.
+* `ipconfig`: provides detailed information about the network configuration of a Windows system.
+<img width="956" alt="day21-5b" src="https://github.com/user-attachments/assets/e8262b50-262c-4cd9-b215-b5335523ec1c" />
+* `net user`: provides information about user accounts on a Windows system.
+* `net user username`: provides detailed information about the specified user account.
+* `net group`: provides information about and manages group accounts in a Windows domain.
+<img width="958" alt="day21-5c" src="https://github.com/user-attachments/assets/59f255b0-0893-4ae7-bea6-ad0065b12ad3" />
+
+#### Phase 3: Defense Evasion
+The goal of defense evasion is to avoid detection by the target's security systems and maintain stealthy access to the compromised environment. It focuses on bypassing or disabling security measures to prolong the attack and minimize the chance of discovery.
