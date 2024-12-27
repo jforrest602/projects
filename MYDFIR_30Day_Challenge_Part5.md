@@ -147,4 +147,4 @@ To view the entire document and a list of other downloaded files, navigate to th
 #### Summary
 Today's task demonstrated the process of performing a brute force attack, establishing a Command-and-Control (C2) session, and exfiltrating data from a compromised Windows server. The attack proceeded through several key phases, starting with gaining initial access using Crowbar and continuing with discovery, defense evasion, and the execution of malicious payloads using Mythic. Once control was established, we used the Mythic agent to set up a reliable C2 channel and exfiltrated sensitive data from the target system. This exercise highlights the importance of each phase in a C2 attack, emphasizing how attackers can infiltrate, control, and extract critical information from a vulnerable network. Finally, Mythic is a powerful framework. Please use it responsibly.
 
-## Day 22: Creating Alerts & Dashboards in Kibana
+## Day 22: Creating Alerts & Dashboards in Kibana (4/4)
