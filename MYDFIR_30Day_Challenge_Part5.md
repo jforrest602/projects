@@ -67,3 +67,22 @@ Some basic discovery commands iclude:
 
 #### Phase 3: Defense Evasion
 The goal of defense evasion is to avoid detection by the target's security systems and maintain stealthy access to the compromised environment. It focuses on bypassing or disabling security measures to prolong the attack and minimize the chance of discovery.
+
+In this case, I disable Windows Defender via the GUI. 
+<img width="954" alt="day21-6" src="https://github.com/user-attachments/assets/2219b1fc-522c-495c-9061-4aa84f1266fe" />
+
+In a more advanced, real-world scenario, in addition to avoiding detection by security tools, attackers may also take measures to obfusicate or masquerade their activity, establish persistence, or even clean up any evidence of their existence.
+
+#### Phase 4: Execution
+This phase  focuses on running malicious commands, scripts, or payloads on the compromised system. This phase is pivotal as it enables attackers to achieve their objectives, such as establishing control, gathering information, or preparing for further stages of the attack. Here, I set up a persistent and reliable connection to the C2 infrastructure under my control.
+
+First, I need to set up an agent within my Mythic instance to use as a payload. Working from my Mythic server, I downloaded and installed the [Apollo Mythic agent](https://github.com/MythicAgents/Apollo.git) from GitHub by running `./mythic-cli install github https://github.com/MythicAgents/Apollo.git`. 
+<img width="961" alt="day21-7a" src="https://github.com/user-attachments/assets/033358e1-99e0-4f21-9d84-55fc656e88da" />
+
+This [Agent Capabilities Matrix](https://mythicmeta.github.io/overview/agent_matrix.html) is a useful resource for determining which agent is good dependent upon operational conditions.
+
+After a few moments, I can see from PowerShell and my Mythic web GUI that Apollo has been successfully installed.
+<img width="948" alt="day21-7b" src="https://github.com/user-attachments/assets/704efa94-868b-4b59-9e85-873381aeee1a" />
+<img width="959" alt="day21-7c" src="https://github.com/user-attachments/assets/b29f3454-5bca-4604-8069-dd039d81f3ca" />
+
+
