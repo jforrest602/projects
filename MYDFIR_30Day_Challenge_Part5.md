@@ -114,7 +114,9 @@ Next, it is necessary to provide your Mythic server's public IP address as the c
 Finally, name and describe the payload.
 <img width="958" alt="day21-9e" src="https://github.com/user-attachments/assets/88d4e404-d793-45a8-9086-3a86fe9e80d9" />
 
-#### Phase 5: COmmand and Control
+#### Phase 5: Command and Control
+This is the pivotal moment of many C2 attacks. Here we will establish and maintain a communication channel between the attacker and the compromised system. 
+
 The payload is ready to be downloaded. I ran the `wget` command in PowerShell from the Mythic server using the download link provided by Mythic. An error occurs but is easily resolved by adding `--no-check-certificate` to the end of the command.
 <img width="959" alt="day21-9f" src="https://github.com/user-attachments/assets/dbdcc0a5-619f-4dbb-bc26-96efab1b2dba" />
 
@@ -133,6 +135,8 @@ Now, running `./svchost-jf.exe`, will establish a connection with my Mythic agen
 #### Phase 6: Exfiltration
 Now that C2 has been established, I have the ability to execute commands on the target machine from my Mythic web GUI.
 <img width="962" alt="day21-10b" src="https://github.com/user-attachments/assets/b0dc3abc-43a8-4d8b-88b0-25ef6cc91cb2" />
+
+The goal of this final phase is to steal sensitive data from the compromised target and transfer it to the attacker-controlled infrastructure. 
 
 To download a file from the target machine, run `download file path`. To download the `passwords.txt` file that was created, I ran `download C:\Users\Administrator\Documents\passwords.txt`. I can even see a preview of the documents data.
 <img width="958" alt="day21-10c" src="https://github.com/user-attachments/assets/b7a2f719-02dd-460f-9efa-6f782b4f23f6" />
