@@ -133,10 +133,10 @@ Now, running `./svchost-jf.exe`, will establish a connection with my Mythic agen
 <img width="962" alt="day21-10b" src="https://github.com/user-attachments/assets/1a4689a4-2f1e-4189-8641-13197c4dc6df" />
 
 #### Phase 6: Exfiltration
+The exfiltration stage is often the primary objective in many cyberattacks, particularly those driven by espionage, fraud, or ransomware. Successful exfiltration allows the attacker to capitalize on the stolen data, whether for financial gain, competitive advantage, or further malicious actions. Additionally, it can significantly harm the targeted organization in terms of financial loss, reputation damage, and regulatory consequences.
+
 Now that C2 has been established, I have the ability to execute commands on the target machine from my Mythic web GUI.
 <img width="962" alt="day21-10b" src="https://github.com/user-attachments/assets/b0dc3abc-43a8-4d8b-88b0-25ef6cc91cb2" />
-
-The goal of this final phase is to steal sensitive data from the compromised target and transfer it to the attacker-controlled infrastructure. 
 
 To download a file from the target machine, run `download file path`. To download the `passwords.txt` file that was created, I ran `download C:\Users\Administrator\Documents\passwords.txt`. I can even see a preview of the documents data.
 <img width="958" alt="day21-10c" src="https://github.com/user-attachments/assets/b7a2f719-02dd-460f-9efa-6f782b4f23f6" />
@@ -144,7 +144,7 @@ To download a file from the target machine, run `download file path`. To downloa
 To view the entire document and a list of other downloaded files, navigate to the paperclip icon located on the top toolbar.
 <img width="958" alt="day21-10d" src="https://github.com/user-attachments/assets/8c73a11f-1c5c-483b-bbe5-ee932665b75f" />
 
-The exfiltration stage is often the primary objective in many cyberattacks, particularly those driven by espionage, fraud, or ransomware. Successful exfiltration allows the attacker to capitalize on the stolen data, whether for financial gain, competitive advantage, or further malicious actions. Additionally, it can significantly harm the targeted organization in terms of financial loss, reputation damage, and regulatory consequences.
-
 #### Summary
-Mythic is a powerful framewrok. Please use it responsibly.
+Today's task demonstrated the process of performing a brute force attack, establishing a Command-and-Control (C2) session, and exfiltrating data from a compromised Windows server. The attack proceeded through several key phases, starting with gaining initial access using Crowbar and continuing with discovery, defense evasion, and the execution of malicious payloads using Mythic. Once control was established, we used the Mythic agent to set up a reliable C2 channel and exfiltrated sensitive data from the target system. This exercise highlights the importance of each phase in a C2 attack, emphasizing how attackers can infiltrate, control, and extract critical information from a vulnerable network. Finally, Mythic is a powerful framework. Please use it responsibly.
+
+## Day 22: Creating Alerts & Dashboards in Kibana
