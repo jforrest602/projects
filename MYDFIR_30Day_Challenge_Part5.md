@@ -76,7 +76,7 @@ In a more advanced, real-world scenario, in addition to avoiding detection by se
 #### Phase 4: Execution
 This phase  focuses on running malicious commands, scripts, or payloads on the compromised system. This phase is pivotal as it enables attackers to achieve their objectives, such as establishing control, gathering information, or preparing for further stages of the attack. Here, I set up a persistent and reliable connection to the C2 infrastructure under my control.
 
-First, I need to set up an agent within my Mythic instance to use as a payload. Working from my Mythic server, I downloaded and installed the [Apollo Mythic agent](https://github.com/MythicAgents/Apollo.git) from GitHub by running `./mythic-cli install github https://github.com/MythicAgents/Apollo.git`. 
+First, I need to set up an agent within my Mythic instance. Working from my Mythic server, I downloaded and installed the [Apollo Mythic agent](https://github.com/MythicAgents/Apollo.git) from GitHub by running `./mythic-cli install github https://github.com/MythicAgents/Apollo.git`. 
 <img width="961" alt="day21-7a" src="https://github.com/user-attachments/assets/033358e1-99e0-4f21-9d84-55fc656e88da" />
 
 This [Agent Capabilities Matrix](https://mythicmeta.github.io/overview/agent_matrix.html) is a useful resource for determining which agent is good dependent upon operational conditions.
@@ -90,6 +90,44 @@ Next, a C2 profile is needed. [This GitHub repository](https://github.com/Mythic
 ![image](https://github.com/user-attachments/assets/9c31917f-f72e-46b7-980f-c11e47a77592)
 ![image](https://github.com/user-attachments/assets/afdee3c4-5c9a-4f58-8c78-46666a8c5e58)
 
+To install the http C2 profile, I ran `./mythic-cli install github https://github.com/MythicC2Profiles/http`. 
+<img width="960" alt="day21-8a" src="https://github.com/user-attachments/assets/83c5cf49-8b78-4f26-9872-b7f8c1d911f3" />
 
+Returning to my Mythic web GUI, I now see an Agent and C2 Profile.
+<img width="960" alt="day21-8c" src="https://github.com/user-attachments/assets/9440e97c-66cf-4f26-b546-891150cb3507" />
+
+To create a payload, navigate to the biohazard icon and choose `Actions > Generate new payload`. 
+<img width="959" alt="day21-9" src="https://github.com/user-attachments/assets/62fc03a9-bc9a-420f-bf9a-4d5ccec30e9d" />
+
+Now, Mythic will guide you through the steps to create the payload. First, select the designated target system.
+<img width="962" alt="day21-9a" src="https://github.com/user-attachments/assets/7bb2bd1c-243d-4745-8346-92f6e402e62b" />
+
+Then, there are several options as how to output the payload (shellcode, executable, service).
+<img width="958" alt="day21-9b" src="https://github.com/user-attachments/assets/5c23f153-3bf6-4f90-9fc8-d6ea17ca5ba1" />
+
+A nice feature of Mythic is that it provides you with the available commands for use allowing for greater customization. You can also click on the `Documentation` button to learn more about each command.
+<img width="958" alt="day21-9c" src="https://github.com/user-attachments/assets/5d6ad7b1-57c1-4233-abc9-ac2e48db997c" />
+
+Next, it is necessary to provide your Mythic server's public IP address as the callback address. After all, we want to be notified about what is going on.
+<img width="961" alt="day21-9d" src="https://github.com/user-attachments/assets/1b850c1d-1fc4-4f1a-9912-13acce430ff0" />
+
+Finally, name and describe the payload.
+<img width="958" alt="day21-9e" src="https://github.com/user-attachments/assets/88d4e404-d793-45a8-9086-3a86fe9e80d9" />
+
+#### Phase 5: COmmand and Control
+The payload is ready to be downloaded. I ran the `wget` command in PowerShell from the Mythic server using the download link provided by Mythic. An error occurs but is easily resolved by adding `--no-check-certificate` to the end of the command.
+<img width="959" alt="day21-9f" src="https://github.com/user-attachments/assets/dbdcc0a5-619f-4dbb-bc26-96efab1b2dba" />
+
+Now, the file is available and I can see that it is a PE32 executable. I also renamed the file to `svchost-jf.exe` and moved it to the newly created `1` directory.
+<img width="961" alt="day21-9g" src="https://github.com/user-attachments/assets/de61a724-d511-41b8-97a6-cb58cc6f0d59" />
+
+Utilizing an HTTP module that python offers to provide the necessary framework and functionality to facilitate communication, data exchange, and execution over the HTTP protocol. 
+<img width="960" alt="day21-10" src="https://github.com/user-attachments/assets/99b5e182-31ac-46e9-891c-696f0556150d" />
+
+Moving back to the previously established RDP session on the Kali Linux machine, I invoked a web request to download the payload.
+<img width="958" alt="day21-10a" src="https://github.com/user-attachments/assets/43c6aa4e-2b20-44da-b205-52fe422fd64e" />
+
+Now, running `./svchost-jf.exe`, will establish a connection with my Mythic agent. Moving over to my Mythic web GUI, I can see that I now have an active callback.
+<img width="962" alt="day21-10b" src="https://github.com/user-attachments/assets/1a4689a4-2f1e-4189-8641-13197c4dc6df" />
 
 
