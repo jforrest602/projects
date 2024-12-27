@@ -130,4 +130,12 @@ Moving back to the previously established RDP session on the Kali Linux machine,
 Now, running `./svchost-jf.exe`, will establish a connection with my Mythic agent. Moving over to my Mythic web GUI, I can see that I now have an active callback.
 <img width="962" alt="day21-10b" src="https://github.com/user-attachments/assets/1a4689a4-2f1e-4189-8641-13197c4dc6df" />
 
+#### Phase 6: Exfiltration
+Now that C2 has been established, I have the ability to execute commands on the target machine from my Mythic web GUI.
+<img width="962" alt="day21-10b" src="https://github.com/user-attachments/assets/b0dc3abc-43a8-4d8b-88b0-25ef6cc91cb2" />
 
+To download a file from the target machine, run `download file path`. To download the `passwords.txt` file that was created, I ran `download C:\Users\Administrator\Documents\passwords.txt`. I can even see a preview of the documents data.
+<img width="958" alt="day21-10c" src="https://github.com/user-attachments/assets/b7a2f719-02dd-460f-9efa-6f782b4f23f6" />
+
+To view the entire document and a list of other downloaded files, navigate to the paperclip icon located on the top toolbar.
+<img width="958" alt="day21-10d" src="https://github.com/user-attachments/assets/8c73a11f-1c5c-483b-bbe5-ee932665b75f" />
