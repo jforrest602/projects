@@ -143,3 +143,8 @@ To download a file from the target machine, run `download file path`. To downloa
 
 To view the entire document and a list of other downloaded files, navigate to the paperclip icon located on the top toolbar.
 <img width="958" alt="day21-10d" src="https://github.com/user-attachments/assets/8c73a11f-1c5c-483b-bbe5-ee932665b75f" />
+
+The exfiltration stage is often the primary objective in many cyberattacks, particularly those driven by espionage, fraud, or ransomware. Successful exfiltration allows the attacker to capitalize on the stolen data, whether for financial gain, competitive advantage, or further malicious actions. Additionally, it can significantly harm the targeted organization in terms of financial loss, reputation damage, and regulatory consequences.
+
+#### Summary
+Mythic is a powerful framewrok. Please use it responsibly.
