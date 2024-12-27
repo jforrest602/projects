@@ -150,3 +150,5 @@ Today's task demonstrated the process of performing a brute force attack, establ
 ## Day 22: Creating Alerts & Dashboards in Kibana (4/4)
 Now that the Mythic agent is up and running, I want to create an alert that will capture the generated telemetry and visualize it with an associated dashboard.
 
+Returning to the Elastic web GUI, under the hamburger menu, navigate to `Analytics > Discover`. To locate the C2 telemetry, I search for the payload I created and deployed yesterday, called `svchost-jf.exe`. In a real-world scenario, this information wouldn't be readily available, but this is for educational purposes.
+
