@@ -85,4 +85,11 @@ After a few moments, I can see from PowerShell and my Mythic web GUI that Apollo
 <img width="948" alt="day21-7b" src="https://github.com/user-attachments/assets/704efa94-868b-4b59-9e85-873381aeee1a" />
 <img width="959" alt="day21-7c" src="https://github.com/user-attachments/assets/b29f3454-5bca-4604-8069-dd039d81f3ca" />
 
+Next, a C2 profile is needed. [This GitHub repository](https://github.com/MythicC2Profiles) contains all the information needed to set up the profile. In this case, I am using the http profile.
+![image](https://github.com/user-attachments/assets/059f8f45-0b0c-49d2-9ee0-92c420a9254a)
+![image](https://github.com/user-attachments/assets/9c31917f-f72e-46b7-980f-c11e47a77592)
+![image](https://github.com/user-attachments/assets/afdee3c4-5c9a-4f58-8c78-46666a8c5e58)
+
+
+
 
