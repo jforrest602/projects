@@ -174,7 +174,7 @@ This query is looking for events where a particular action occurred (event code 
 To create a new security rule, under the hamburger icon, navigate to `Security > Rules > Detection rules > Create new rule > Custom query` and paste in the custom search.
 <img width="959" alt="Day22-1a" src="https://github.com/user-attachments/assets/fec8778b-169d-4d4e-9cb8-72b6b0e84e11" />
 
-After defining some required fields, naming and describing the rule, assigning a sevrity level, and scheduling the rule it was created and enabled.
+After defining the desired required fields, naming and describing the rule, assigning a severity level, and scheduling the rule, it was created and enabled.
 <img width="959" alt="Day22-1b" src="https://github.com/user-attachments/assets/4e34915d-002f-4c40-8440-df09488776b0" />
 <img width="958" alt="Day22-1c" src="https://github.com/user-attachments/assets/20afd3e9-97cc-4445-8a57-f150537de1e1" />
 
@@ -182,6 +182,17 @@ After defining some required fields, naming and describing the rule, assigning a
 
 #### The Dashboard
 This dashboard will display three panels:
-+ Event ID: 1, any Process Creates - powershell, cmd, rundll32
-+ + Event ID 3, any processes INITIATING an outbound network connection
++ The first panel will focus on detecting when any process is started on the system.
+  - The search parameters for this panel are: `event.code: 1 and event.provider: Microsoft-Windows-Sysmon and (powershell, cmd, rundll32)`.
+  - `event.code: 1` filters for any process creation event (Event ID 1 in Sysmon). 
+  - `event.provider: Microsoft-Windows-Sysmon` specifies that the event should come from Sysmon.
+  - `(powershell, cmd, rundll32)` looks for any of the three specified processes.
+    
++ The second panel will focus any processes initiating an outbound network connection.
+  - The search parameters are: `event.code: 3 and event.provider: Microsoft-Windows-Sysmon and winlog.event_data.Initiated: "true"`.
+  - `event.code: 3` filters for events that record network activity, specifically any successful network connections. In Sysmon refers to Network Connection events (Event ID 3). 
++ 
 + Event ID: 5001, Microsoft Windows Defender activity disabled
+
+
+
