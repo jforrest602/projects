@@ -203,3 +203,8 @@ This dashboard will display three panels:
 ![app_dashboards3](https://github.com/user-attachments/assets/a0b6658b-b9ec-42d7-98e6-55d958107a56)
 
 To create the visualization, navigate to the hamburger menu, `Dashboards > Create dashboard > Create visualization`. Once there, paste in the custom search parameters and format to suit your specific needs. In this case, `winlog.event_data.Image`, `winlog.event_data.DestinationIp`, `winlog.event_data.SourceIp`, `winlog.event_data.DestinationPort` provide all the necessary information.
+
+By defining search queries that focus on specific events—such as process creation, outbound network connections, and Defender activity—we were able to build an insightful and actionable security dashboard. The custom alerts provide an efficient way to track suspicious behaviors, while the dashboard visualizations make it easy to monitor key indicators in real time. With this setup, I am now equipped to detect and respond to potential threats with greater visibility and precision.
+
+## DAY 23: Ticketing Systems
+
