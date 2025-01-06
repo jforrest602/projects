@@ -150,5 +150,23 @@ Today's task demonstrated the process of performing a brute force attack, establ
 ## Day 22: Creating Alerts & Dashboards in Kibana (4/4)
 Now that the Mythic agent is up and running, I want to create an alert that will capture the generated telemetry and visualize it with an associated dashboard.
 
-Returning to the Elastic web GUI, under the hamburger menu, navigate to `Analytics > Discover`. To locate the C2 telemetry, I search for the payload I created and deployed yesterday, called `svchost-jf.exe`. In a real-world scenario, this information wouldn't be readily available, but this is for educational purposes.
+Returning to the Elastic web GUI, under the hamburger menu, navigate to `Analytics > Discover`, I am going to define custom search parameters for this alert which will feed the visualization. 
 
+To locate the C2 telemetry, I search for the payload I created and deployed yesterday, called `svchost-jf.exe`. In a real-world scenario, this information wouldn't be readily available, but this is for educational purposes, so I am cheating a little to get started.
+
+To further hone these results, I want to focus on `event.code: 1`, Sysmon Process Create which contains the MD5 hash which can be used to try and gain additional information. The custom search so far is: `svchost-jf.exe and event.code: 1`. This search returns just one result.
+
+Delving into this event's details, one particular field stands out: `winlog.event_data.OriginalFileName: Apollo.exe`, which was an executable used in the C2 attack. This will be included in the custom search parameters. 
+
+The SHA256 hash could be useful even though it is quite easy for attackers to modify. 
+
+In the end, my custom search is: `event.code: 1 and (winlog.event_data.Hashes: 0D2AA0566EAC0BE21B03982D79B73FBB9BEE93E543F82BEB229C25946EBE5243 or winlog.event_data.OriginalFileName: Apollo.exe)`. 
+
+Breaking this search down,
++ `event.code: 1` filters for logs that have an `event.code` value of `1`.
++ `(winlog.event_data.Hashes: 0D2AA0566EAC0BE21B03982D79B73FBB9BEE93E543F82BEB229C25946EBE5243 or winlog.event_data.OriginalFileName: Apollo.exe)` is a logical OR condition combining two fields for filtering.
+  - `winlog.event_data.Hashes: 0D2AA0566EAC0BE21B03982D79B73FBB9BEE93E543F82BEB229C25946EBE5243` will match logs where the file’s hash matches this specific value.
+  - `winlog.event_data.OriginalFileName: Apollo.exe` filters logs for events related to a file named `Apollo.exe`.
++`svchost-jf.exe` is removed because it could potentially return unwanted results.
+
+This query is looking for events where a particular action occurred (event code 1) that involves either a file with a specific hash or the execution of a file named Apollo.exe.
