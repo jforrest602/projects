@@ -218,3 +218,11 @@ Tickets can be many things. They can be security alerts, troubleshooting request
 6. __Reporting and Metrics:__ The ticketing system typically has reporting capabilities that allow SOC managers to monitor key performance indicators such as mean time to detect (MTTD), mean time to respond (MTTR), ticket closure times, and other metrics that are important for evaluating SOC performance.
 7. __Integration with Other Tools:__ A modern ticketing system in a SOC is often integrated with other security tools, such as SIEM systems, threat intelligence platforms, or incident response tools, which can be configured to automatically create tickets when alerts are triggered.
 8. __Audit Trails:__ The system maintains an audit trail of all activities performed on each ticket, which is important for accountability, forensic investigations, and compliance with regulations.
+
+Common commercially available ticketing systems include [Jira](https://www.atlassian.com/software/jira), [servicenow](https://www.servicenow.com/), [Freshdesk](https://www.freshworks.com/freshdesk/), and [zendesk](https://www.zendesk.com).
+
+[osTicket](https://osticket.com/) is an open source product that offers features that can fulfill many of the core responsibilities of a commercially available ticketing system. It has the ability to customize fields, create filters for routing, assign and transfer tickets, and even an option to set a service level agreement. It can operate as self-hosted or, for a fee, the company will manage it for you.
+
+By integrating osTicket into this tech stack it will begin to mimic a small SOC environment. Because a ticketing system is such a vital tool used to manage, track, and document security incidents, events, and operational tasks, a well-implemented ticketing system is essential for efficient and effective SOC operations, ensuring that security incidents are handled promptly and systematically.
+
+## Day 24: osTicket Setup
