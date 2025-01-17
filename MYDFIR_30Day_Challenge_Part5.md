@@ -226,3 +226,24 @@ Common commercially available ticketing systems include [Jira](https://www.atlas
 By integrating osTicket into this tech stack it will begin to mimic a small SOC environment. Because a ticketing system is such a vital tool used to manage, track, and document security incidents, events, and operational tasks, a well-implemented ticketing system is essential for efficient and effective SOC operations, ensuring that security incidents are handled promptly and systematically.
 
 ## Day 24: osTicket Setup
+Now that we know what a ticketing system is, let's set up osTicket. 
+
+To get started, I deployed a new, dedicated server running on a Windows Standoard 2022 operating system within my VPC network. Once the server was set up, I integrated it into my firewall group.
+
+Next, I connected directly to this new virtual machine via remote desktop protocol (RDP) to set up a web server. To do this, I used `xampp`. Google `xampp` to find the [dowload link](https://www.apachefriends.org/download.html). Once the installer downloaded, I opened the file to run the installer leaving the default settings in place. 
+<img width="948" alt="Day24-1" src="https://github.com/user-attachments/assets/1c288a37-b5b7-4c27-919d-1bd99fc2043b" />
+
+Once installation is complete, you will see the `xampp` control panel. 
+<img width="958" alt="Day24-1a" src="https://github.com/user-attachments/assets/c0574c87-8ff8-4867-a26b-2f1a65c12689" />
+
+Before going any further, I need to edit the properties configuration file located in `C:\xampp\properties.txt`. I need to change `apache_domainname` from 127.0.0.1 (localhost) to my server’s public IP, which is 45.76.213.92
+<img width="959" alt="Day24-2" src="https://github.com/user-attachments/assets/8a91bc4c-3df5-4b80-872f-9518b4dd1a6e" />
+Save and exit.
+
+Next, change the phpMyAdmin configuration file located at `C:\xampp\phpMyAdmin\config.inc.php`. Before making any changes to this file I created a backup file by copying the original and renaming it `config.inc.backup.php`.
+
+I opened the file with Notepad and changed `/* Bind to the localhost ipv4 address and tcp */
+$cfg['Servers'][$i]['host'] = '127.0.0.1';` to use my server's public IP address, `/* Bind to the localhost ipv4 address and tcp */
+$cfg['Servers'][$i]['host'] = '45.76.213.92'. 
+<img width="959" alt="Day24-2a" src="https://github.com/user-attachments/assets/c1c080d5-0d3b-482e-8d72-1079d6170446" />
+Save and exit.
