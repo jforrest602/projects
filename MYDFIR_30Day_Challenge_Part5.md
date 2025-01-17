@@ -244,6 +244,11 @@ Next, change the phpMyAdmin configuration file located at `C:\xampp\phpMyAdmin\c
 
 I opened the file with Notepad and changed `/* Bind to the localhost ipv4 address and tcp */
 $cfg['Servers'][$i]['host'] = '127.0.0.1';` to use my server's public IP address, `/* Bind to the localhost ipv4 address and tcp */
-$cfg['Servers'][$i]['host'] = '45.76.213.92'. 
+$cfg['Servers'][$i]['host'] = '45.76.213.92'`. 
 <img width="959" alt="Day24-2a" src="https://github.com/user-attachments/assets/c1c080d5-0d3b-482e-8d72-1079d6170446" />
 Save and exit.
+
+This change allows access via my SOC analyst laptop and restricts unauthorized access to the virtual machine.
+
+The final step of this section is to create an endpoint firewall rule with Windows Defender Firewall with Advanced Security to allow inbound connections via ports 80 and 443. To do this, click `New Rule` and follow the prompts. Specifically, select `Port > TCP`, enter `80,443`,  `Allow COnnection`, and name it `Inbound 80,443`.
+<img width="957" alt="Day24-3" src="https://github.com/user-attachments/assets/6887c6a9-2d45-4c11-9849-b5eae6907c89" />
