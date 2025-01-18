@@ -228,8 +228,10 @@ By integrating osTicket into this tech stack it will begin to mimic a small SOC 
 ## Day 24: osTicket Setup
 Now that we know what a ticketing system is, let's set up osTicket. 
 
+#### Deploy Server in VPC
 To get started, I deployed a new, dedicated server running on a Windows Standoard 2022 operating system within my VPC network. Once the server was set up, I integrated it into my firewall group.
 
+#### Set up Web Server
 Next, I connected directly to this new virtual machine via remote desktop protocol (RDP) to set up a web server. To do this, I used `xampp`. Google `xampp` to find the [dowload link](https://www.apachefriends.org/download.html). Once the installer downloaded, I opened the file to run the installer leaving the default settings in place. 
 <img width="948" alt="Day24-1" src="https://github.com/user-attachments/assets/1c288a37-b5b7-4c27-919d-1bd99fc2043b" />
 
@@ -254,7 +256,7 @@ Select `Login Information~ at the top of the page.
 Change the `Host name` from `localhost` to the server's public IP address and configure a password. 
 <img width="959" alt="Day24-5d" src="https://github.com/user-attachments/assets/d23f5895-36ec-43cc-9031-85c56cb2e26e" />
 
-Now, before going any further, I need to edit the properties configuration file located in `C:\xampp\properties.txt`. I need to change `apache_domainname` from 127.0.0.1 (localhost) to my server’s public IP, which is 45.76.213.92
+Now, before going any further, I need to edit the properties configuration file located in `C:\xampp\properties.txt`. I need to change `apache_domainname` from `127.0.0.1 (localhost)` to my server’s public IP, which is `45.76.213.92`.
 <img width="959" alt="Day24-2" src="https://github.com/user-attachments/assets/8a91bc4c-3df5-4b80-872f-9518b4dd1a6e" />
 Save and exit.
 
@@ -268,5 +270,10 @@ Save and exit.
 
 This change allows access via my SOC analyst laptop and restricts unauthorized access to the virtual machine.
 
+Note, do not forget to update the password in your phpMyAdmin configuration file (`config.inc.php`).
+<img width="959" alt="Day24-5e" src="https://github.com/user-attachments/assets/fa00e882-81e2-48ca-940e-ff59f15a1aad" />
+
 The final step of this section is to create an endpoint firewall rule with Windows Defender Firewall with Advanced Security to allow inbound connections via ports 80 and 443. To do this, click `New Rule` and follow the prompts. Specifically, select `Port > TCP`, enter `80,443`,  `Allow COnnection`, and name it `Inbound 80,443`.
 <img width="957" alt="Day24-3" src="https://github.com/user-attachments/assets/6887c6a9-2d45-4c11-9849-b5eae6907c89" />
+
+#### Installing osTicket
