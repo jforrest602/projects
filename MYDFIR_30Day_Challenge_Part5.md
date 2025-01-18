@@ -236,7 +236,25 @@ Next, I connected directly to this new virtual machine via remote desktop protoc
 Once installation is complete, you will see the `xampp` control panel. 
 <img width="958" alt="Day24-1a" src="https://github.com/user-attachments/assets/c0574c87-8ff8-4867-a26b-2f1a65c12689" />
 
-Before going any further, I need to edit the properties configuration file located in `C:\xampp\properties.txt`. I need to change `apache_domainname` from 127.0.0.1 (localhost) to my server’s public IP, which is 45.76.213.92
+Now, I want to authorize this server's public IP address to access the `phpMyAdmin` of this `Apache` instance. To do so, navigate to the xampp control panel and start the `Apache` and `MySQL` services. Once those are running, go to `Admin` under the Apache service. 
+<img width="957" alt="Day24-4" src="https://github.com/user-attachments/assets/0470562e-e1ad-4faf-949f-38af37820c1f" />
+
+When the web page loads, go to `phpMyAdmin` at the top of the page.
+<img width="953" alt="Day24-5" src="https://github.com/user-attachments/assets/eef94c58-7f9d-4f97-9980-31944b2e8eda" />
+
+Navigate to `User Accounts`.
+<img width="959" alt="Day24-5a" src="https://github.com/user-attachments/assets/7740179b-8528-459b-9bd1-b3b9180a58ef" />
+
+Select the username `root` with the hostname `localhost`.
+<img width="956" alt="Day24-5b" src="https://github.com/user-attachments/assets/613c46c8-ae34-471d-844b-6e9aa4b69d3b" />
+
+Select `Login Information~ at the top of the page. 
+<img width="958" alt="Day24-5c" src="https://github.com/user-attachments/assets/b76dbc85-7de0-4563-98b0-fc66cae341ba" />
+
+Change the `Host name` from `localhost` to the server's public IP address and configure a password. 
+<img width="959" alt="Day24-5d" src="https://github.com/user-attachments/assets/d23f5895-36ec-43cc-9031-85c56cb2e26e" />
+
+Now, before going any further, I need to edit the properties configuration file located in `C:\xampp\properties.txt`. I need to change `apache_domainname` from 127.0.0.1 (localhost) to my server’s public IP, which is 45.76.213.92
 <img width="959" alt="Day24-2" src="https://github.com/user-attachments/assets/8a91bc4c-3df5-4b80-872f-9518b4dd1a6e" />
 Save and exit.
 
