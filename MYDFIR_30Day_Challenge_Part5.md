@@ -277,3 +277,20 @@ The final step of this section is to create an endpoint firewall rule with Windo
 <img width="957" alt="Day24-3" src="https://github.com/user-attachments/assets/6887c6a9-2d45-4c11-9849-b5eae6907c89" />
 
 #### Installing osTicket
+Navigate to `osTicket.com > Self-Hosted > [Download](https://osticket.com/download/)` and download the most recent version. Select your desired language and plugins configurations then download. Once the file is downloaded, extract its contents. Once that finishes extracting, you will need to extract the contents of another folder. 
+
+The default web contents for the Apache server are stored in `c:\xampp\htdocs`. Here, I will create a new directory called `osTicket`. 
+
+Next, once the above osTicket download has finished extracting, copy the `scripts` and `uploads` directories from the extracted folded and paste it to the newly created directory `C:\xampp\htdocs\osTicket`.
+
+Now, open a web browser and navigate to `serverIP/osticket/setup`.
+<img width="959" alt="Day24-6" src="https://github.com/user-attachments/assets/9505b71c-6ae4-4ec0-93cf-f88b195b8323" />
+
+Once there, click `Continue` at the bottom of the page and you should get a warning that a configuration file is missing.
+Fortunately, the fix to thois issue is provided.
+<img width="957" alt="Day24-6a" src="https://github.com/user-attachments/assets/2687bf9c-47e9-41c2-bb82-e98459b5b36c" />
+
+The file to rename is located in `C:\xampp\htdocs\osTicket\uploads\include` directory which is part of the directory that was just moved from `Downloads`.
+<img width="956" alt="Day24-6b" src="https://github.com/user-attachments/assets/5e519513-ef6b-4b08-b81e-e379b8f7a70d" />
+
+After renaming the file, return to the web browser and click `Continue` which brings you to the basic installation information. 
