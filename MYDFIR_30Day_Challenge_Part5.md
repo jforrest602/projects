@@ -337,4 +337,5 @@ Back on my host computer, I navigated to the `Your Staff Control Panel` link tha
 If you click on `Admin Panel` located in the top right corner, you can begin to edit certain settings or even create agents.
 <img width="957" alt="Day24-6l" src="https://github.com/user-attachments/assets/3713415b-965b-49e8-aa61-d821ae1d2d9e" />
 
-#### Recap
+#### Conclusion
+Setting up osTicket involves several detailed steps, from deploying a server and configuring the web environment to installing and troubleshooting the ticketing system. By following these instructions, I successfully deployed osTicket and confirmed its functionality, enabling ticket management for my environment. This process not only provides a practical understanding of server and application deployment but also highlights the importance of precise configuration in creating reliable IT solutions. With osTicket fully operational, I am ready to explore its features and optimize it for my needs.
