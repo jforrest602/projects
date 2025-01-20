@@ -293,4 +293,10 @@ Fortunately, the fix to thois issue is provided.
 The file to rename is located in `C:\xampp\htdocs\osTicket\uploads\include` directory which is part of the directory that was just moved from `Downloads`.
 <img width="956" alt="Day24-6b" src="https://github.com/user-attachments/assets/5e519513-ef6b-4b08-b81e-e379b8f7a70d" />
 
-After renaming the file, return to the web browser and click `Continue` which brings you to the basic installation information. 
+After renaming the file, return to the web browser and click `Continue` which brings you to the basic installation information. Once the basic system settings have been filled in, it's time to setup a new database. The most important detail here is to enter the server's public IP address in the `MySQL Hostname` field.
+<img width="955" alt="Day24-6c" src="https://github.com/user-attachments/assets/6959032e-fc67-484e-b1e9-ffa601c4404e" />
+
+Click `Install Now`. I immediately encountered an error.
+<img width="960" alt="Day24-6d" src="https://github.com/user-attachments/assets/2d423f37-eaab-4c07-a2ac-9ea0db9148f3" />
+
+This is because the MySQL database was not created. What just happened was editing the database settings. It was not actual creation of a database. To fix this, first create a database before running the osTicket installation. 
