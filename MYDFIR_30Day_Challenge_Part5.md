@@ -317,4 +317,24 @@ Next, ensure the proper privileges are granted to access database. Click the hom
 Here, make sure to select `Check all`.
 <img width="958" alt="Day24-6h" src="https://github.com/user-attachments/assets/990a706d-8aea-4ac9-94f8-1da5fd9ff5bb" />
 
-This provided privileges to this database for the root account. Now, rerun the osTicket configuration steps. In a web browser, go to `serverIP/osticket/upload` which will take you back to the osTicket installer. Input the required information (again 🙁), and click `Install Now`. 
+This provided privileges to this database for the root account. Now, rerun the osTicket configuration steps. In a web browser, go to `serverIP/osticket/upload` which will take you back to the osTicket installer. Input the required information (again 🙁), and click `Install Now`. If done right, you'll see a congratulatory message like this.
+<img width="959" alt="Day24-6i" src="https://github.com/user-attachments/assets/62961fbc-a602-4c03-bf6b-9cabd6b46478" />
+
+#### Configuring File Permissions
+Luckily, commands are provided (see previous screenshot). I used PowerShell, running it as an administrator. Before running the command, I changed into the directory where the `ost-config.php` file is located by first running
+`cd C:\xampp\htdocs\osTicket\uploads\include` and then ran the `icalcs include\ost-config.php /reset` command as provided. 
+
+However, this failed because the system could not find the specified path. Instead, I ran `icalcs .\ost-config.php /reset` and was successful.
+<img width="960" alt="Day24-6j" src="https://github.com/user-attachments/assets/5ec8cccc-9ada-4735-b92e-0e8e0ed59630" />
+
+Now is a good time to take note of `Your os Ticket URL` and `Your Staff Control Panel` links provided.
+<img width="959" alt="Day24-6iI" src="https://github.com/user-attachments/assets/80cf84f4-da19-4eff-ade0-6d4ecb8e6f94" />
+
+#### Confirming Successful Installation
+Back on my host computer, I navigated to the `Your Staff Control Panel` link that was provided and logged in with my credentials.
+<img width="958" alt="Day24-6k" src="https://github.com/user-attachments/assets/80b24f7f-808a-4a25-a6ca-bbec40163b27" />
+
+If you click on `Admin Panel` located in the top right corner, you can begin to edit certain settings or even create agents.
+<img width="957" alt="Day24-6l" src="https://github.com/user-attachments/assets/3713415b-965b-49e8-aa61-d821ae1d2d9e" />
+
+#### Recap
