@@ -300,3 +300,21 @@ Click `Install Now`. I immediately encountered an error.
 <img width="960" alt="Day24-6d" src="https://github.com/user-attachments/assets/2d423f37-eaab-4c07-a2ac-9ea0db9148f3" />
 
 This is because the MySQL database was not created. What just happened was editing the database settings. It was not actual creation of a database. To fix this, first create a database before running the osTicket installation. 
+
+From the xampp control panel navigate to the `phpMyAdmin` page by clicking on the `Admin` button.
+<img width="957" alt="Day24-4" src="https://github.com/user-attachments/assets/b40c5d3a-883d-4a55-8506-cf9b868f692c" />
+<img width="953" alt="Day24-5" src="https://github.com/user-attachments/assets/4733dc6d-22ae-4a64-ac03-8d62c2508f9f" />
+
+A list of databases is located in the lafthand column of the page. From here select the `Databases` tab at the top of the page, click `New` to create a new database, name the database, and click `Create`.
+<img width="958" alt="Day24-6e" src="https://github.com/user-attachments/assets/7ae54ca0-8a43-4936-bc83-f8294b38b750" />
+
+The database should now be listed in the lefthand column. 
+<img width="960" alt="Day24-6f" src="https://github.com/user-attachments/assets/bd881d6b-d8b8-46c4-83f5-a52147283b0f" />
+
+Next, ensure the proper privileges are granted to access database. Click the home icon at the top of the lefthand column. Navigate to `user accounts - root (with public IP) - database - go`.
+<img width="960" alt="Day24-6g" src="https://github.com/user-attachments/assets/d7820c28-a57f-4dee-8168-34b929416ba4" />
+
+Here, make sure to select `Check all`.
+<img width="958" alt="Day24-6h" src="https://github.com/user-attachments/assets/990a706d-8aea-4ac9-94f8-1da5fd9ff5bb" />
+
+This provided privileges to this database for the root account. Now, rerun the osTicket configuration steps. In a web browser, go to `serverIP/osticket/upload` which will take you back to the osTicket installer. Input the required information (again 🙁), and click `Install Now`. 
