@@ -339,3 +339,7 @@ If you click on `Admin Panel` located in the top right corner, you can begin to 
 
 #### Conclusion
 Setting up osTicket involves several detailed steps, from deploying a server and configuring the web environment to installing and troubleshooting the ticketing system. By following these instructions, I successfully deployed osTicket and confirmed its functionality, enabling ticket management for my environment. This process not only provides a practical understanding of server and application deployment but also highlights the importance of precise configuration in creating reliable IT solutions. With osTicket fully operational, I am ready to explore its features and optimize it for my needs.
+
+## Day 25: Integrating osTicket with ELK
+Having osTicket installed and configured properly is nice, but it won't do me much good unless it is integrated with other aspects of my tech stack. The integration of osTicket with the ELK stack will enhance ticket management by providing centralized access to ticket data and system logs, improve real-time monitoring and alerting, and could enable advanced analytics. This integration helps support teams respond more efficiently, troubleshoot problems faster, and gain valuable insights to optimize workflows, improve performance, and proactively manage IT issues.
+
