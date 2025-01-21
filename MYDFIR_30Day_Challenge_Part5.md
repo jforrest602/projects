@@ -343,3 +343,21 @@ Setting up osTicket involves several detailed steps, from deploying a server and
 ## Day 25: Integrating osTicket with ELK
 Having osTicket installed and configured properly is nice, but it won't do me much good unless it is integrated with other aspects of my tech stack. The integration of osTicket with the ELK stack will enhance ticket management by providing centralized access to ticket data and system logs, improve real-time monitoring and alerting, and could enable advanced analytics. This integration helps support teams respond more efficiently, troubleshoot problems faster, and gain valuable insights to optimize workflows, improve performance, and proactively manage IT issues.
 
+#### Generate API Key
+To begin, log into the osTicket control panel and navigate to the `Admin Panel`.
+<img width="958" alt="Day24-6k" src="https://github.com/user-attachments/assets/bfb25c82-e811-40a1-ac92-e8de449bca25" />
+
+Once there, go to `Manage`, select `API`, and click `Add New API Key`.
+<img width="960" alt="Day25-1" src="https://github.com/user-attachments/assets/0e4d1a9e-529a-47f7-addb-c999d7f69cfd" />
+
+Now, because the osTicket server and ELK server are both a part of the same virtual private cloud (VPC), I will use the private IP address of my ELK server. If they were not part of the same VPC, I would use the public IP address instead.
+Select `Can Create Tickets`, enter any `Internal Notes`, and click `Add Key`.
+<img width="959" alt="Day25-1a" src="https://github.com/user-attachments/assets/a4c27fb4-1b5a-4a00-9a70-d6c20e16a113" />
+
+After clicking `Add Key`, you are brought to a screen with your newly generated API key which will be use in Elastic to integrate osTicket. Copy it and keep it somewhere safe for now.
+<img width="958" alt="Day25-1b" src="https://github.com/user-attachments/assets/84a59a53-39f9-4acc-ae9c-8602bf08bd65" />
+
+#### Integration
+Log into Elastic. Under the hamburger icon, navigate to `Management > Stack Managment > Alerts and Insights > Connectors`. 
+
+
