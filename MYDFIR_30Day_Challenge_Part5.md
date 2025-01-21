@@ -381,3 +381,14 @@ An error has occurred. The request failed, timeout of 60000ms exceeded tells me 
 
 To troubleshoot, I opened a PowerShell session on my host computer and established an SSH connection to my ELK server. When I tied to `ping` the osTicket server, I could not get a response.
 <img width="957" alt="Day25-1h" src="https://github.com/user-attachments/assets/25b9cd22-b8b8-472b-914d-68a02087894e" />
+
+After a bit more trouble shooting in my osTicket server RDP session, I found that the private IP address that I used earlier does not match the private IP address provided by the osTicket server when I ran `ipconfig` in Command Prompt.
+
+To edit this, I opened up the Control Panel within the osTicket server, navigated to `Network and Internet > View network status and task > Change adapter settings > Ethernet Instance 0 > Properties > Internet protocol version 4 (TCP/IPv4)` and selected `Use the following IP address`. There, I entered the IP address and corresponding subnet mask that I want to use and clicked `OK`. 
+<img width="958" alt="Day25-1i" src="https://github.com/user-attachments/assets/389a61a3-ebdd-48d5-976e-5b39045dde0b" />
+
+However, I ran into more problems here and lost connection to my osTicket server and could not restablish my RDP session. So, I navigated to Vultr and used the `View Console` option to work within the osTicket server. I updated the Ethernet 0 2 IP address, subnet mask, and gateway but this did not resolve the issue.
+<img width="959" alt="Day25-1k" src="https://github.com/user-attachments/assets/b50ac1b4-d89e-4cec-97de-d1be79ea9909" />
+
+#### More Troubleshooting
+
