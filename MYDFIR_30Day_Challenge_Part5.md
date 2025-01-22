@@ -408,4 +408,6 @@ To confirm it is working like I expect it is, I navigated to the `Agent Panel` w
 <img width="960" alt="Day25a-5" src="https://github.com/user-attachments/assets/c8b800a8-4689-449c-b634-dc0d733dabe5" />
 
 #### Wrapping Up
+Now that osTicket is integrated with my Elastic, whenever alerts are generated from Elastic, I can automatically create a ticket in osTicket to start tracking alerts and workflows. This ticketing system satisfies the accounting/auditing A of the AAA security framework. This also provides me with a more robust SOC environment to begin exploring more.
 
+This journey of integrating osTicket with the ELK Stack demonstrates the importance of perseverance and adaptability in troubleshooting complex configurations. While setbacks like connectivity issues can be frustrating, they offer invaluable opportunities to learn and refine problem-solving skills. The successful integration not only streamlines alert tracking and workflow management but also enhances the overall security operations framework. With this foundation, I can now explore more advanced SOC capabilities and continue building a comprehensive and efficient tech stack.
