@@ -391,4 +391,21 @@ However, I ran into more problems here and lost connection to my osTicket server
 <img width="959" alt="Day25-1k" src="https://github.com/user-attachments/assets/b50ac1b4-d89e-4cec-97de-d1be79ea9909" />
 
 #### More Troubleshooting
+After several hours of troubleshooting without success, I took drastic measures. I destroyed my osTicket server and started over from the beginning. I deployed a new server with the same specifications, installed xampp, downloaded and installed osTicket following all of the same steps I took previously.
+
+It can be unsatisfying not being able to discover what issue was preventing the integration from working properly but, this is a learning process and these types of situations are nearly inevitable. On the positive side, starting over got me to where I waanted to go, it just took longer than originally planned.
+
+The screenshots below show the updated Ethernet 0 IP address and the successful `ping` of that IP address meaning that the connectivity issues have been resolved.
+<img width="959" alt="Day25a-1" src="https://github.com/user-attachments/assets/e4f71f5f-62ec-4553-b584-d19c7e19d024" />
+<img width="959" alt="Day25a-2" src="https://github.com/user-attachments/assets/79df3ea1-24f8-43c8-9311-16daa5e278dc" />
+
+#### Moving On
+Under the `Configuration` tab, I changed the `Connector settings` URL to the private IP address of my osTicket server. I saved it and ran the test again. This time with success!
+<img width="959" alt="Day25a-3" src="https://github.com/user-attachments/assets/5c3beb32-7962-4609-b014-aa0794edf481" />
+<img width="961" alt="Day25a-4" src="https://github.com/user-attachments/assets/9909cede-9c18-426d-9d73-5bb3789db96a" />
+
+To confirm it is working like I expect it is, I navigated to the `Agent Panel` within my osTicket console. Tickets have been generated! It is a relief to get it working after having so much trouble earlier.
+<img width="960" alt="Day25a-5" src="https://github.com/user-attachments/assets/c8b800a8-4689-449c-b634-dc0d733dabe5" />
+
+#### Wrapping Up
 
