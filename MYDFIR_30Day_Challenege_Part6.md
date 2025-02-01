@@ -18,4 +18,14 @@ There are several ways to investigate a brute force attack. Many failed login at
 Elastic offers a [timeline function](https://www.elastic.co/guide/en/security/current/timelines-ui.html) that can provide relevant information at a glance to help with investigations. Users have the ability to use predefined timeline templates or create custom timelines. Timelines utilize a drag-and-drop interface, query filters, and can even integrate MITRE ATT&CK tactics and techniques. Timelines can be a powerful tool for SOC analysts to investigate security threats, correlate events, and respond to incidents efficiently.
 
 ----
+#### Investigating an Alert
+<img width="947" alt="Day26-3" src="https://github.com/user-attachments/assets/7271e518-819a-4f77-abe5-50c43e2fd179" />
+
+There are a few questions that you can ask yourself that can help with the investigation.
+1) Is this IP address known to perform brute force activities?
+2) Were any other users affected by this IP address?
+3) Were any of the login attempts succesful?
+4) If yes, what activities occurred after the login?
+
+
 
