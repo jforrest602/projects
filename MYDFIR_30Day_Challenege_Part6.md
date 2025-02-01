@@ -42,9 +42,10 @@ Other details like associated organization and tags are also provided.
 <img width="958" alt="Day26-4d" src="https://github.com/user-attachments/assets/60806dd2-61f0-4981-9d52-f9e4fb444836" />
 
 __2) Were any other users affected by this IP address?__
-This can help you discern who or what the attacker is targeting.
+Answering this question can help discern who or what the attacker is targeting. To answer it, I navigated to the search function within Elastic and searched for the `218.92.0.182` IP address. The results provide nearly 8,200 events in the psat 30 days. To find out what users were targeted, I selected the `user.name` field from the list of field names in the left hand column. It showed me that the user root was targeted 100% of the time.
+<img width="960" alt="Day26-5" src="https://github.com/user-attachments/assets/e8adb8c5-b2fb-4c8b-bea2-f724c0b4b33e" />
 
-4) Were any of the login attempts succesful?
+__3) Were any of the login attempts succesful?__
 
 5) If yes, what activities occurred after the login?
 
