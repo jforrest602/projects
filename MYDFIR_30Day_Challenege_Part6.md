@@ -46,6 +46,11 @@ Answering this question can help discern who or what the attacker is targeting. 
 <img width="960" alt="Day26-5" src="https://github.com/user-attachments/assets/e8adb8c5-b2fb-4c8b-bea2-f724c0b4b33e" />
 
 __3) Were any of the login attempts succesful?__
+This is critical to know because iff a successful logon occurred, I want to know what type of activity occurred next. Did they download a shellscript? Did they perform discovery commands? Did they execute something malicious? Did they run [linpeas](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS) for privilege escalation?
+
+To find the answer, I modified my Elsaticsearch parameters from `218.92.0.182` to `218.92.0.182 AND Accepted` to show me any successfull login events from that IP address. 
+Note here that capitalization *DOES* matter when crafting searches in Elastic. 
+<img width="959" alt="Day26-6" src="https://github.com/user-attachments/assets/7ebef4e5-93ec-4940-be05-49902a9457bf" />
 
 5) If yes, what activities occurred after the login?
 
