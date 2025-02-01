@@ -19,13 +19,33 @@ Elastic offers a [timeline function](https://www.elastic.co/guide/en/security/cu
 
 ----
 #### Investigating an Alert
-<img width="947" alt="Day26-3" src="https://github.com/user-attachments/assets/7271e518-819a-4f77-abe5-50c43e2fd179" />
+<img width="947" alt="Day26-3" src="https://github.com/user-attachments/assets/aabc3628-10bf-4c66-9ec6-781e3a854e35" />
 
 There are a few questions that you can ask yourself that can help with the investigation.
-1) Is this IP address known to perform brute force activities?
-2) Were any other users affected by this IP address?
-3) Were any of the login attempts succesful?
-4) If yes, what activities occurred after the login?
+__1) Is this IP address known to perform brute force activities?__
+This helps build context around the alert. If the IP address is known to be associated with brute force activity, it should be cause for concern.
+The above screenshot of some of the alert details gives me the IP address of `218.92.0.182`. To find out whether or not this IP address has been associated with any malicious behavior, I can search for it on [AbuseIPDB](https://www.abuseipdb.com/). This IP address has been reported 1094 times with a 100% confidence of abuse.
+<img width="959" alt="Day26-4" src="https://github.com/user-attachments/assets/aad49208-0b6e-4271-b987-79aa9ca30311" />
 
+Scrolling down to view more details, recent reports all involved failed password for root and are tagged as ssh brute force, over and over.
+<img width="958" alt="Day26-4a" src="https://github.com/user-attachments/assets/5c706d74-3cac-4741-a230-c12f4198db85" />
+
+This leaves no doubt that this IP address is well known to perform brute force attacks.
+
+Another good resource to use is [GreyNoise](https://www.greynoise.io/), which similarly allows users to search IP addresses. After entering the `218.92.0.182` IP address, it is very lear that this IP is associated with malicious activity.
+<img width="959" alt="Day26-4b" src="https://github.com/user-attachments/assets/b8bae858-f4db-49a5-9767-387edde54a8c" />
+
+It even goes as far as suggesting a course of action.
+<img width="960" alt="Day26-4c" src="https://github.com/user-attachments/assets/8a0ffb1c-08ed-44ef-892c-2ce5947c390e" />
+
+Other details like associated organization and tags are also provided.
+<img width="958" alt="Day26-4d" src="https://github.com/user-attachments/assets/60806dd2-61f0-4981-9d52-f9e4fb444836" />
+
+__2) Were any other users affected by this IP address?__
+This can help you discern who or what the attacker is targeting.
+
+4) Were any of the login attempts succesful?
+
+5) If yes, what activities occurred after the login?
 
 
