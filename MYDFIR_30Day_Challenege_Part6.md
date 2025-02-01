@@ -46,12 +46,22 @@ Answering this question can help discern who or what the attacker is targeting. 
 <img width="960" alt="Day26-5" src="https://github.com/user-attachments/assets/e8adb8c5-b2fb-4c8b-bea2-f724c0b4b33e" />
 
 __3) Were any of the login attempts succesful?__
-This is critical to know because iff a successful logon occurred, I want to know what type of activity occurred next. Did they download a shellscript? Did they perform discovery commands? Did they execute something malicious? Did they run [linpeas](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS) for privilege escalation?
+This is critical to know because if a successful logon occurred, I want to know what type of activity occurred next. Did they download a shellscript? Did they perform discovery commands? Did they execute something malicious? Did they run [linpeas](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS) for privilege escalation?
 
 To find the answer, I modified my Elsaticsearch parameters from `218.92.0.182` to `218.92.0.182 AND Accepted` to show me any successfull login events from that IP address. 
 Note here that capitalization *DOES* matter when crafting searches in Elastic. 
 <img width="959" alt="Day26-6" src="https://github.com/user-attachments/assets/7ebef4e5-93ec-4940-be05-49902a9457bf" />
 
-5) If yes, what activities occurred after the login?
+No successful logins from this IP address occurred. If this were taking place in an organizational setting and not just a demonstration, I would be following a defined process, like entering any notes into the ticketing system before closing this alert.
 
+__4) If yes, what activities occurred after the login?__
+If I did find any successful logins, this investigation could go much further. I would want to know what actions the attacker took next and where on the network did they go.
 
+#### Modifying Rules to Push Alerts to osTicket
+The osTicket instance that I set up will be useless if it isn't able to receive any alerts so, I must configure the alert rules to push the alerts to the ticketing system.
+
+To do this, I went to `Rules > Detection rules (SIEM) > *rule name* > Edit rule settings > Actions > Webhook`. Once there, my osTicket was selected by default. I changed the action frequency to each alert.
+<img width="957" alt="Day26-7" src="https://github.com/user-attachments/assets/adddd92e-0b6d-43b0-b7c6-8f49538ee2d9" />
+
+Next, I updated the body of the xml payload [example provided by osTicket](https://docs.osticket.com/en/latest/Developer%20Documentation/API/Tickets.html?highlight=body). 
+Within this xml payload example, I wanted to change the `subject` field from `Testing API` to the actual rule name.
