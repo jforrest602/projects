@@ -74,7 +74,8 @@ Next, I updated the included message to let the receiver know to investigate the
 Finally, I repeated these steps for the alert rule monitoring for any RDP connections. After a few minutes, I refreshed my osTicket web-interface and the was a new ticket.
 <img width="960" alt="Day26-8" src="https://github.com/user-attachments/assets/84699ed4-acdd-47fe-b615-732629934eb4" />
 
-By clicking into the alert I can see some details. This can be configured to include many other details but that is beyond the scope of what I am trying to do today. For now, I'm satisfied that the alerts are being pushed to osTicket.
+By clicking into the alert I can see some details. This can be configured to include many other details but that is beyond the scope of what I am trying to do today. Ideally, I think that including the alert name, source IP address, user name, and computer could go a long way in providing the analyst with good information to begin their work. For now, I'm satisfied that the alerts are being pushed to osTicket.
 <img width="960" alt="Day26-8a" src="https://github.com/user-attachments/assets/23683bf3-3c31-46f2-af61-0d9294b82be5" />
 
 #### Troubleshooting
+I ran into a problem right out of the gate with this day's task.
