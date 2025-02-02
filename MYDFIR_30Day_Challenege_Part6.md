@@ -78,4 +78,9 @@ By clicking into the alert I can see some details. This can be configured to inc
 <img width="960" alt="Day26-8a" src="https://github.com/user-attachments/assets/23683bf3-3c31-46f2-af61-0d9294b82be5" />
 
 #### Troubleshooting
-I ran into a problem right out of the gate with this day's task.
+I ran into a problem right out of the gate with this day's task. The alerts were not populating in the Security alerts section in my Elastic web GUI. It took me more than a days work to figure out what the issue was. The filebeat, which collects and forwards logs from various sources, was not mapped correctly. Improper mapping can cause inconsistencies across field types resulting in query failures or dashboard issues leading to delays in investigations. This is all new to me but I will say that if things aren't showing up where you expect them to be, mapping could be an issue.
+
+The troubleshooting process is a learning process. It was frustrating at the time but I have emerged a bit more knowlegable and much more aware about the importance of ensuring proper mapping in a SOC environment. SOCs rely on accurate, searchable data which enables strong threat detection and effecient incident response.
+
+## Day 27: Investigating an RDP Brute Force Attack
+
