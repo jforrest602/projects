@@ -64,4 +64,17 @@ To do this, I went to `Rules > Detection rules (SIEM) > *rule name* > Edit rule 
 <img width="957" alt="Day26-7" src="https://github.com/user-attachments/assets/adddd92e-0b6d-43b0-b7c6-8f49538ee2d9" />
 
 Next, I updated the body of the xml payload [example provided by osTicket](https://docs.osticket.com/en/latest/Developer%20Documentation/API/Tickets.html?highlight=body). 
-Within this xml payload example, I wanted to change the `subject` field from `Testing API` to the actual rule name.
+Within this xml payload example, I want to change the `subject` field from `Testing API` to the actual rule name. To do this,
+I clicked on the small `Add variable` icon highlighted in the screenshot below and chose `rule.name` from the list of available variables.
+<img width="958" alt="Day26-7a" src="https://github.com/user-attachments/assets/f4a97772-156c-49b9-8cc9-057bc63571f8" />
+
+Next, I updated the included message to let the receiver know to investigate the rule.
+<img width="959" alt="Day26-7b" src="https://github.com/user-attachments/assets/1eca159f-1738-43f4-b631-95c6e397f775" />
+
+Finally, I repeated these steps for the alert rule monitoring for any RDP connections. After a few minutes, I refreshed my osTicket web-interface and the was a new ticket.
+<img width="960" alt="Day26-8" src="https://github.com/user-attachments/assets/84699ed4-acdd-47fe-b615-732629934eb4" />
+
+By clicking into the alert I can see some details. This can be configured to include many other details but that is beyond the scope of what I am trying to do today. For now, I'm satisfied that the alerts are being pushed to osTicket.
+<img width="960" alt="Day26-8a" src="https://github.com/user-attachments/assets/23683bf3-3c31-46f2-af61-0d9294b82be5" />
+
+#### Troubleshooting
