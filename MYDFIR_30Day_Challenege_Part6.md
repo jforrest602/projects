@@ -100,6 +100,7 @@ Before moving on, I went to `Edit rule settings > Schedule` to ensure that the r
 
 #### Investigation Methodology
 Just like when investigating the SSH brute force attempts, there are four questions that I want to answer as I go through this investigation. They are:
+
 __1) Is this IP known to perform brute force activity?__ Yes
 
 __2) Were any other users affected by this IP address?__ No
