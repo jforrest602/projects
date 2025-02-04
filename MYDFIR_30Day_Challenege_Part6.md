@@ -101,8 +101,11 @@ Before moving on, I went to `Edit rule settings > Schedule` to ensure that the r
 #### Investigation Methodology
 Just like when investigating the SSH brute force attempts, there are four questions that I want to answer as I go through this investigation. They are:
 __1) Is this IP known to perform brute force activity?__ Yes
+
 __2) Were any other users affected by this IP address?__ No
+
 __3) Were any of the login attempts successful?__ No
+
 __4) If so, what activity occurred after the successful login?__ N/A
 
 I will use [AbuseIPDB](https://www.abuseipdb.com/) and [Greynoise](https://www.greynoise.io/) again to check the `179.60.147.198` IP address.
@@ -117,9 +120,13 @@ Greynoise doesn't provide as much information for this IP, but does tag it as an
 To find out if any other users have been affected by this IP, I go to `Discover` in the Elastic web GUI to search for the IP address. I find that there have been more than 48,000 events in the past 30 days. All of them targeting Administrator.
 <img width="960" alt="Day27-4" src="https://github.com/user-attachments/assets/6c96fb79-f9b4-450b-98bb-3078c1467338" />
 
-TO determine if any of the 48,000+ authentication attempts were successful, I combine the IP address and the event code 4624 to make my query - `179.60.147.198 and event.code: 4624`. Remember that event code 4624 in Windows is a log entry that records a successful account logon.
+To determine if any of the 48,000+ authentication attempts were successful, I combine the IP address and the event code 4624 to make my query - `179.60.147.198 and event.code: 4624`. Remember that event code 4624 in Windows is a log entry that records a successful account logon.
 <img width="959" alt="Day27-4a" src="https://github.com/user-attachments/assets/817645ff-6d94-4e98-b529-043c1dcac64b" />
 
 Thankfully, there hasn't been any successful authentications. However, just to be sure my query worked as expected, I query just `event.code: 4624` to see if there are any results. And there are 557 events returned, meaning my query performed as I intended.
 <img width="959" alt="Day27-4b" src="https://github.com/user-attachments/assets/e39f4382-9d53-45f0-882f-b244ebdb71e9" />
 
+#### Conclusions
+By applying the same investigative methodology as with the SSH brute force attempts, I was able to identify and analyze the RDP brute force activity. The IP `179.60.147.198` is clearly linked to malicious behavior, with numerous failed attempts targeting Administrator accounts. Fortunately, no successful logins were observed. Using tools like AbuseIPDB and Greynoise provided context to the IP’s activity, reinforcing its association with brute force attacks. Finally, by pushing alerts to osTicket, I am ensuring that a hypothetical security team is immediately notified of any future attempts, allowing for quicker responses to potential threats.
+
+## Day 28: Investigating Mythic Agent
