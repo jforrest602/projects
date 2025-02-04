@@ -100,9 +100,26 @@ Before moving on, I went to `Edit rule settings > Schedule` to ensure that the r
 
 #### Investigation Methodology
 Just like when investigating the SSH brute force attempts, there are four questions that I want to answer as I go through this investigation. They are:
-__1) Is this IP known to perform brute force activity?__
-__2) Were any other users affected by this IP address?__
-__3) Were any of the login attempts successful?__
-__4) If so, what activity occurred after the successful login?__
+__1) Is this IP known to perform brute force activity?__ Yes
+__2) Were any other users affected by this IP address?__ No
+__3) Were any of the login attempts successful?__ No
+__4) If so, what activity occurred after the successful login?__ N/A
 
+I will use [AbuseIPDB](https://www.abuseipdb.com/) and [Greynoise](https://www.greynoise.io/) again to check the `179.60.147.198` IP address.
+
+This IP address, originating from the Netherlands, has been report to AbuseIPDB 635 times with a 100% confidence of abuse associated with RDP brute force activity.
+<img width="961" alt="Day27-3" src="https://github.com/user-attachments/assets/2fe60868-2061-42ac-8381-efff0dca6ec4" />
+<img width="959" alt="Day27-3a" src="https://github.com/user-attachments/assets/f55b4811-ea33-4976-bcb0-b5bdf75d4b41" />
+
+Greynoise doesn't provide as much information for this IP, but does tag it as an RDP crawler - a tool or program that scans or "crawls" through RDP servers to discover and collect information about available systems or potential vulnerabilities.
+<img width="958" alt="Day27-3b" src="https://github.com/user-attachments/assets/bc6f992b-b9b2-4525-9944-b5c1054d30c7" />
+
+To find out if any other users have been affected by this IP, I go to `Discover` in the Elastic web GUI to search for the IP address. I find that there have been more than 48,000 events in the past 30 days. All of them targeting Administrator.
+<img width="960" alt="Day27-4" src="https://github.com/user-attachments/assets/6c96fb79-f9b4-450b-98bb-3078c1467338" />
+
+TO determine if any of the 48,000+ authentication attempts were successful, I combine the IP address and the event code 4624 to make my query - `179.60.147.198 and event.code: 4624`. Remember that event code 4624 in Windows is a log entry that records a successful account logon.
+<img width="959" alt="Day27-4a" src="https://github.com/user-attachments/assets/817645ff-6d94-4e98-b529-043c1dcac64b" />
+
+Thankfully, there hasn't been any successful authentications. However, just to be sure my query worked as expected, I query just `event.code: 4624` to see if there are any results. And there are 557 events returned, meaning my query performed as I intended.
+<img width="959" alt="Day27-4b" src="https://github.com/user-attachments/assets/e39f4382-9d53-45f0-882f-b244ebdb71e9" />
 
