@@ -2,7 +2,7 @@
 # MyDFIR 30 Day SOC Analyst Challenge (Part 6)
 <img width="894" alt="part6header" src="https://github.com/user-attachments/assets/928e52a6-b869-4f58-86ea-864eb87c4635" />
 
-## Day 26: Investigating a Brute Force Attack
+## Day 26: Investigating an SSH Brute Force Attack
 To begin investigating the SSH alerts that I previously created, I navigated to the hamburger icon `Secuirty > Alerts` in my Elastic web GUI. Nothing displayed on this page.
 <img width="959" alt="Day26-2" src="https://github.com/user-attachments/assets/13eab798-7bfe-4f29-8634-eccab89fb280" />
 
@@ -83,4 +83,19 @@ I ran into a problem right out of the gate with this day's task. The alerts were
 The troubleshooting process is a learning process. It was frustrating at the time but I have emerged a bit more knowlegable and much more aware about the importance of ensuring proper mapping in a SOC environment. SOCs rely on accurate, searchable data which enables strong threat detection and effecient incident response.
 
 ## Day 27: Investigating an RDP Brute Force Attack
+Today, I am going to investigate an RDP brute force alert and identify some of the key indicators to be aware of. Here, I am going to apply the same methodology that I used to investigate the SSH brute force alert on Day 26. 
+
+I began in the Elastic web GUI by navigating to `Security > Alerts` under the hamburger menu and filtered for RDP brute force alerts occuring in the past 30 days. More than 1,000 events have been generated. 
+<img width="960" alt="Day27-1" src="https://github.com/user-attachments/assets/ee98f45f-c0b8-431a-8860-fb66230b0e42" />
+
+Next, I chose the first event listed and brought up its details and see that the IP address `179.60.147.198` attempted to login as Administrator 22 times.
+<img width="959" alt="Day27-2" src="https://github.com/user-attachments/assets/69d543e3-02b6-4f70-ad1e-c9874c25c89a" />
+
+#### Methodology
+Just like when investigating the SSH brute force attempts, there are four questions that I want to answer as I go through this investigation. They are:
+__1) Is this IP known to perform brute force activity?__
+__2) Were any other users affected by this IP address?__
+__3) Were any of the login attempts successful?__
+__4) If so, what activity occurred after the successful login?__
+
 
