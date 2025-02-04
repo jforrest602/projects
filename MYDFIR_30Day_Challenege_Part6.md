@@ -91,7 +91,14 @@ I began in the Elastic web GUI by navigating to `Security > Alerts` under the ha
 Next, I chose the first event listed and brought up its details and see that the IP address `179.60.147.198` attempted to login as Administrator 22 times.
 <img width="959" alt="Day27-2" src="https://github.com/user-attachments/assets/69d543e3-02b6-4f70-ad1e-c9874c25c89a" />
 
-#### Methodology
+#### Pushing the alerts to osTicket
+Now, like yesterday, I want to modify this rule to automatically create a ticket in osTicket each time it triggers. To do this, I'm following the same steps. I will even copy and paste the body of the xml payload.
+
+After copying the body of the xml payload, I navigated to `Rules > Detection rules (SIEM) > *rule name* > Edit rule settings > Actions > Webhook` and confirmed that osTicket was auto selected, pasted in the body and saved the changes.
+
+Before moving on, I went to `Edit rule settings > Schedule` to ensure that the rule would run every 1 minute.
+
+#### Investigation Methodology
 Just like when investigating the SSH brute force attempts, there are four questions that I want to answer as I go through this investigation. They are:
 __1) Is this IP known to perform brute force activity?__
 __2) Were any other users affected by this IP address?__
