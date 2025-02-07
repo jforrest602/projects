@@ -131,3 +131,13 @@ Thankfully, there hasn't been any successful authentications. However, just to b
 By applying the same investigative methodology as with the SSH brute force attempts, I was able to identify and analyze the RDP brute force activity. The IP `179.60.147.198` is clearly linked to malicious behavior, with numerous failed attempts targeting Administrator accounts. Fortunately, no successful logins were observed. Using tools like AbuseIPDB and Greynoise provided context to the IP’s activity, reinforcing its association with brute force attacks. Finally, by pushing alerts to osTicket, I am ensuring that a hypothetical security team is immediately notified of any future attempts, allowing for quicker responses to potential threats.
 
 ## Day 28: Investigating Mythic Agent
+Today's task will involve investigating the Mythic coomand-and-control (C2) framework by identifying some common things to look for. To get started, I do have a bit of an unfair advantage because, based upon prevous activity in this challenge, I know that the Mythic C2 Agent in this case is called `srvhost-jf.exe`.
+
+With that in mind, I search for `srvhost-jf.exe` in my Elastic web GUI, sorting the results from old to new to begin following the chain of events. The search returns 40 results that have taken place within the last 30 days.
+<img width="957" alt="Day28-1" src="https://github.com/user-attachments/assets/86b26fa4-b8f7-49d7-9d22-07f63801f237" />
+
+#### How to Identify a C2 (When the Agent Name is not Known)
+- Examine network telemetry. Typically, an ongoing C2 session will have a lot of back and forth traffic. In other words, a lot of data bytes are being transferred back and forth and the IP addresses will likely be among the top ten IP address pairs communicating with each other.
+- Use a tool like [RITA](https://www.blackhillsinfosec.com/projects/rita/), offered by [BHIS](https://www.blackhillsinfosec.com/), to examine the heartbeat which can help detect potential C2 traffic.
+- Use Sysmon to look at process creations (event ID 1) and network creations (event ID 3).
+
