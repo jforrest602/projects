@@ -141,3 +141,8 @@ With that in mind, I search for `srvhost-jf.exe` in my Elastic web GUI, sorting 
 - Use a tool like [RITA](https://www.blackhillsinfosec.com/projects/rita/), offered by [BHIS](https://www.blackhillsinfosec.com/), to examine the heartbeat which can help detect potential C2 traffic.
 - Use Sysmon to look at process creations (event ID 1) and network creations (event ID 3).
 
+I created a dashboard to display suspicious activity, like process creations and process initiated network connections. Process initiated network connections are network connections that started as a process on the local machine and called out to somewhere to establish a connection.
+<img width="958" alt="Day28-2" src="https://github.com/user-attachments/assets/4ef4ebaa-1fb2-4029-89cd-422a6747a9e4" />
+
+Scrolling a bit further down that list, I see the `C:\Users\Public\Downloads\srvhost-jf.exe`.
+<img width="956" alt="Day28-3" src="https://github.com/user-attachments/assets/ae1a1ead-e671-4d9c-9c27-4ec17fa63477" />
