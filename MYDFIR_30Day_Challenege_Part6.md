@@ -173,3 +173,6 @@ It is good practice to take a look at the Process GUID if it's available. This p
 
 It is important to take note of the process GUID here, if it is available, because it can be used to track down related activities. A quick search returns promising results like original file name, command line input, parent user, parent image, and process ID.
 <img width="962" alt="Day28-2-6" src="https://github.com/user-attachments/assets/753ff83f-e656-43d9-9a8c-648be5e869fe" />
+
+Another good practice is to utilize the process ID and parent process ID to look for any processes spawned from the parent process.
+
