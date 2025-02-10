@@ -140,9 +140,30 @@ With that in mind, I search for `srvhost-jf.exe` in my Elastic web GUI, sorting 
 - Examine network telemetry. Typically, an ongoing C2 session will have a lot of back and forth traffic. In other words, a lot of data bytes are being transferred back and forth and the IP addresses will likely be among the top ten IP address pairs communicating with each other.
 - Use a tool like [RITA](https://www.blackhillsinfosec.com/projects/rita/), offered by [BHIS](https://www.blackhillsinfosec.com/), to examine the heartbeat which can help detect potential C2 traffic.
 - Use Sysmon to look at process creations (event ID 1) and network creations (event ID 3).
+---- 
 
 I created a dashboard to display suspicious activity, like process creations and process initiated network connections. Process initiated network connections are network connections that started as a process on the local machine and called out to somewhere to establish a connection.
 <img width="958" alt="Day28-2" src="https://github.com/user-attachments/assets/4ef4ebaa-1fb2-4029-89cd-422a6747a9e4" />
 
 Scrolling a bit further down that list, I see the `C:\Users\Public\Downloads\srvhost-jf.exe`.
-<img width="956" alt="Day28-3" src="https://github.com/user-attachments/assets/ae1a1ead-e671-4d9c-9c27-4ec17fa63477" />
+<img width="946" alt="Day28-3a" src="https://github.com/user-attachments/assets/a27da619-284c-4506-8779-5c0f70900696" />
+
+I can identify this as suspicious, even if it weren't titled `svchost-jf.exe`, because this directory is an odd place for an executable to be originating a connection to an external IP address. 
+
+Just below that entry, I see Powershell calling out to the same IP address. That is certainly suspicious. I want to investigate this more.
+
+#### Digging in to the PowerShell Call Out
+I begin by searching `event.code: 3 and winlog.event_data.DestinationIp: 108.160.131.2` to start building a timeline of events. Remember, in Sysmon, event code 3 represents a network connection. The search returns 5 results.
+<img width="960" alt="Day28-2-1" src="https://github.com/user-attachments/assets/6bb23839-1e5c-4d16-9cdc-cfda198ff0da" />
+
+__TIMELINE__
+- Nov 15, 2024 @ 16:04:30.169 (local time): a file named `svchost-jf.exe` is created under `C:\Users\Public\Downloads\`.
+<img width="959" alt="Day28-2-4" src="https://github.com/user-attachments/assets/0f5b380c-6ccc-446b-a49e-210ed8df3803" />
+
+- Nov 15, 2024 @ 16:04:31.202 (local time): an outbound network connection to `108.160.131.2` is made.
+<img width="958" alt="Day28-2-2" src="https://github.com/user-attachments/assets/7022ec53-63ad-410c-b85b-d9f55526fcd5" />
+
+- Nov 15, 2024 @ 16:04:32.723 (local time): a file executable is detected.
+<img width="958" alt="Day28-2-5a" src="https://github.com/user-attachments/assets/8b17af76-019e-4467-aada-28ac391f763d" />
+
+  
