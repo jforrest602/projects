@@ -188,3 +188,5 @@ __3)Check the File Hash:__ Use the file hash provided by Sysmon to look up the f
 __4)Parent Process Review:__ Investigate the parent process that spawned svchost-jf.exe (if this information is available) to understand how this process was initiated. Checking for any PowerShell or other script activity may provide additional clues.
 
 __5)Analyze System Behavior:__ Monitor the system for any additional signs of unusual activity, such as further outbound network connections, creation of additional files, or system performance anomalies.
+
+## Day 29: Elastic Defend Setup
