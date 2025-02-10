@@ -158,12 +158,18 @@ I begin by searching `event.code: 3 and winlog.event_data.DestinationIp: 108.160
 
 __TIMELINE__
 - Nov 15, 2024 @ 16:04:30.169 (local time): a file named `svchost-jf.exe` is created under `C:\Users\Public\Downloads\`.
-<img width="959" alt="Day28-2-4" src="https://github.com/user-attachments/assets/0f5b380c-6ccc-446b-a49e-210ed8df3803" />
+<img width="959" alt="Day28-2-4" src="https://github.com/user-attachments/assets/6caee549-4dd0-4716-a67f-c761d5162e33" />
 
 - Nov 15, 2024 @ 16:04:31.202 (local time): an outbound network connection to `108.160.131.2` is made.
-<img width="958" alt="Day28-2-2" src="https://github.com/user-attachments/assets/7022ec53-63ad-410c-b85b-d9f55526fcd5" />
+<img width="958" alt="Day28-2-2" src="https://github.com/user-attachments/assets/33d26508-d683-4c27-a2c2-85c9a4eee375" />
 
-- Nov 15, 2024 @ 16:04:32.723 (local time): a file executable is detected.
+It is good practice to take a look at the Process GUID if it's available. This process GUID can help identify all of the events generated from the PowerShell session.
+
+- Nov 15, 2024 @ 16:04:32.723 (local time): a file executable is detected, event code 29. In Sysmon, event code 29 is generated when Sysmon detects the creation of a new executable file. It is also worth noting that the message here contains the file hashes which could prove helpful.
 <img width="958" alt="Day28-2-5a" src="https://github.com/user-attachments/assets/8b17af76-019e-4467-aada-28ac391f763d" />
 
-  
+- Nov 15, 2024 @ 16:05:52.785 (local time): a process create of `svchost-jf.exe` takes place.
+<img width="959" alt="Day28-2-6a" src="https://github.com/user-attachments/assets/4e4f7d11-acb6-4ce7-9bf4-b9e92b10ab24" />
+
+It is important to take note of the process GUID here, if it is available, because it can be used to track down related activities. A quick search returns promising results like original file name, command line input, parent user, parent image, and process ID.
+<img width="962" alt="Day28-2-6" src="https://github.com/user-attachments/assets/753ff83f-e656-43d9-9a8c-648be5e869fe" />
