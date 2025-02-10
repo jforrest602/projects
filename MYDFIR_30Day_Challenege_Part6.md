@@ -181,11 +181,11 @@ As you can see, this sequence of events strongly suggests the possibility of a m
 #### Next Steps
 __1)Examine the Process GUID:__ If available, track the events associated with the Process GUID to get a complete view of the process lifecycle, its parent process, and any other actions it triggered.
 
-__2)Investigate the Network Connection:__ Investigate the IP address (108.160.131.2) to check if it is known for malicious activity. Tools like threat intelligence feeds or external blacklists can help determine whether it is associated with C2 or malware.
+__2)Investigate the Network Connection:__ Investigate the IP address `108.160.131.2` to check if it is known for malicious activity. Tools like threat intelligence feeds or external blacklists can help determine whether it is associated with C2 or malware.
 
 __3)Check the File Hash:__ Use the file hash provided by Sysmon to look up the file in antivirus/malware databases or check for any previous detections of the same file. This can help verify whether this is part of a known malware campaign.
 
-__4)Parent Process Review:__ Investigate the parent process that spawned svchost-jf.exe (if this information is available) to understand how this process was initiated. Checking for any PowerShell or other script activity may provide additional clues.
+__4)Parent Process Review:__ Investigate the parent process that spawned `svchost-jf.exe` (if this information is available) to understand how this process was initiated. Checking for any PowerShell or other script activity may provide additional clues.
 
 __5)Analyze System Behavior:__ Monitor the system for any additional signs of unusual activity, such as further outbound network connections, creation of additional files, or system performance anomalies.
 
