@@ -230,4 +230,10 @@ Elastic Defend prevented the file from executing and removed it from the system.
 <img width="740" alt="Day29-2a" src="https://github.com/user-attachments/assets/fa055559-30d8-4c35-bce8-e0b04d8c01bb" />
 
 #### Viewing the Telemetry
-In Kibana, under the `Discover` tab, I searched for `malware`. 
+In Kibana, under the `Discover` tab, I searched for the keyword `malware` within the last 1 hour. Among the results is a `Malware Prevention Alert`. Looking at the details of the event provides useful details like agent type, data stream, event category, event.code, file directory, quarantine path, file name, file owner, file hash and so on.
+<img width="959" alt="Day29-3" src="https://github.com/user-attachments/assets/efa90f36-868a-467e-9c33-97028e9edc92" />
+
+Navigating to `Security > Alerts` I see the Malware Prevention Alert there as well with a rule description.
+<img width="948" alt="Day29-3a" src="https://github.com/user-attachments/assets/211a4d6e-e734-4a33-8708-6b1c99959ac2" />
+
+
