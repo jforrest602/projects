@@ -233,7 +233,14 @@ Elastic Defend prevented the file from executing and removed it from the system.
 In Kibana, under the `Discover` tab, I searched for the keyword `malware` within the last 1 hour. Among the results is a `Malware Prevention Alert`. Looking at the details of the event provides useful details like agent type, data stream, event category, event.code, file directory, quarantine path, file name, file owner, file hash and so on.
 <img width="959" alt="Day29-3" src="https://github.com/user-attachments/assets/efa90f36-868a-467e-9c33-97028e9edc92" />
 
-Navigating to `Security > Alerts` I see the Malware Prevention Alert there as well with a rule description.
+Navigating to `Security > Alerts` I see the Malware Prevention Alert there as well with a rule description and alert reason.
 <img width="948" alt="Day29-3a" src="https://github.com/user-attachments/assets/211a4d6e-e734-4a33-8708-6b1c99959ac2" />
 
+The highlighted fields also provide useful information like the process executable, file path, file hash, and even a process tree, and responses.
+<img width="946" alt="Day29-3b" src="https://github.com/user-attachments/assets/a8860901-f02f-4e91-8c4b-2abf0ae75d68" />
 
+To set up a responsive action, I clicked the hyperlink provided.
+<img width="945" alt="Day29-4" src="https://github.com/user-attachments/assets/1ad335a9-670f-4db9-965b-7885d74cd349" />
+
+I followed that by navigating to `Malware prevention alert > Edit rule settings > Actions > Elastic Defend > Response action`, taking me to following screen where I chose `isolate` as the responsive action. Finally, I saved the changes.
+<img width="947" alt="Day29-4a" src="https://github.com/user-attachments/assets/dac273b7-6df3-4d70-b53b-b46ca7bbdd09" />
