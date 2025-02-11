@@ -239,8 +239,17 @@ Navigating to `Security > Alerts` I see the Malware Prevention Alert there as we
 The highlighted fields also provide useful information like the process executable, file path, file hash, and even a process tree, and responses.
 <img width="946" alt="Day29-3b" src="https://github.com/user-attachments/assets/a8860901-f02f-4e91-8c4b-2abf0ae75d68" />
 
+#### Responsive Action
 To set up a responsive action, I clicked the hyperlink provided.
 <img width="945" alt="Day29-4" src="https://github.com/user-attachments/assets/1ad335a9-670f-4db9-965b-7885d74cd349" />
 
 I followed that by navigating to `Malware prevention alert > Edit rule settings > Actions > Elastic Defend > Response action`, taking me to following screen where I chose `isolate` as the responsive action. Finally, I saved the changes.
 <img width="947" alt="Day29-4a" src="https://github.com/user-attachments/assets/dac273b7-6df3-4d70-b53b-b46ca7bbdd09" />
+
+#### More Telemetry
+I ran an infinite ping to Google's DNS server by running `ping 8.8.8.8 -t` in command prompt. Then, with PowerShell, I invoked a web request to download the same malicious `mydfir-30.exe` file from the web. Elastic Defend immediately detected the file and responded.
+<img width="944" alt="Day29-4b" src="https://github.com/user-attachments/assets/885e1cf3-3c03-4c9d-9e51-02d3c09a39bf" />
+
+Within moments, the infinite ping has failed because the Windows server has been isolated.
+<img width="947" alt="Day29-4c" src="https://github.com/user-attachments/assets/4c51d1f0-eceb-4aef-a90b-1eebc46dd5f7" />
+
