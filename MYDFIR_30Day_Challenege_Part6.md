@@ -256,3 +256,4 @@ Within moments, the infinite ping has failed because the Windows server has been
 This is just a brief example of how useful an EDR can be. Of course, EDRs are not an end all be all of a security strategy. Rather, they can become an important tool of a comprehensive cyber security defense as they improve an organization's ability to detect sophisticated cyberattacks and limit their impact by providing enhanced visibility into endpoint activity.
 
 ## Day 30: The Finish Line
+Since day 30 of the video series is dedicated to troubleshooting, I am going to use this space to write about my experience with the challenge, what I've gained from it, what some of my biggest challenges were, and what I am going to work on going foward. 
