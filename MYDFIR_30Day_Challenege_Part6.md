@@ -220,5 +220,14 @@ Save and deploy changes. A quick and straightforward process.
 For an additional confirmation, I navigated to `Security > Manage > Endpoints` under the hamburger icon and see that the endpoint is enrolled.
 <img width="959" alt="Day29-1e" src="https://github.com/user-attachments/assets/5ffecbee-7c9d-4bde-be34-0244be2c82cb" />
 
-----
+#### Testing the EDR
+To make sure Elastic Defend is going to function as intended, I want to try to execute a malicious file on my Windows server. The file, `mydfir-30.exe`, is the same `svchost-jf.exe` that was used to establish a command and control session previously. When I try to execute it, Elastic Defend should block it.
 
+After opening up the Windows server, I navigated to `C:\Users\Public\Downloads` and executed the file, without success.
+<img width="732" alt="Day29-2" src="https://github.com/user-attachments/assets/483299db-4229-4014-a63a-1aa11812b1f5" />
+
+Elastic Defend prevented the file from executing and removed it from the system.
+<img width="740" alt="Day29-2a" src="https://github.com/user-attachments/assets/fa055559-30d8-4c35-bce8-e0b04d8c01bb" />
+
+#### Viewing the Telemetry
+In Kibana, under the `Discover` tab, I searched for `malware`. 
