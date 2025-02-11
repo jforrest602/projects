@@ -253,3 +253,6 @@ I ran an infinite ping to Google's DNS server by running `ping 8.8.8.8 -t` in co
 Within moments, the infinite ping has failed because the Windows server has been isolated.
 <img width="947" alt="Day29-4c" src="https://github.com/user-attachments/assets/4c51d1f0-eceb-4aef-a90b-1eebc46dd5f7" />
 
+This is just a brief example of how useful an EDR can be. Of course, EDRs are not an end all be all of a security strategy. Rather, they can become an important tool of a comprehensive cyber security defense as they improve an organization's ability to detect sophisticated cyberattacks and limit their impact by providing enhanced visibility into endpoint activity.
+
+## Day 30: The Finish Line
