@@ -190,3 +190,13 @@ __4)Parent Process Review:__ Investigate the parent process that spawned `svchos
 __5)Analyze System Behavior:__ Monitor the system for any additional signs of unusual activity, such as further outbound network connections, creation of additional files, or system performance anomalies.
 
 ## Day 29: Elastic Defend Setup
+The goal for today is to set up Elastic Defend and view it's telemetry.
+
+Elastic Defend is Elastic's version of an Endpoint Detection and Response (EDR) tool. 
+
+#### What is an EDR?
+An EDR is a cybersecurity solution designed to monitor, detect, and respond to suspicious activities and threats on endpoints (such as computers, servers, mobile devices, etc.). They provide continuous monitoring of endpoint data, analyze potential threats, and allow security teams to investigate and respond to incidents in real-time. Think antivirus protection on steroids. 
+
+More simply, EDR solutions provide advanced threat detection by collecting multiple forms of telemetry from an endpoint and respond by taking action on those threats. Some examples of the telemetry used by EDRs include file signatures, network connections, running processes, memory, kernel, system or API calls, even what files are opened or accessed. The EDR processes this info through algorithms to automatically detect threats based on behavior rather than just looking at signatures. Actions that EDRs can take include blocking all or some network traffic, killing processes, quarantining files, putting a computer into full quarantine mode, or removing harmful sites.
+
+To sum that up, the key features of an EDR solution include endpoint security, threat detection capabilities, investigative and response tools, automation, and in the case of Elastic Defend, integration with the ELK stack.
