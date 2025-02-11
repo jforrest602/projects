@@ -200,3 +200,19 @@ An EDR is a cybersecurity solution designed to monitor, detect, and respond to s
 More simply, EDR solutions provide advanced threat detection by collecting multiple forms of telemetry from an endpoint and respond by taking action on those threats. Some examples of the telemetry used by EDRs include file signatures, network connections, running processes, memory, kernel, system or API calls, even what files are opened or accessed. The EDR processes this info through algorithms to automatically detect threats based on behavior rather than just looking at signatures. Actions that EDRs can take include blocking all or some network traffic, killing processes, quarantining files, putting a computer into full quarantine mode, or removing harmful sites.
 
 To sum that up, the key features of an EDR solution include endpoint security, threat detection capabilities, investigative and response tools, automation, and in the case of Elastic Defend, integration with the ELK stack.
+
+#### Configuring Elastic Defend
+To get this started, in my Elastic web GUI under the hamburger icon I navigated to `Management > Integrations > Elastic defend > Add elastic defend`.
+<img width="947" alt="Day29-1" src="https://github.com/user-attachments/assets/d4889ac4-614f-4265-84c6-1389431e8d9f" />
+
+From here, I selected my desired setup. This included naming and describing the integration, 
+<img width="947" alt="Day29-1a" src="https://github.com/user-attachments/assets/24c30fc0-9e45-42bc-8dc0-ac5b9810b3ab" />
+
+the type of environment to protect and configuration settings, 
+<img width="948" alt="Day29-1b" src="https://github.com/user-attachments/assets/eeb42d8b-5498-42f4-bfb3-4e7725a9dea3" />
+
+and where I wanted to add the integration. 
+<img width="947" alt="Day29-1c" src="https://github.com/user-attachments/assets/97abfeaa-10e8-4df9-a24c-3a6c19e5f935" />
+
+Save and deploy changes.
+<img width="959" alt="Day29-1d" src="https://github.com/user-attachments/assets/be420427-5d81-44e6-9265-fb4a24e6d381" />
