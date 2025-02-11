@@ -214,5 +214,11 @@ the type of environment to protect and configuration settings,
 and where I wanted to add the integration. 
 <img width="947" alt="Day29-1c" src="https://github.com/user-attachments/assets/97abfeaa-10e8-4df9-a24c-3a6c19e5f935" />
 
-Save and deploy changes.
+Save and deploy changes. A quick and straightforward process.
 <img width="959" alt="Day29-1d" src="https://github.com/user-attachments/assets/be420427-5d81-44e6-9265-fb4a24e6d381" />
+
+For an additional confirmation, I navigated to `Security > Manage > Endpoints` under the hamburger icon and see that the endpoint is enrolled.
+<img width="959" alt="Day29-1e" src="https://github.com/user-attachments/assets/5ffecbee-7c9d-4bde-be34-0244be2c82cb" />
+
+----
+
